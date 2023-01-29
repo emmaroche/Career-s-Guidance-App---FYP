@@ -61,6 +61,7 @@
 		04ADB7242982A11800BCFAC5 /* Career_s_Guidance_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ADB7232982A11800BCFAC5 /* Career_s_Guidance_AppTests.swift */; };
 		04ADB72E2982A11800BCFAC5 /* Career_s_Guidance_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ADB72D2982A11800BCFAC5 /* Career_s_Guidance_AppUITests.swift */; };
 		04ADB7302982A11800BCFAC5 /* Career_s_Guidance_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ADB72F2982A11800BCFAC5 /* Career_s_Guidance_AppUITestsLaunchTests.swift */; };
+		04FA68A72986C3E600B9811E /* AccountPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA68A62986C3E600B9811E /* AccountPageController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +113,7 @@
 		04ADB7292982A11800BCFAC5 /* Career's Guidance AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Career's Guidance AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04ADB72D2982A11800BCFAC5 /* Career_s_Guidance_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Career_s_Guidance_AppUITests.swift; sourceTree = "<group>"; };
 		04ADB72F2982A11800BCFAC5 /* Career_s_Guidance_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Career_s_Guidance_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		04FA68A62986C3E600B9811E /* AccountPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPageController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 				0439A9B22982DC1200942926 /* LoginController.swift */,
 				0439A9B32982DC1200942926 /* RegisterController.swift */,
 				04A1448B29831831007F60A6 /* WelcomeController.swift */,
+				04FA68A62986C3E600B9811E /* AccountPageController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -434,6 +437,7 @@
 				0439A9CF2982DC5800942926 /* LoginUserRequest.swift in Sources */,
 				0439A9D02982DC5800942926 /* RegisterUserRequest.swift in Sources */,
 				0439A9B92982DC1200942926 /* ForgotPasswordController.swift in Sources */,
+				04FA68A72986C3E600B9811E /* AccountPageController.swift in Sources */,
 				0439A9BA2982DC1200942926 /* HomeController.swift in Sources */,
 				0439A9D52982DC8600942926 /* AuthService.swift in Sources */,
 				0439A9C52982DC4500942926 /* CustomTextField.swift in Sources */,
