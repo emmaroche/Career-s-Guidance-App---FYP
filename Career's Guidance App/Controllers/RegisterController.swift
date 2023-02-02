@@ -37,6 +37,10 @@ class RegisterController: UIViewController {
         self.signUpButton.addTarget(self, action: #selector(didTapSignUp), for: .touchUpInside)
         self.signInButton.addTarget(self, action: #selector(didTapSignIn), for: .touchUpInside)
         overrideUserInterfaceStyle = .light
+        
+        //Dismiss keyboard when text field is clicked out of. Code reference: https://stackoverflow.com/questions/24126678/close-ios-keyboard-by-touching-anywhere-using-swift
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
     }
     
     
@@ -51,6 +55,7 @@ class RegisterController: UIViewController {
     // MARK: - UI Setup
     private func setupUI() {
         self.view.backgroundColor = UIColor(red: 0.20, green: 0.48, blue: 0.67, alpha: 1.00)
+        
         
         self.view.addSubview(headerView)
         self.view.addSubview(usernameField)
@@ -177,4 +182,10 @@ class RegisterController: UIViewController {
         let vc = LoginController()
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    @objc func dismissKeyboard() {
+        //Causes the text fields to resign the first responder status.
+        view.endEditing(true)
+    }
+    
 }

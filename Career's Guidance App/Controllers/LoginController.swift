@@ -39,15 +39,17 @@ class LoginController: UIViewController, UITextViewDelegate {
         self.forgotPasswordButton.addTarget(self, action: #selector(didTapForgotPassword), for: .touchUpInside)
         overrideUserInterfaceStyle = .light
         
+        //Dismiss keyboard when text field is clicked out of. Code reference: https://stackoverflow.com/questions/24126678/close-ios-keyboard-by-touching-anywhere-using-swift
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = false
         self.navigationController?.navigationBar.tintColor = UIColor.white
 
     }
-    
-    
     
    
     // MARK: - UI Setup
@@ -159,6 +161,12 @@ class LoginController: UIViewController, UITextViewDelegate {
         let vc = ForgotPasswordController()
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    @objc func dismissKeyboard() {
+        //Causes the text fields to resign the first responder status.
+        view.endEditing(true)
+    }
+    
     
   }
 

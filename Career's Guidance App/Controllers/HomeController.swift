@@ -20,11 +20,12 @@ class HomeController: UIViewController {
         return label
     }()
     
+    
+    
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
-        overrideUserInterfaceStyle = .light
         
         AuthService.shared.fetchUser { [weak self] user, error in
             guard let self = self else { return }
@@ -37,14 +38,16 @@ class HomeController: UIViewController {
                 self.label.text = "\(user.username)\n\(user.email)"
             }
         }
+        
+        overrideUserInterfaceStyle = .light
     }
+    
+    
     
     
     // MARK: - UI Setup
     private func setupUI() {
-        self.view.backgroundColor = .systemBackground
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(didTapLogout))
-        
+        self.view.backgroundColor = .white
         self.view.addSubview(label)
         label.translatesAutoresizingMaskIntoConstraints = false
         
@@ -52,21 +55,6 @@ class HomeController: UIViewController {
             label.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             label.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
         ])
-    }
-    
-    // MARK: - Selectors
-    @objc private func didTapLogout() {
-        AuthService.shared.signOut { [weak self] error in
-            guard let self = self else { return }
-            if let error = error {
-                AlertManager.showLogoutError(on: self, with: error)
-                return
-            }
-            
-            if let sceneDelegate = self.view.window?.windowScene?.delegate as? SceneDelegate {
-                sceneDelegate.checkAuthentication()
-            }
-        }
     }
     
 }
