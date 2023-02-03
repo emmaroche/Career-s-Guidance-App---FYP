@@ -55,6 +55,7 @@ class AccountView: UIView {
         return iv
     }()
     
+    
     // MARK: - LifeCycle
     init(title: String) {
         super.init(frame: .zero)
