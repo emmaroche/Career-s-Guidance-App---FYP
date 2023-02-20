@@ -11,18 +11,8 @@ class QuizView: UIView {
     
     // MARK: - UI Components
     
-    private let welcomeLabel: UILabel = {
-        
-        let label = UILabel()
-        label.textColor = .black
-        label.textAlignment = .left
-        label.font = .systemFont(ofSize: 24, weight: .bold)
-        label.text = "Error"
-//        label.numberOfLines = 3
-        return label
-    }()
     
-    private let welcomeLabelContinued: UILabel = {
+    private let welcomeLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black
         label.textAlignment = .left
@@ -63,10 +53,9 @@ class QuizView: UIView {
     }()
     
     // MARK: - LifeCycle
-    init(title: String, subTitle: String, subLabel: String, subLabel2: String, subLabel3: String) {
+    init(title: String, subLabel: String, subLabel2: String, subLabel3: String) {
         super.init(frame: .zero)
         self.welcomeLabel.text = title
-        self.welcomeLabelContinued.text = subTitle
         self.subWelcomeLabel.text = subLabel
         self.subWelcomeLabel2.text = subLabel2
         self.subWelcomeLabel3.text = subLabel3
@@ -83,13 +72,11 @@ class QuizView: UIView {
     private func setupUI() {
         
         self.addSubview(welcomeLabel)
-        self.addSubview(welcomeLabelContinued)
         self.addSubview(subWelcomeLabel)
         self.addSubview(subWelcomeLabel2)
         self.addSubview(subWelcomeLabel3)
         
         welcomeLabel.translatesAutoresizingMaskIntoConstraints = false
-        welcomeLabelContinued.translatesAutoresizingMaskIntoConstraints = false
         subWelcomeLabel.translatesAutoresizingMaskIntoConstraints = false
         subWelcomeLabel2.translatesAutoresizingMaskIntoConstraints = false
         subWelcomeLabel3.translatesAutoresizingMaskIntoConstraints = false
@@ -102,11 +89,7 @@ class QuizView: UIView {
             self.welcomeLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             self.welcomeLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor),
 
-            self.welcomeLabelContinued.topAnchor.constraint(equalTo: self.welcomeLabel.topAnchor, constant: 70),
-            self.welcomeLabelContinued.leadingAnchor.constraint(equalTo: self.welcomeLabel.leadingAnchor, constant: 3),
-            self.welcomeLabelContinued.trailingAnchor.constraint(equalTo: self.welcomeLabel.trailingAnchor, constant: -3),
-        
-            self.subWelcomeLabel.topAnchor.constraint(equalTo: self.welcomeLabelContinued.topAnchor, constant: 90),
+            self.subWelcomeLabel.topAnchor.constraint(equalTo: self.welcomeLabel.topAnchor, constant: 90),
             self.subWelcomeLabel.leadingAnchor.constraint(equalTo: self.welcomeLabel.leadingAnchor, constant: 3),
             self.subWelcomeLabel.trailingAnchor.constraint(equalTo: self.welcomeLabel.trailingAnchor, constant: -3),
             

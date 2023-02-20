@@ -18,7 +18,17 @@ class QuizViewController: UIViewController {
         return iv
     }()
     
-    private let quizViews = QuizView(title: "Welcome!", subTitle: "Our mission is to help you find your dream course, personalised to your skills and interests.",subLabel: "Let's start by taking the Course Matching Questionnaire!", subLabel2: "To get the most accurate results choose the answers that relates to you the most.", subLabel3: "Please note that only one option is accepted per question." )
+    private let label: UILabel = {
+        let label = UILabel()
+        label.textColor = .label
+        label.textAlignment = .left
+        label.font = .systemFont(ofSize: 24, weight: .semibold)
+        label.text = "Welcome, Guest!"
+        label.numberOfLines = 2
+        return label
+    }()
+    
+    private let quizViews = QuizView(title: "Our mission is to help you find your dream course, personalised to your skills and interests.", subLabel: "Let's start by taking the Course Matching Questionnaire!", subLabel2: "To get the most accurate results choose the answers that relates to you the most.", subLabel3: "Please note that only one option is accepted per question." )
 
     private let getStartedButton = CustomButton(title: "Get Started", hasBackground: true, fontSize: .biglol)
     
@@ -28,6 +38,18 @@ class QuizViewController: UIViewController {
         self.setupUI()
         self.getStartedButton.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
         
+        AuthService.shared.fetchUser { [weak self] user, error in
+            guard let self = self else { return }
+            if let error = error {
+                AlertManager.showFetchingUserError(on: self, with: error)
+                return
+            }
+            
+            if let user = user {
+                self.label.text = "Welcome, \(user.username.capitalized)!"
+            }
+        }
+        
         overrideUserInterfaceStyle = .light
     }
     
@@ -36,12 +58,14 @@ class QuizViewController: UIViewController {
         self.view.backgroundColor = .white
         
         self.view.addSubview(logoImageView)
+        self.view.addSubview(label)
         self.view.addSubview(quizViews)
         self.view.addSubview(getStartedButton)
 
     
         //enables autolayout for view
         logoImageView.translatesAutoresizingMaskIntoConstraints = false
+        label.translatesAutoresizingMaskIntoConstraints = false
         quizViews.translatesAutoresizingMaskIntoConstraints = false
         getStartedButton.translatesAutoresizingMaskIntoConstraints = false
 
@@ -52,7 +76,12 @@ class QuizViewController: UIViewController {
             self.logoImageView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
             self.logoImageView.heightAnchor.constraint(equalToConstant: 230),
 
-            self.quizViews.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 40),
+
+            self.label.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 40),
+            self.label.centerXAnchor.constraint(equalTo: logoImageView.centerXAnchor),
+            self.label.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85),
+            
+            self.quizViews.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 40),
             self.quizViews.centerXAnchor.constraint(equalTo: logoImageView.centerXAnchor),
             self.quizViews.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85),
 

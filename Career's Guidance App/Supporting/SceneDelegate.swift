@@ -28,9 +28,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     public func checkAuthentication() {
         if Auth.auth().currentUser == nil {
-            self.goToController(with: QuizViewController())
+            self.goToController(with: WelcomeController())
         } else {
-            self.goToController(with: NavigationTabBarController())
+            self.goToController(with: QuizViewController())
         }
     }
     
