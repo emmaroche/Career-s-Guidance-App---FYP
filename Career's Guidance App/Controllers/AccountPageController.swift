@@ -8,14 +8,15 @@
 import UIKit
 
 class AccountPageController: UIViewController {
-        
+    
+    
         private let headerView = AccountView(title: "Account Settings")
         
         private let signUpButton = CustomButton(title: "Log out", hasBackground: true, fontSize: .med)
         
         // MARK: - UI Components
         
-        //Crete outline around text labels Code Reference: https://stackoverflow.com/questions/74048697/how-do-i-create-a-text-box-view-in-ios-programmatically
+        //Create outline around text labels. Intial Code Reference (hugely modified/repurposed): https://stackoverflow.com/questions/74048697/how-do-i-create-a-text-box-view-in-ios-programmatically
         
         lazy var mainView: UIView = {
             let view = UIView()
@@ -173,6 +174,7 @@ class AccountPageController: UIViewController {
     }
         
         // MARK: - Selectors
+    
         @objc private func didTapLogout() {
             AuthService.shared.signOut { [weak self] error in
                 guard let self = self else { return }
