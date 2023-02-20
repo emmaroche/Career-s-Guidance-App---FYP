@@ -29,6 +29,7 @@
 		0456AB87299E5E1000C8369A /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456AB86299E5E1000C8369A /* QuizViewController.swift */; };
 		0456F73B29A3B57300414B9C /* QuizScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456F73A29A3B57300414B9C /* QuizScreen.swift */; };
 		0456F73F29A3C04D00414B9C /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456F73E29A3C04D00414B9C /* QuizView.swift */; };
+		0456F74329A3E6DF00414B9C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456F74229A3E6DF00414B9C /* HomeView.swift */; };
 		046F2BB72982A30100F4D6BC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 046F2BB62982A30100F4D6BC /* GoogleService-Info.plist */; };
 		046F2BBA2982A4E900F4D6BC /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 046F2BB92982A4E900F4D6BC /* FirebaseAnalytics */; };
 		046F2BBC2982A4E900F4D6BC /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 046F2BBB2982A4E900F4D6BC /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -111,6 +112,7 @@
 		0456AB86299E5E1000C8369A /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		0456F73A29A3B57300414B9C /* QuizScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizScreen.swift; sourceTree = "<group>"; };
 		0456F73E29A3C04D00414B9C /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
+		0456F74229A3E6DF00414B9C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		046F2BB62982A30100F4D6BC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		04A1448B29831831007F60A6 /* WelcomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
 		04A1448D29831D4F007F60A6 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 				04FA68B22986F6F500B9811E /* NavigationView.swift */,
 				0456F73A29A3B57300414B9C /* QuizScreen.swift */,
 				0456F73E29A3C04D00414B9C /* QuizView.swift */,
+				0456F74229A3E6DF00414B9C /* HomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 				0439A9B82982DC1200942926 /* RegisterController.swift in Sources */,
 				0439A9CF2982DC5800942926 /* LoginUserRequest.swift in Sources */,
 				0439A9D02982DC5800942926 /* RegisterUserRequest.swift in Sources */,
+				0456F74329A3E6DF00414B9C /* HomeView.swift in Sources */,
 				0439A9B92982DC1200942926 /* ForgotPasswordController.swift in Sources */,
 				04FA68A72986C3E600B9811E /* AccountPageController.swift in Sources */,
 				0439A9BA2982DC1200942926 /* HomeController.swift in Sources */,

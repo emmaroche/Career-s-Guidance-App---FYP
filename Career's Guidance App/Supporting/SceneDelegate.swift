@@ -30,7 +30,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if Auth.auth().currentUser == nil {
             self.goToController(with: WelcomeController())
         } else {
-            self.goToController(with: QuizViewController())
+            self.goToController(with: HomeController())
         }
     }
     
