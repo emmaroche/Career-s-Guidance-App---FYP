@@ -23,7 +23,7 @@ class QuizViewController: UIViewController {
         label.textColor = .label
         label.textAlignment = .left
         label.font = .systemFont(ofSize: 24, weight: .semibold)
-        label.text = "Welcome, Guest!"
+        label.text = "Welcome!"
         label.numberOfLines = 2
         return label
     }()
