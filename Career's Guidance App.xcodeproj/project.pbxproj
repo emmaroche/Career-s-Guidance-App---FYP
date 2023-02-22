@@ -68,8 +68,6 @@
 		04ADB7242982A11800BCFAC5 /* Career_s_Guidance_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ADB7232982A11800BCFAC5 /* Career_s_Guidance_AppTests.swift */; };
 		04ADB72E2982A11800BCFAC5 /* Career_s_Guidance_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ADB72D2982A11800BCFAC5 /* Career_s_Guidance_AppUITests.swift */; };
 		04ADB7302982A11800BCFAC5 /* Career_s_Guidance_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ADB72F2982A11800BCFAC5 /* Career_s_Guidance_AppUITestsLaunchTests.swift */; };
-		04EF024929A64C0B0018C090 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF024829A64C0B0018C090 /* ViewController2.swift */; };
-		04EF024D29A650140018C090 /* TableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF024C29A650140018C090 /* TableViewCell2.swift */; };
 		04FA68A72986C3E600B9811E /* AccountPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA68A62986C3E600B9811E /* AccountPageController.swift */; };
 		04FA68A92986C8BB00B9811E /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA68A82986C8BB00B9811E /* AccountView.swift */; };
 		04FA68B32986F6F500B9811E /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA68B22986F6F500B9811E /* NavigationView.swift */; };
@@ -131,8 +129,6 @@
 		04ADB7292982A11800BCFAC5 /* Career's Guidance AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Career's Guidance AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04ADB72D2982A11800BCFAC5 /* Career_s_Guidance_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Career_s_Guidance_AppUITests.swift; sourceTree = "<group>"; };
 		04ADB72F2982A11800BCFAC5 /* Career_s_Guidance_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Career_s_Guidance_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		04EF024829A64C0B0018C090 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
-		04EF024C29A650140018C090 /* TableViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell2.swift; sourceTree = "<group>"; };
 		04FA68A62986C3E600B9811E /* AccountPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPageController.swift; sourceTree = "<group>"; };
 		04FA68A82986C8BB00B9811E /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		04FA68B22986F6F500B9811E /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
@@ -202,7 +198,6 @@
 				0435CFF9298BF07E00670D1A /* NavigationTabBarController.swift */,
 				0456AB84299E4F5500C8369A /* ViewController.swift */,
 				0456AB86299E5E1000C8369A /* QuizViewController.swift */,
-				04EF024829A64C0B0018C090 /* ViewController2.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -224,7 +219,6 @@
 				0456F73E29A3C04D00414B9C /* QuizView.swift */,
 				0456F74229A3E6DF00414B9C /* HomeView.swift */,
 				0456F74429A5065800414B9C /* TableViewCell.swift */,
-				04EF024C29A650140018C090 /* TableViewCell2.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -467,7 +461,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0439A9B82982DC1200942926 /* RegisterController.swift in Sources */,
-				04EF024929A64C0B0018C090 /* ViewController2.swift in Sources */,
 				0439A9CF2982DC5800942926 /* LoginUserRequest.swift in Sources */,
 				0439A9D02982DC5800942926 /* RegisterUserRequest.swift in Sources */,
 				0456F74329A3E6DF00414B9C /* HomeView.swift in Sources */,
@@ -475,7 +468,6 @@
 				04FA68A72986C3E600B9811E /* AccountPageController.swift in Sources */,
 				0439A9BA2982DC1200942926 /* HomeController.swift in Sources */,
 				0456F73F29A3C04D00414B9C /* QuizView.swift in Sources */,
-				04EF024D29A650140018C090 /* TableViewCell2.swift in Sources */,
 				0439A9D52982DC8600942926 /* AuthService.swift in Sources */,
 				0439A9C52982DC4500942926 /* CustomTextField.swift in Sources */,
 				0456F73B29A3B57300414B9C /* QuizScreen.swift in Sources */,
