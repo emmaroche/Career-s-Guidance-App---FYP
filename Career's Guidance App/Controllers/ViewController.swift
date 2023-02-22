@@ -5,74 +5,66 @@
 //  Created by Emma Roche on 16/02/2023.
 //
 
-import FirebaseFirestore
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
-    
-    let database = Firestore.firestore()
+class CardContent {
 
-    private let label: UILabel = {
-        
-        let label = UILabel()
-        label.textAlignment = .center
-        label.numberOfLines = 0
-        return label
-    }()
+    var title: String?
+    var content: String?
+    var buttonImage: UIImage?
     
-    private let field: UITextField = {
-        
-        let field = UITextField()
-        field.placeholder = "LOL"
-        field.layer.borderWidth = 1
-        field.layer.borderColor = UIColor.black.cgColor
-        
-        return field
-    }()
+    init(title: String, content: String, buttonImage: UIImage) {
+        self.buttonImage = buttonImage
+        self.title = title
+        self.content = content
+    }
+}
+
+class ViewController: UIViewController {
     
+    var tableView = UITableView()
+    
+    var content = [CardContent]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(label)
-        view.addSubview(field)
-        field.delegate = self
-
-        
-        let dofRef = database.document("cga/textinput")
-        
-        dofRef.addSnapshotListener { [weak self] snapshot, error in
-            guard let data = snapshot?.data(), error == nil else {
-                return
-            }
-
-            guard let text = data["text"] as? String else{
-                return
-            }
-
-            DispatchQueue.main.async {
-                self?.label.text = text
-            }
-        }
-        
-        view.backgroundColor = .white
+        setTableView()
+        content.append(CardContent(title: "Questionnaire", content: "Retake questionnaire", buttonImage: #imageLiteral(resourceName: "arrow")))
+        content.append(CardContent(title: "Results Dashboard", content: "View questionnaire results",buttonImage: #imageLiteral(resourceName: "arrow")))
     }
 
-    override func viewDidLayoutSubviews() {
-       super.viewDidLayoutSubviews()
-        field.frame = CGRect(x: 10, y: view.safeAreaInsets.top+10, width: view.frame.size.width-20, height: 50)
-        label.frame = CGRect(x: 10, y: view.safeAreaInsets.top+10+60, width: view.frame.size.width-20, height: 100)
+    func setTableView() {
+        tableView.frame = self.view.frame
+        tableView.backgroundColor = UIColor.clear
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.separatorColor = UIColor.clear
+        tableView.backgroundColor = .white
+        self.view.addSubview(tableView)
+        
+        tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: "Cell")
+    }
+}
+
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return content.count
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if let text = textField.text, !text.isEmpty {
-            saveData(text: text)
-        }
-       return true
-    }
-
-    func saveData(text: String){
-        let dofRef = database.document("cga/ex")
-        dofRef.setData(["text": text])
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? CustomTableViewCell else {fatalError("Unable to create cell")}
+        cell.contentTitle.text = content[indexPath.row].title
+        cell.contentText.text = content[indexPath.row].content
+        cell.buttonImage.image = content[indexPath.row].buttonImage
         
+        return cell
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 160
+    }
+    
     
 }
+

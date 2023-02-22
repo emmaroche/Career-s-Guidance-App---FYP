@@ -41,6 +41,7 @@ class HomeView: UIView {
         return label
     }()
     
+    
     // MARK: - LifeCycle
     init(hLabel1: String, hLabel2: String, hLabel3: String) {
         super.init(frame: .zero)
