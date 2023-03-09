@@ -62,7 +62,6 @@
 		046F2BEA2982A4E900F4D6BC /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 046F2BE92982A4E900F4D6BC /* FirebaseRemoteConfigSwift */; };
 		046F2BEC2982A4E900F4D6BC /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 046F2BEB2982A4E900F4D6BC /* FirebaseStorage */; };
 		046F2BEE2982A4E900F4D6BC /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 046F2BED2982A4E900F4D6BC /* FirebaseStorageCombine-Community */; };
-		049BBA0129BA37290065B481 /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049BBA0029BA37290065B481 /* Survey.swift */; };
 		04A1448C29831831007F60A6 /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A1448B29831831007F60A6 /* WelcomeController.swift */; };
 		04A1448E29831D4F007F60A6 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A1448D29831D4F007F60A6 /* WelcomeView.swift */; };
 		04ADB70D2982A11600BCFAC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ADB70C2982A11600BCFAC5 /* AppDelegate.swift */; };
@@ -124,7 +123,6 @@
 		04597E9829B0F1E9000BF3AB /* QuestionsVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsVIew.swift; sourceTree = "<group>"; };
 		04597E9A29B0F210000BF3AB /* QA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QA.swift; sourceTree = "<group>"; };
 		046F2BB62982A30100F4D6BC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		049BBA0029BA37290065B481 /* Survey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
 		04A1448B29831831007F60A6 /* WelcomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
 		04A1448D29831D4F007F60A6 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		04ADB7092982A11600BCFAC5 /* Career's Guidance App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Career's Guidance App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -242,7 +240,6 @@
 				0439A9CD2982DC5800942926 /* RegisterUserRequest.swift */,
 				0439A9CE2982DC5800942926 /* User.swift */,
 				04EF025029A67C050018C090 /* Questionnaire.swift */,
-				049BBA0029BA37290065B481 /* Survey.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -490,7 +487,6 @@
 				0439A9B92982DC1200942926 /* ForgotPasswordController.swift in Sources */,
 				04FA68A72986C3E600B9811E /* AccountPageController.swift in Sources */,
 				0439A9BA2982DC1200942926 /* HomeController.swift in Sources */,
-				049BBA0129BA37290065B481 /* Survey.swift in Sources */,
 				0456F73F29A3C04D00414B9C /* QuizView.swift in Sources */,
 				04597E9B29B0F210000BF3AB /* QA.swift in Sources */,
 				0439A9D52982DC8600942926 /* AuthService.swift in Sources */,
