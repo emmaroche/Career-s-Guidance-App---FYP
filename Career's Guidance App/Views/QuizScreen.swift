@@ -19,7 +19,7 @@ struct QuizScreen: View {
     
     @State var show = false
     // Storing Level for Fetching Questions
-    @State var set = "Round_1"
+    @State var set = "Questionnaire_1"
     
     // for analytics
     @State var correct = 0
@@ -85,7 +85,7 @@ struct QuizScreen: View {
                     .cornerRadius(12)
                     // opening QA view as sheet
                     .onTapGesture {
-                        set = "Round_\(index)"
+                        set = "Questionnaire_\(index)"
                         show.toggle()
                     }
                 }

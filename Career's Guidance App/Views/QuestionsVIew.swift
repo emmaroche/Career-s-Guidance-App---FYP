@@ -38,100 +38,100 @@ struct QuestionView: View {
             
             // Options
             Button(action: {
-                selected = question.option1!
-                if selected == question.option1!{
-                    question.answer = question.option1
+                selected = (question.answer_choices?[0])!
+                if selected == question.answer_choices![0]{
+                    question.answer = question.answer_choices![0]
                 }
             }) {
-                Text(question.option1!)
+                Text(question.answer_choices![0])
                     .foregroundColor(.black)
                     .padding()
                     .frame(maxWidth: .infinity)
                     .background(
                         RoundedRectangle(cornerRadius: 15)
-                            .stroke(color(option: question.option1!), lineWidth: 2)
+                            .stroke(color(option: question.answer_choices![0]), lineWidth: 2)
                     )
             }
             
             Button(action: {
-                selected = question.option2!
-                if selected == question.option2!{
-                    question.answer = question.option2
+                selected = (question.answer_choices?[1])!
+                if selected == question.answer_choices![1]{
+                    question.answer = question.answer_choices![1]
                 }
             }) {
-                Text(question.option2!)
+                Text(question.answer_choices![1])
                     .foregroundColor(.black)
                     .padding()
                     .frame(maxWidth: .infinity)
                     .background(
                         RoundedRectangle(cornerRadius: 15)
-                            .stroke(color(option: question.option2!), lineWidth: 2)
+                            .stroke(color(option: question.answer_choices![1]), lineWidth: 2)
                     )
             }
             
             Button(action: {
-                selected = question.option3!
-                if selected == question.option3!{
-                    question.answer = question.option3
+                selected = (question.answer_choices?[2])!
+                if selected == question.answer_choices![2]{
+                    question.answer = question.answer_choices![2]
                 }
             }) {
-                Text(question.option3!)
+                Text(question.answer_choices![2])
                     .foregroundColor(.black)
                     .padding()
                     .frame(maxWidth: .infinity)
                     .background(
                         RoundedRectangle(cornerRadius: 15)
-                            .stroke(color(option: question.option3!), lineWidth: 2)
+                            .stroke(color(option: question.answer_choices![2]), lineWidth: 2)
                     )
             }
             
             Button(action: {
                 
-                selected = question.option4!
-                if selected == question.option4!{
-                    question.answer = question.option4
+                selected = (question.answer_choices?[3])!
+                if selected == question.answer_choices![3]{
+                    question.answer = question.answer_choices![3]
                 }
             }) {
-                Text(question.option4!)
+                Text(question.answer_choices![3])
                     .foregroundColor(.black)
                     .padding()
                     .frame(maxWidth: .infinity)
                     .background(
                         RoundedRectangle(cornerRadius: 15)
-                            .stroke(color(option: question.option4!), lineWidth: 2)
+                            .stroke(color(option: question.answer_choices![3]), lineWidth: 2)
                     )
             }
             
             Button(action: {
-                selected = question.option5!
-                if selected == question.option5!{
-                    question.answer = question.option5
+                selected = (question.answer_choices?[4])!
+                if selected == question.answer_choices![4]{
+                    question.answer = question.answer_choices![4]
                 }
             }) {
-                Text(question.option5!)
+                Text(question.answer_choices![4])
                     .foregroundColor(.black)
                     .padding()
                     .frame(maxWidth: .infinity)
                     .background(
                         RoundedRectangle(cornerRadius: 15)
-                            .stroke(color(option: question.option5!), lineWidth: 2)
+                            .stroke(color(option: question.answer_choices![4]), lineWidth: 2)
                     )
             }
             
             Button(action: {
-                selected = question.option6!
-                if selected == question.option6!{
-                  question.answer = question.option6
+                selected = (question.answer_choices?[5])!
+                if selected == question.answer_choices![5]{
+                  question.answer = question.answer_choices![5]
                 }
 
             }) {
-                Text(question.option6!)
+                Text(question.answer_choices![5])
                     .foregroundColor(.black)
                     .padding()
                     .frame(maxWidth: .infinity)
                     .background(
                         RoundedRectangle(cornerRadius: 15)
-                            .stroke(color(option: question.option6!), lineWidth: 2)
+                            .stroke(color(option: question.answer_choices![5]), lineWidth: 2)
                     )
             }
             
@@ -215,27 +215,27 @@ struct QuestionView: View {
     }
     
     func countAns() {
-        if selected == question.option1! {
+        if selected == question.answer_choices![0] {
             social += 1
         }
         
-        if selected == question.option2! {
+        if selected == question.answer_choices![1] {
             creative += 1
         }
         
-        if selected == question.option3! {
+        if selected == question.answer_choices![2] {
             social += 1
         }
         
-        if selected == question.option4! {
+        if selected == question.answer_choices![3] {
             creative += 1
         }
         
-        if selected == question.option5! {
+        if selected == question.answer_choices![4] {
             social += 1
         }
         
-        if selected == question.option6! {
+        if selected == question.answer_choices![5] {
             creative += 1
         }
         
@@ -243,3 +243,4 @@ struct QuestionView: View {
         question.isSubmitted.toggle()
     }
 }
+

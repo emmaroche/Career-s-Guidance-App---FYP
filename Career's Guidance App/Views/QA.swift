@@ -150,7 +150,33 @@ struct QA: View {
                                     .cornerRadius(15)
                             }
                         }
-                    } else {
+                    }; if answered == data.questions.count && creative >= 2 {
+                        VStack(spacing: 25) {
+                            
+                            Text("YOU ARE VERY CREATIVE!")
+                                .font(.title)
+                                .fontWeight(.heavy)
+                                .foregroundColor(.black)
+                            
+                            
+                            Button(action: {
+                                // closing sheet
+                                present.wrappedValue.dismiss()
+                                answered = 0
+                                correct = 0
+                                wrong = 0
+                            }) {
+                                Text("Go to Home")
+                                    .fontWeight(.heavy)
+                                    .foregroundColor(.white)
+                                    .padding(.vertical)
+                                    .frame(width: UIScreen.main.bounds.width - 150)
+                                    .background(Color.blue)
+                                    .cornerRadius(15)
+                            }
+                        }
+                    }
+                    else {
                         VStack {
                             // Top Progress View
                             ZStack(alignment: Alignment(horizontal: .leading, vertical: .center)) {

@@ -9,6 +9,7 @@ import SwiftUI
 
 import SwiftUI
 import Firebase
+import FirebaseFirestore
 
 class QuestionViewModel: ObservableObject {
     @Published var questions: [Question] = []
@@ -19,7 +20,7 @@ class QuestionViewModel: ObservableObject {
         let db = Firestore.firestore()
         
         // change this to set
-        db.collection("Round_1").getDocuments { (snapshot, err) in
+        db.collection("Questionnaire_1").getDocuments { (snapshot, err) in
             
             guard let data = snapshot else { return }
             
