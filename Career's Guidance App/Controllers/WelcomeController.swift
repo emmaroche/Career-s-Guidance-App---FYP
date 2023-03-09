@@ -102,7 +102,7 @@ class WelcomeController: UIViewController {
     }
     
     @objc private func didTapGuest() {
-        let vc = HomeController()
+        let vc = NavigationTabBarController()
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
