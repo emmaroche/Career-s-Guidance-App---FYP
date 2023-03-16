@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0400554D29BDEA2900EEB2A9 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400554C29BDEA2900EEB2A9 /* CategoryViewModel.swift */; };
 		0435CFFA298BF07E00670D1A /* NavigationTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0435CFF9298BF07E00670D1A /* NavigationTabBarController.swift */; };
 		0439A9B72982DC1200942926 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0439A9B22982DC1200942926 /* LoginController.swift */; };
 		0439A9B82982DC1200942926 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0439A9B32982DC1200942926 /* RegisterController.swift */; };
@@ -25,6 +26,7 @@
 		0439A9D32982DC7500942926 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0439A9D22982DC7500942926 /* AlertManager.swift */; };
 		0439A9D52982DC8600942926 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0439A9D42982DC8600942926 /* AuthService.swift */; };
 		0439A9D72982DC8A00942926 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0439A9D62982DC8A00942926 /* Validator.swift */; };
+		044351E129C35EA800F2DC6C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044351E029C35EA800F2DC6C /* Category.swift */; };
 		0456AB85299E4F5500C8369A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456AB84299E4F5500C8369A /* ViewController.swift */; };
 		0456AB87299E5E1000C8369A /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456AB86299E5E1000C8369A /* QuizViewController.swift */; };
 		0456F73B29A3B57300414B9C /* QuizScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456F73A29A3B57300414B9C /* QuizScreen.swift */; };
@@ -95,6 +97,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0400554C29BDEA2900EEB2A9 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 		0435CFF9298BF07E00670D1A /* NavigationTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTabBarController.swift; sourceTree = "<group>"; };
 		0439A9B22982DC1200942926 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		0439A9B32982DC1200942926 /* RegisterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
@@ -113,6 +116,7 @@
 		0439A9D22982DC7500942926 /* AlertManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		0439A9D42982DC8600942926 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		0439A9D62982DC8A00942926 /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		044351E029C35EA800F2DC6C /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		0456AB84299E4F5500C8369A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0456AB86299E5E1000C8369A /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		0456F73A29A3B57300414B9C /* QuizScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizScreen.swift; sourceTree = "<group>"; };
@@ -240,6 +244,7 @@
 				0439A9CD2982DC5800942926 /* RegisterUserRequest.swift */,
 				0439A9CE2982DC5800942926 /* User.swift */,
 				04EF025029A67C050018C090 /* Questionnaire.swift */,
+				044351E029C35EA800F2DC6C /* Category.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -248,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				04597E9629B0F177000BF3AB /* QuestionViewModel.swift */,
+				0400554C29BDEA2900EEB2A9 /* CategoryViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -505,6 +511,7 @@
 				0435CFFA298BF07E00670D1A /* NavigationTabBarController.swift in Sources */,
 				0439A9C82982DC4500942926 /* AuthHeaderView.swift in Sources */,
 				04EF025129A67C050018C090 /* Questionnaire.swift in Sources */,
+				0400554D29BDEA2900EEB2A9 /* CategoryViewModel.swift in Sources */,
 				04A1448C29831831007F60A6 /* WelcomeController.swift in Sources */,
 				0456F74529A5065800414B9C /* TableViewCell.swift in Sources */,
 				04ADB70D2982A11600BCFAC5 /* AppDelegate.swift in Sources */,
@@ -512,6 +519,7 @@
 				0439A9D12982DC5800942926 /* User.swift in Sources */,
 				04FA68B32986F6F500B9811E /* NavigationView.swift in Sources */,
 				0439A9CA2982DC4500942926 /* CustomSecondaryButton.swift in Sources */,
+				044351E129C35EA800F2DC6C /* Category.swift in Sources */,
 				0456AB87299E5E1000C8369A /* QuizViewController.swift in Sources */,
 				04ADB70F2982A11600BCFAC5 /* SceneDelegate.swift in Sources */,
 				0439A9C92982DC4500942926 /* BasicText.swift in Sources */,
