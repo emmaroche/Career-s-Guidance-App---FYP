@@ -12,9 +12,13 @@ struct QuestionView: View {
     @Binding var correct: Int
     @Binding var wrong: Int
     @Binding var answered: Int
-    @Binding var social: Int
-    @Binding var creative: Int
     
+    //Calling Category array from QA
+    @Binding var categories: [Category]
+    
+    //order of counts: social, artistic,
+//    @State var categoryCount = [0,0,0,0,0,0]
+
     @State var selected = ""
     
     var body: some View {
@@ -181,64 +185,46 @@ struct QuestionView: View {
     // highlighting Answer
     func color(option: String) -> Color {
         if option == selected {
-            // displaying if correct means green, else red
-//            if question.isSubmitted {
-//                if selected == question.answer! {
-//                    return Color.green
-//                } else {
-//                    return Color.red
-//                }
-//            } else {
                 return Color.blue
             
         } else {
-            // displaying right if wrong selected
-//            if question.isSubmitted && option != selected {
-//                if question.answer! == option {
-//                    return Color.green
-//                }
-//            }
             
             return Color.gray
         }
     }
     
-    // check Answer
-    func checkAns() {
-        if selected == question.answer! {
-            correct += 1
-        } else {
-            wrong += 1
-        }
-        
-        question.isSubmitted.toggle()
-    }
     
-    func countAns() {
+     func countAns() {
         if selected == question.answer_choices![0] {
-            social += 1
+            //social += 1
+            categories[0].categoryCount += 1
         }
         
         if selected == question.answer_choices![1] {
-            creative += 1
+//           artistic += 1
+            categories[1].categoryCount += 1
         }
         
         if selected == question.answer_choices![2] {
-            social += 1
+//            realistic += 1
+            categories[2].categoryCount += 1
         }
         
         if selected == question.answer_choices![3] {
-            creative += 1
+//            conventional += 1
+            categories[3].categoryCount += 1
         }
         
         if selected == question.answer_choices![4] {
-            social += 1
+//            enterprising += 1
+            categories[4].categoryCount += 1
+
         }
         
         if selected == question.answer_choices![5] {
-            creative += 1
+//            investigative += 1
+            categories[5].categoryCount += 1
         }
-        
         
         question.isSubmitted.toggle()
     }

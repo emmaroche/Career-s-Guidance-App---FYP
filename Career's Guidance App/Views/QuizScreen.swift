@@ -25,8 +25,7 @@ struct QuizScreen: View {
     @State var correct = 0
     @State var wrong = 0
     @State var answerd = 0
-    @State var social = 0
-    @State var creative = 0
+    
     
     var body: some View {
         VStack {
@@ -97,7 +96,7 @@ struct QuizScreen: View {
         }
         .background(Color.black.opacity(0.05).ignoresSafeArea())
         .sheet(isPresented: $show) {
-            QA(correct: $correct, wrong: $wrong, social: $social, creative: $creative, answered: $answerd, set: set)
+            QA(correct: $correct, wrong: $wrong, answered: $answerd, set: set)
         }
     }
 }

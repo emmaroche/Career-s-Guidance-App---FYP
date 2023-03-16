@@ -6,8 +6,6 @@
 //
 
 import SwiftUI
-
-import SwiftUI
 import Firebase
 import FirebaseFirestore
 
@@ -33,4 +31,5 @@ class QuestionViewModel: ObservableObject {
             
         }
     }
+    
 }

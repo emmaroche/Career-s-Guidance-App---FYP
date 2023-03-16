@@ -25,6 +25,7 @@ struct Question: Identifiable, Codable {
 //    var option6: String?
     var answer: String?
     var answer_choices: [String]?
+
     
     // for checking
     var isSubmitted = false
@@ -42,6 +43,5 @@ struct Question: Identifiable, Codable {
 //        case option6 = "f"
         case answer
         case answer_choices
-//        case choices
     }
 }
