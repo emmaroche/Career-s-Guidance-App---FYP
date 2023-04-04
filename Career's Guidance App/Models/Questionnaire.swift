@@ -13,20 +13,13 @@ import SwiftUI
 import FirebaseFirestoreSwift
 
 struct Question: Identifiable, Codable {
-    // it will fetch doc ID
+    // fetch doc ID
     @DocumentID var id: String?
     var question: String?
     var question_number: String?
-//    var option1: String?
-//    var option2: String?
-//    var option3: String?
-//    var option4: String?
-//    var option5: String?
-//    var option6: String?
     var answer: String?
     var answer_choices: [String]?
 
-    
     // for checking
     var isSubmitted = false
     var completed = false
@@ -35,13 +28,8 @@ struct Question: Identifiable, Codable {
     enum CodingKeys: String, CodingKey {
         case question
         case question_number
-//        case option1 = "a"
-//        case option2 = "b"
-//        case option3 = "c"
-//        case option4 = "d"
-//        case option5 = "e"
-//        case option6 = "f"
         case answer
         case answer_choices
     }
+
 }

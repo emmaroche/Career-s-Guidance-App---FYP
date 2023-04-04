@@ -7,6 +7,7 @@
 
 struct Category: Comparable {
     var categoryName: String
+    var categoryDescription: String
     var categoryCount: Int
     
     static func < (lhs: Category, rhs: Category) -> Bool {

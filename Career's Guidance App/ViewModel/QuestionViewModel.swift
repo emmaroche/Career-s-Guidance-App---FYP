@@ -25,7 +25,7 @@ class QuestionViewModel: ObservableObject {
             DispatchQueue.main.async {
                 self.questions = data.documents.compactMap({ (doc) -> Question? in
                     return try? doc.data(as: Question.self)
-                })
+                }).shuffled() //https://developer.apple.com/documentation/swift/array/shuffled()
                 print(self.questions)
             }
             
