@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreMIDI
 
 // Resource that helped me with importing custom app colours https://levelup.gitconnected.com/using-custom-colors-in-swiftui-d16f07d6a71e
 
@@ -16,16 +17,15 @@ struct CustomColour {
 
 struct QuizScreen: View {
     
-    
     @State var show = false
+    
     // Storing Level for Fetching Questions
     @State var set = "Questionnaire_1"
     
     // for analytics
-    @State var correct = 0
-    @State var wrong = 0
-    @State var answerd = 0
+    @State var answered = 0
     
+    @StateObject var data = ResultViewModel()
     
     var body: some View {
         VStack {
@@ -61,8 +61,16 @@ struct QuizScreen: View {
                 .padding(.trailing, 10)
                 .padding(.top, 20)
                 .fixedSize(horizontal: false, vertical: true)
-
             
+            Text("NOTE: There is no right or wrong answers")
+                .font(.system(size: 18))
+                .fontWeight(.regular)
+                .foregroundColor(.black)
+                .padding(.leading, -10)
+                .padding(.trailing, 10)
+                .padding(.top, 20)
+                .fixedSize(horizontal: false, vertical: true)
+
             Spacer(minLength: 0)
             
             // Level View
@@ -96,7 +104,7 @@ struct QuizScreen: View {
         }
         .background(Color.black.opacity(0.05).ignoresSafeArea())
         .sheet(isPresented: $show) {
-            QA(correct: $correct, wrong: $wrong, answered: $answerd, set: set)
+            QA(answered: $answered, set: set)
         }
     }
 }

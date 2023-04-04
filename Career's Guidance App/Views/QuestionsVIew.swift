@@ -9,19 +9,18 @@ import SwiftUI
 
 struct QuestionView: View {
     @Binding var question: Question
-    @Binding var correct: Int
-    @Binding var wrong: Int
+//    @Binding var results: Results
     @Binding var answered: Int
+    
+    //var shuffle: true if shuffle...... set it to false after for
     
     //Calling Category array from QA
     @Binding var categories: [Category]
-    
-    //order of counts: social, artistic,
-//    @State var categoryCount = [0,0,0,0,0,0]
 
     @State var selected = ""
     
     var body: some View {
+        
         VStack(alignment: .leading, spacing: 22) {
             HStack(spacing: 15){
             Text(question.question!)
@@ -30,117 +29,64 @@ struct QuestionView: View {
                 .foregroundColor(.black)
                 .padding(.top, 25)
             
-            
             Spacer(minLength: 0)
             
-            Text(question.question_number!)
-                .font(.title2)
-                .fontWeight(.heavy)
-                .foregroundColor(.black)
-                .padding(.top, 25)
             }
-            
-            // Options
-            Button(action: {
-                selected = (question.answer_choices?[0])!
-                if selected == question.answer_choices![0]{
-                    question.answer = question.answer_choices![0]
-                }
-            }) {
-                Text(question.answer_choices![0])
-                    .foregroundColor(.black)
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .background(
-                        RoundedRectangle(cornerRadius: 15)
-                            .stroke(color(option: question.answer_choices![0]), lineWidth: 2)
-                    )
-            }
-            
-            Button(action: {
-                selected = (question.answer_choices?[1])!
-                if selected == question.answer_choices![1]{
-                    question.answer = question.answer_choices![1]
-                }
-            }) {
-                Text(question.answer_choices![1])
-                    .foregroundColor(.black)
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .background(
-                        RoundedRectangle(cornerRadius: 15)
-                            .stroke(color(option: question.answer_choices![1]), lineWidth: 2)
-                    )
-            }
-            
-            Button(action: {
-                selected = (question.answer_choices?[2])!
-                if selected == question.answer_choices![2]{
-                    question.answer = question.answer_choices![2]
-                }
-            }) {
-                Text(question.answer_choices![2])
-                    .foregroundColor(.black)
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .background(
-                        RoundedRectangle(cornerRadius: 15)
-                            .stroke(color(option: question.answer_choices![2]), lineWidth: 2)
-                    )
-            }
-            
-            Button(action: {
-                
-                selected = (question.answer_choices?[3])!
-                if selected == question.answer_choices![3]{
-                    question.answer = question.answer_choices![3]
-                }
-            }) {
-                Text(question.answer_choices![3])
-                    .foregroundColor(.black)
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .background(
-                        RoundedRectangle(cornerRadius: 15)
-                            .stroke(color(option: question.answer_choices![3]), lineWidth: 2)
-                    )
-            }
-            
-            Button(action: {
-                selected = (question.answer_choices?[4])!
-                if selected == question.answer_choices![4]{
-                    question.answer = question.answer_choices![4]
-                }
-            }) {
-                Text(question.answer_choices![4])
-                    .foregroundColor(.black)
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .background(
-                        RoundedRectangle(cornerRadius: 15)
-                            .stroke(color(option: question.answer_choices![4]), lineWidth: 2)
-                    )
-            }
-            
-            Button(action: {
-                selected = (question.answer_choices?[5])!
-                if selected == question.answer_choices![5]{
-                  question.answer = question.answer_choices![5]
-                }
+    
+                ForEach(question.answer_choices!, id: \.self) { answerChoice in
 
-            }) {
-                Text(question.answer_choices![5])
-                    .foregroundColor(.black)
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .background(
-                        RoundedRectangle(cornerRadius: 15)
-                            .stroke(color(option: question.answer_choices![5]), lineWidth: 2)
-                    )
-            }
-            
-            Spacer(minLength: 0)
-            
+                    Button(action: {
+                        selected = answerChoice
+                        question.answer = answerChoice
+                    }) {
+                        Text(answerChoice)
+                            .foregroundColor(.black)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(
+                                RoundedRectangle(cornerRadius: 15)
+                                    .stroke(color(option: answerChoice), lineWidth: 2)
+                            )
+                    }
+
+                }
+//                
+//                .onAppear {
+//                    question.answer_choices?.shuffle()
+//
+//                }
+//
+//            // Create a new shuffled array for display
+//            let shuffledAnswerChoices = question.answer_choices?.shuffled()
+//
+//            // Use the shuffled array for display
+//            ForEach(shuffledAnswerChoices!, id: \.self) { answerChoice in
+//                Button(action: {
+//                    selected = answerChoice
+//                    question.answer = answerChoice
+//                }) {
+//                    Text(answerChoice)
+//                        .foregroundColor(.black)
+//                        .padding()
+//                        .frame(maxWidth: .infinity)
+//                        .background(
+//                            RoundedRectangle(cornerRadius: 15)
+//                                .stroke(color(option: answerChoice), lineWidth: 2)
+//                        )
+//                } .id(answerChoice)
+//                .animation(nil, value: answerChoice)
+//                .transition(.identity)
+//            }.onAppear {
+//                                    question.answer_choices?.shuffle()
+//
+//                                }
+//
+//
+
+            //Flag - first display = false ..... or count
+
+//                Spacer(minLength: 0)
+
             // Buttons
             HStack(spacing: 15) {
                 Button(action: countAns) {
@@ -192,41 +138,42 @@ struct QuestionView: View {
             return Color.gray
         }
     }
-    
-    
+
      func countAns() {
         if selected == question.answer_choices![0] {
-            //social += 1
+            //social
             categories[0].categoryCount += 1
         }
         
         if selected == question.answer_choices![1] {
-//           artistic += 1
+            //artistic
             categories[1].categoryCount += 1
         }
         
         if selected == question.answer_choices![2] {
-//            realistic += 1
+            //realistic
             categories[2].categoryCount += 1
         }
         
         if selected == question.answer_choices![3] {
-//            conventional += 1
+           //conventional
             categories[3].categoryCount += 1
         }
         
         if selected == question.answer_choices![4] {
-//            enterprising += 1
+           //enterprising
             categories[4].categoryCount += 1
-
         }
         
         if selected == question.answer_choices![5] {
-//            investigative += 1
+           //investigative
             categories[5].categoryCount += 1
         }
         
         question.isSubmitted.toggle()
     }
+
 }
+
+
 

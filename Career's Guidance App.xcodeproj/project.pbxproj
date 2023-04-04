@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0400554D29BDEA2900EEB2A9 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400554C29BDEA2900EEB2A9 /* CategoryViewModel.swift */; };
+		0400554D29BDEA2900EEB2A9 /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400554C29BDEA2900EEB2A9 /* ResultViewModel.swift */; };
 		0435CFFA298BF07E00670D1A /* NavigationTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0435CFF9298BF07E00670D1A /* NavigationTabBarController.swift */; };
 		0439A9B72982DC1200942926 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0439A9B22982DC1200942926 /* LoginController.swift */; };
 		0439A9B82982DC1200942926 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0439A9B32982DC1200942926 /* RegisterController.swift */; };
@@ -64,6 +64,8 @@
 		046F2BEA2982A4E900F4D6BC /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 046F2BE92982A4E900F4D6BC /* FirebaseRemoteConfigSwift */; };
 		046F2BEC2982A4E900F4D6BC /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 046F2BEB2982A4E900F4D6BC /* FirebaseStorage */; };
 		046F2BEE2982A4E900F4D6BC /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 046F2BED2982A4E900F4D6BC /* FirebaseStorageCombine-Community */; };
+		049AF85C29DC4B8C0028351E /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049AF85B29DC4B8C0028351E /* Results.swift */; };
+		049AF85E29DC58960028351E /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049AF85D29DC58960028351E /* SwiftUIView.swift */; };
 		04A1448C29831831007F60A6 /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A1448B29831831007F60A6 /* WelcomeController.swift */; };
 		04A1448E29831D4F007F60A6 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A1448D29831D4F007F60A6 /* WelcomeView.swift */; };
 		04ADB70D2982A11600BCFAC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ADB70C2982A11600BCFAC5 /* AppDelegate.swift */; };
@@ -97,7 +99,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0400554C29BDEA2900EEB2A9 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
+		0400554C29BDEA2900EEB2A9 /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
 		0435CFF9298BF07E00670D1A /* NavigationTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTabBarController.swift; sourceTree = "<group>"; };
 		0439A9B22982DC1200942926 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		0439A9B32982DC1200942926 /* RegisterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
@@ -127,6 +129,8 @@
 		04597E9829B0F1E9000BF3AB /* QuestionsVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsVIew.swift; sourceTree = "<group>"; };
 		04597E9A29B0F210000BF3AB /* QA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QA.swift; sourceTree = "<group>"; };
 		046F2BB62982A30100F4D6BC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		049AF85B29DC4B8C0028351E /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
+		049AF85D29DC58960028351E /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		04A1448B29831831007F60A6 /* WelcomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
 		04A1448D29831D4F007F60A6 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		04ADB7092982A11600BCFAC5 /* Career's Guidance App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Career's Guidance App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -233,6 +237,7 @@
 				0456F74429A5065800414B9C /* TableViewCell.swift */,
 				04597E9829B0F1E9000BF3AB /* QuestionsVIew.swift */,
 				04597E9A29B0F210000BF3AB /* QA.swift */,
+				049AF85D29DC58960028351E /* SwiftUIView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -245,6 +250,7 @@
 				0439A9CE2982DC5800942926 /* User.swift */,
 				04EF025029A67C050018C090 /* Questionnaire.swift */,
 				044351E029C35EA800F2DC6C /* Category.swift */,
+				049AF85B29DC4B8C0028351E /* Results.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -253,7 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				04597E9629B0F177000BF3AB /* QuestionViewModel.swift */,
-				0400554C29BDEA2900EEB2A9 /* CategoryViewModel.swift */,
+				0400554C29BDEA2900EEB2A9 /* ResultViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -492,6 +498,7 @@
 				0456F74329A3E6DF00414B9C /* HomeView.swift in Sources */,
 				0439A9B92982DC1200942926 /* ForgotPasswordController.swift in Sources */,
 				04FA68A72986C3E600B9811E /* AccountPageController.swift in Sources */,
+				049AF85C29DC4B8C0028351E /* Results.swift in Sources */,
 				0439A9BA2982DC1200942926 /* HomeController.swift in Sources */,
 				0456F73F29A3C04D00414B9C /* QuizView.swift in Sources */,
 				04597E9B29B0F210000BF3AB /* QA.swift in Sources */,
@@ -511,7 +518,8 @@
 				0435CFFA298BF07E00670D1A /* NavigationTabBarController.swift in Sources */,
 				0439A9C82982DC4500942926 /* AuthHeaderView.swift in Sources */,
 				04EF025129A67C050018C090 /* Questionnaire.swift in Sources */,
-				0400554D29BDEA2900EEB2A9 /* CategoryViewModel.swift in Sources */,
+				049AF85E29DC58960028351E /* SwiftUIView.swift in Sources */,
+				0400554D29BDEA2900EEB2A9 /* ResultViewModel.swift in Sources */,
 				04A1448C29831831007F60A6 /* WelcomeController.swift in Sources */,
 				0456F74529A5065800414B9C /* TableViewCell.swift in Sources */,
 				04ADB70D2982A11600BCFAC5 /* AppDelegate.swift in Sources */,
