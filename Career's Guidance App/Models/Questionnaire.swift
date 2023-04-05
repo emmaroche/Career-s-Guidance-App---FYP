@@ -6,10 +6,6 @@
 //
 
 import SwiftUI
-
-// MARK: Quiz info
-
-import SwiftUI
 import FirebaseFirestoreSwift
 
 struct Question: Identifiable, Codable {

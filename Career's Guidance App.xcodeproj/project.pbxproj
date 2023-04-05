@@ -64,8 +64,8 @@
 		046F2BEA2982A4E900F4D6BC /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 046F2BE92982A4E900F4D6BC /* FirebaseRemoteConfigSwift */; };
 		046F2BEC2982A4E900F4D6BC /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 046F2BEB2982A4E900F4D6BC /* FirebaseStorage */; };
 		046F2BEE2982A4E900F4D6BC /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 046F2BED2982A4E900F4D6BC /* FirebaseStorageCombine-Community */; };
+		049AB07829DDC20F0055A71A /* ResultsDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049AB07729DDC20F0055A71A /* ResultsDashboardView.swift */; };
 		049AF85C29DC4B8C0028351E /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049AF85B29DC4B8C0028351E /* Results.swift */; };
-		049AF85E29DC58960028351E /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049AF85D29DC58960028351E /* SwiftUIView.swift */; };
 		04A1448C29831831007F60A6 /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A1448B29831831007F60A6 /* WelcomeController.swift */; };
 		04A1448E29831D4F007F60A6 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A1448D29831D4F007F60A6 /* WelcomeView.swift */; };
 		04ADB70D2982A11600BCFAC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ADB70C2982A11600BCFAC5 /* AppDelegate.swift */; };
@@ -129,8 +129,8 @@
 		04597E9829B0F1E9000BF3AB /* QuestionsVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsVIew.swift; sourceTree = "<group>"; };
 		04597E9A29B0F210000BF3AB /* QA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QA.swift; sourceTree = "<group>"; };
 		046F2BB62982A30100F4D6BC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		049AB07729DDC20F0055A71A /* ResultsDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsDashboardView.swift; sourceTree = "<group>"; };
 		049AF85B29DC4B8C0028351E /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
-		049AF85D29DC58960028351E /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		04A1448B29831831007F60A6 /* WelcomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
 		04A1448D29831D4F007F60A6 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		04ADB7092982A11600BCFAC5 /* Career's Guidance App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Career's Guidance App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -237,7 +237,7 @@
 				0456F74429A5065800414B9C /* TableViewCell.swift */,
 				04597E9829B0F1E9000BF3AB /* QuestionsVIew.swift */,
 				04597E9A29B0F210000BF3AB /* QA.swift */,
-				049AF85D29DC58960028351E /* SwiftUIView.swift */,
+				049AB07729DDC20F0055A71A /* ResultsDashboardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -518,7 +518,6 @@
 				0435CFFA298BF07E00670D1A /* NavigationTabBarController.swift in Sources */,
 				0439A9C82982DC4500942926 /* AuthHeaderView.swift in Sources */,
 				04EF025129A67C050018C090 /* Questionnaire.swift in Sources */,
-				049AF85E29DC58960028351E /* SwiftUIView.swift in Sources */,
 				0400554D29BDEA2900EEB2A9 /* ResultViewModel.swift in Sources */,
 				04A1448C29831831007F60A6 /* WelcomeController.swift in Sources */,
 				0456F74529A5065800414B9C /* TableViewCell.swift in Sources */,
@@ -527,6 +526,7 @@
 				0439A9D12982DC5800942926 /* User.swift in Sources */,
 				04FA68B32986F6F500B9811E /* NavigationView.swift in Sources */,
 				0439A9CA2982DC4500942926 /* CustomSecondaryButton.swift in Sources */,
+				049AB07829DDC20F0055A71A /* ResultsDashboardView.swift in Sources */,
 				044351E129C35EA800F2DC6C /* Category.swift in Sources */,
 				0456AB87299E5E1000C8369A /* QuizViewController.swift in Sources */,
 				04ADB70F2982A11600BCFAC5 /* SceneDelegate.swift in Sources */,
