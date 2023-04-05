@@ -6,7 +6,18 @@
 //
 
 import SwiftUI
+import Firebase
+import FirebaseFirestore
+import FirebaseCore
 
+struct CardModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .cornerRadius(20)
+            .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 0)
+    }
+    
+}
 
 struct QA: View {
     
@@ -18,6 +29,11 @@ struct QA: View {
     
     //Resource that helped display highest category (code in document is heavily modified and troubleshooted from these resources to suit whats needed for the CGA app): https://stackoverflow.com/questions/43806967/finding-indices-of-max-value-in-swift-array & https://stackoverflow.com/questions/69160416/how-do-i-get-the-variable-with-the-highest-int-and-retrieve-a-string-swift
     
+    @State var ResultTitle = ""
+    @State var ResultDescription = ""
+    @State var ResultDate = ""
+    @State var createDate = ""
+//    @State var userID = " "
     
     //Category array
     @State var categories: [Category] = [
@@ -31,8 +47,10 @@ struct QA: View {
     
     @Environment(\.presentationMode) var present
     
-    
+  
     var body: some View {
+
+        
         ScrollView {
             ZStack {
                 if data.questions.isEmpty {
@@ -41,7 +59,7 @@ struct QA: View {
                     if answered == data.questions.count {
                         VStack(alignment: .leading, spacing: 35){
                             
-                            
+    
                             Text("Results")
                                 .font(.title)
                                 .fontWeight(.bold)
@@ -56,6 +74,13 @@ struct QA: View {
                             //get max number and count how many times in array.
                             let highestIndex = categories.indices.max(by: { categories[$0].categoryCount < categories[$1].categoryCount })
                             let highestCategory = categories[highestIndex!]
+                            
+                            let date: Date = Date()
+//
+//                            let user = Auth.auth().currentUser
+//                            let uid = user?.uid
+                            
+//                            let userID = Auth.auth().currentUser!.uid
                             
                             HStack(alignment: .center) {
                                 
@@ -110,9 +135,7 @@ struct QA: View {
                                             Text(" \(highestCategory.categoryName)")
                                                 .font(.system(size: 24, weight: .bold, design: .default))
                                                 .frame(maxWidth: .infinity, alignment: .center)
-                                            
-                                            
-                                            
+ 
                                         }
                                         
                                     }
@@ -140,6 +163,11 @@ struct QA: View {
                                 // closing sheet
                                 present.wrappedValue.dismiss()
                                 answered = 0
+                                
+                                self.AddInfo(Result: highestCategory.categoryName, ResultDescription: highestCategory.categoryDescription, createDate: date)
+                                
+  
+                                
                             }) {
                                 Text("Save")
                                     .fontWeight(.heavy)
@@ -192,6 +220,13 @@ struct QA: View {
             }
             
         }
+    }
+    
+    //Add result info to firebase
+    func AddInfo(Result: String, ResultDescription: String, createDate: Date){
+        let db = Firestore.firestore()
+        db.collection("Results").document().setData(["Result": Result, "ResultDescription": ResultDescription,"createDate": createDate])
+        
     }
     
     // progress
