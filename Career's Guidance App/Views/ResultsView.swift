@@ -1,5 +1,5 @@
 //
-//  ResultsDashboardView.swift
+//  ResultsView.swift
 //  Career's Guidance App
 //
 //  Created by Emma Roche on 05/04/2023.
