@@ -7,9 +7,25 @@
 
 import SwiftUI
 import FirebaseFirestoreSwift
+import FirebaseFirestore
 
 struct Results: Identifiable, Codable {
     // fetch doc ID
+    
+//    init?(document: QueryDocumentSnapshot) {
+//        guard let data = Optional(document.data()),
+//              let createDate = data["createDate"] as? Timestamp
+//        else {
+//            return nil
+//        }
+//
+//        self.id = document.documentID
+//        self.Result = data["Result"] as? String
+//        self.ResultDescription = data["ResultDescription"] as? String
+//        self.createDate = createDate.dateValue()
+//    }
+
+    
     @DocumentID var id: String?
 
     var Result: String?
@@ -24,5 +40,4 @@ struct Results: Identifiable, Codable {
     }
 
 }
-
 

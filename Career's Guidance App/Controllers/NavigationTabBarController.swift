@@ -6,25 +6,27 @@
 //
 
 import UIKit
+import SwiftUI
 
 class NavigationTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let homeVC = HomeController()
+        let resultsDashboard = UIHostingController(rootView: ResultsDashboardController())
         let account = AccountPageController()
         
         homeVC.title = "Home"
+        resultsDashboard.title = "Results"
         account.title = "Account"
-        
-    
-        self.setViewControllers([homeVC, account], animated: false)
+
+        self.setViewControllers([homeVC, resultsDashboard, account], animated: false)
         
         guard let items = self.tabBar.items else {
             return
         }
         
-        let images = ["house", "person.circle"]
+        let images = ["house", "lightbulb", "person.circle"]
         
         for x in 0..<items.count {
             items[x].image = UIImage(systemName: images[x])
