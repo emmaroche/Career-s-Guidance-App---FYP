@@ -33,7 +33,7 @@ struct QA: View {
     @State var ResultDescription = ""
     @State var ResultDate = ""
     @State var createDate = ""
-//    @State var userID = " "
+//    @State var userID = ""
     
     //Category array
     @State var categories: [Category] = [
