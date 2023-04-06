@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 import Firebase
 
 struct ResultsDashboardController: View {
@@ -14,7 +15,9 @@ struct ResultsDashboardController: View {
     
     var body: some View {
         
+      
         ScrollView{
+            
             VStack(alignment: .leading, spacing: 35) {
                 Text("Results Dashboard")
                     .font(.title)
@@ -40,14 +43,20 @@ struct ResultsDashboardController: View {
             }.padding(.leading, 30)
                 .padding(.trailing, 30)
             
-                .navigationBarTitle("Results")
-                .onAppear() {
-                    viewModel.fetchResults()
-                }
-        }
+              
+          .navigationBarTitle("Results")
+            .onAppear() {
+                viewModel.fetchResults()
+            }
+         
+        }.clipped()
+            .edgesIgnoringSafeArea(.top)
+    
+    }
+            
     }
     
-}
+
 
 struct ResultsDashboardController_Previews: PreviewProvider {
     static var previews: some View {
