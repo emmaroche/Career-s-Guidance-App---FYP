@@ -17,17 +17,20 @@ struct ResultsView: View {
                     HStack{
                         ZStack {
                             Text(result.Result!)
-                                .font(.system(size: 24, weight: .bold, design: .default))
+                                .font(.system(size: 20, weight: .bold, design: .default))
                                 .frame(maxWidth: .infinity, alignment: .center)
                                 .lineLimit(nil)
                         }
                     }
                     Text(result.ResultDescription!)
-                        .font(.system(size: 16, weight: .bold, design: .default))
+                        .font(.system(size: 16, weight: .regular, design: .default))
                         .foregroundColor(.black)
                         .frame(maxWidth: .infinity, alignment: .center)
                         .fixedSize(horizontal: false, vertical: true)
-                }
+                }.padding(.leading, 30)
+                    .padding(.trailing, 30)
+                    .padding(.bottom, 20)
+                    .padding(.top, 20)
                 Spacer()
             }
             .padding(.bottom, 50)
@@ -35,28 +38,31 @@ struct ResultsView: View {
             .frame(maxWidth: .infinity, alignment: .center)
             .background(Color.white)
             .modifier(CardModifier())
-            .padding(.all, 20)
+            .padding(.all, 30)
+            
             Text("Based on your results, the following courses have been recommended:")
-                .font(.system(size: 16, weight: .bold, design: .default))
+                .font(.system(size: 18, weight: .medium, design: .default))
                 .foregroundColor(.black)
-                .frame(maxWidth: .infinity, alignment: .center)
-                .padding(.leading, 20)
+                .padding(.leading, 30)
                 .padding(.trailing, 20)
             
                             HStack(alignment: .center) {
                                 VStack(alignment: .leading , spacing: 25) {
                                     HStack{
-                                        Text(result.Result!)
-                                            .font(.system(size: 24, weight: .bold, design: .default))
+                                        Text("Course recommendations")
+                                            .font(.system(size: 20, weight: .bold, design: .default))
                                             .frame(maxWidth: .infinity, alignment: .center)
                                     }
-                                    Text(result.ResultDescription! )
-                                        .font(.system(size: 16, weight: .bold, design: .default))
+                                    Text("Placeholder Text")
+                                        .font(.system(size: 17, weight: .regular, design: .default))
                                         .foregroundColor(.black)
                                         .frame(maxWidth: .infinity, alignment: .center)
                                         .fixedSize(horizontal: false, vertical: true)
                                         .lineLimit(nil)
-                                }
+                                } .padding(.leading, 30)
+                                    .padding(.trailing, 30)
+                                    .padding(.bottom, 20)
+                                    .padding(.top, 20)
                                 Spacer()
                             }
                             .padding(.bottom, 50)
@@ -64,7 +70,7 @@ struct ResultsView: View {
                             .frame(maxWidth: .infinity, alignment: .center)
                             .background(Color.white)
                             .modifier(CardModifier())
-                            .padding(.all, 20)
+                            .padding(.all, 30)
             
             
         }

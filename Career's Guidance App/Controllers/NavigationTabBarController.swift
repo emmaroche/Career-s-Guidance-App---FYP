@@ -14,20 +14,25 @@ class NavigationTabBarController: UITabBarController {
         super.viewDidLoad()
         
         let homeVC = HomeController()
+        let quizScreen = UIHostingController(rootView: QuizScreen())
         let resultsDashboard = UIHostingController(rootView: ResultsDashboardController())
         let account = AccountPageController()
         
         homeVC.title = "Home"
+        quizScreen.title = "Quiz"
         resultsDashboard.title = "Results"
         account.title = "Account"
 
-        self.setViewControllers([homeVC, resultsDashboard, account], animated: false)
+        self.setViewControllers([homeVC, quizScreen, resultsDashboard, account], animated: false)
         
         guard let items = self.tabBar.items else {
             return
         }
         
-        let images = ["house", "lightbulb", "person.circle"]
+//        let images = ["house", "lightbulb", "chart.bar.xaxis", "person"]
+      
+        
+        let images = ["house.fill", "lightbulb.fill", "chart.bar.xaxis", "person.fill"]
         
         for x in 0..<items.count {
             items[x].image = UIImage(systemName: images[x])

@@ -20,13 +20,16 @@ struct ResultsDashboardController: View {
             
             VStack(alignment: .leading, spacing: 35) {
                 Text("Results Dashboard")
-                    .font(.title)
+                    .font(.system(size: 24, weight: .bold, design: .default))
                     .fontWeight(.bold)
                 Text("Top Scoring Categories")
-                    .font(.title3)
+                    .font(.system(size: 18, weight: .semibold, design: .default))
                     .fontWeight(.semibold)
                     .multilineTextAlignment(.trailing)
                 
+                Text("Previous results")
+                    .font(.system(size: 18, weight: .semibold, design: .default))
+                    .foregroundColor(.black)
                 
                 VStack(alignment: .leading, spacing: 35)  {
                     ForEach(viewModel.results.indices, id: \.self) { index in
@@ -34,10 +37,7 @@ struct ResultsDashboardController: View {
                         
                     }
                 }
-                
-                Text("Previous results")
-                    .font(.system(size: 16, weight: .bold, design: .default))
-                    .foregroundColor(.black)
+            
                 
                 Spacer()
             }.padding(.leading, 30)
@@ -50,7 +50,7 @@ struct ResultsDashboardController: View {
             }
          
         }.clipped()
-            .edgesIgnoringSafeArea(.top)
+           
     
     }
             
