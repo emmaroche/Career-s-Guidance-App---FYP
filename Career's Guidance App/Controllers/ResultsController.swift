@@ -17,14 +17,12 @@ struct ResultsController: View {
         ScrollView{
             VStack(alignment: .leading, spacing: 35) {
                 Text("Results")
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .padding(.leading, 20)
+                    .font(.system(size: 24, weight: .bold, design: .default))
+                    .padding(.leading, 30)
                 Text("Top Category")
-                    .font(.title3)
-                    .fontWeight(.semibold)
+                    .font(.system(size: 18, weight: .bold, design: .default))
                     .multilineTextAlignment(.trailing)
-                    .padding(.leading, 20)
+                    .padding(.leading, 30)
                 
                 // Code resource to help me bind the specific result clicked to the ResultsView  https://www.hackingwithswift.com/quick-start/swiftui/how-to-create-constant-bindings
                       ResultsView(result: .constant(result))

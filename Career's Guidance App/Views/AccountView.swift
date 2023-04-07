@@ -60,7 +60,6 @@ class AccountView: UIView {
     init(title: String) {
         super.init(frame: .zero)
         self.accountTextLabel.text = title
-        
         self.setupUI()
     }
     
