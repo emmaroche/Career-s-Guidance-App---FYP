@@ -25,7 +25,6 @@ struct QA: View {
     
     var set: String
     @StateObject var data = QuestionViewModel()
-    //    @StateObject var results = ResultViewModel()
     
     //Resource that helped display highest category (code in document is heavily modified and troubleshooted from these resources to suit whats needed for the CGA app): https://stackoverflow.com/questions/43806967/finding-indices-of-max-value-in-swift-array & https://stackoverflow.com/questions/69160416/how-do-i-get-the-variable-with-the-highest-int-and-retrieve-a-string-swift
     
@@ -33,7 +32,7 @@ struct QA: View {
     @State var ResultDescription = ""
     @State var ResultDate = ""
     @State var createDate = ""
-//    @State var userID = ""
+    @State var user = ""
     
     //Category array
     @State var categories: [Category] = [
@@ -75,12 +74,12 @@ struct QA: View {
                             let highestIndex = categories.indices.max(by: { categories[$0].categoryCount < categories[$1].categoryCount })
                             let highestCategory = categories[highestIndex!]
                             
-                            let date: Date = Date()
-//
-//                            let user = Auth.auth().currentUser
-//                            let uid = user?.uid
                             
-//                            let userID = Auth.auth().currentUser!.uid
+                            //adds a reposnse date to the result
+                            let date: Date = Date()
+                            
+                            //links result to current user
+                            let userID = Auth.auth().currentUser!.uid
                             
                             HStack(alignment: .center) {
                                 
@@ -164,7 +163,7 @@ struct QA: View {
                                 present.wrappedValue.dismiss()
                                 answered = 0
                                 
-                                self.AddInfo(Result: highestCategory.categoryName, ResultDescription: highestCategory.categoryDescription, createDate: date)
+                                self.AddInfo(Result: highestCategory.categoryName, ResultDescription: highestCategory.categoryDescription, createDate: date, user: userID)
                                 
   
                                 
@@ -223,9 +222,9 @@ struct QA: View {
     }
     
     //Add result info to firebase
-    func AddInfo(Result: String, ResultDescription: String, createDate: Date){
+    func AddInfo(Result: String, ResultDescription: String, createDate: Date, user: String){
         let db = Firestore.firestore()
-        db.collection("Results").document().setData(["Result": Result, "ResultDescription": ResultDescription,"createDate": createDate])
+        db.collection("Results").document().setData(["Result": Result, "ResultDescription": ResultDescription,"createDate": createDate, "user": user])
         
     }
     

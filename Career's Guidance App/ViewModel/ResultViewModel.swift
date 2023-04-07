@@ -12,11 +12,15 @@
 //class ResultViewModel: ObservableObject {
 //
 //    @Published var results: [Results] = []
+//    var currentUser: String? = Auth.auth().currentUser?.uid
 //
-//    func getResults() {
+//    func fetchResults() {
 //        let db = Firestore.firestore()
 //
-//        db.collection("Results").getDocuments { (querySnapshot, error) in
+//        db.collection("Results")
+//            .whereField("user", isEqualTo: currentUser!) // filter by current user's UID
+//            .order(by: "createDate", descending: true)
+//            .getDocuments { (querySnapshot, error) in
 //            if let error = error {
 //                print("Error getting results: \(error.localizedDescription)")
 //                return
@@ -32,26 +36,27 @@
 //            }
 //        }
 //    }
-//
-//
 //}
-//
 
 import SwiftUI
 import Firebase
 import FirebaseFirestore
 
-
 class ResultViewModel: ObservableObject {
 
     @Published var results: [Results] = []
-
+    var currentUser = Auth.auth().currentUser?.uid
+    
     func fetchResults() {
-        let date = Date(timeIntervalSinceNow: -24*60*60) // get date of 24 hours ago
+        guard let currentUser = self.currentUser else {
+            print("No current user")
+            return
+        }
         let db = Firestore.firestore()
 
         db.collection("Results")
-            .whereField("createDate", isGreaterThan: date)
+            .whereField("user", isEqualTo: currentUser) // filter by current user's UID
+            .order(by: "createDate", descending: true)
             .getDocuments { (querySnapshot, error) in
             if let error = error {
                 print("Error getting results: \(error.localizedDescription)")
@@ -68,6 +73,4 @@ class ResultViewModel: ObservableObject {
             }
         }
     }
-
-
 }
