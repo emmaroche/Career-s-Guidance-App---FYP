@@ -8,14 +8,15 @@
 import SwiftUI
 import UIKit
 import Firebase
+import SwiftUICharts
 
 struct ResultsDashboardController: View {
     @ObservedObject var viewModel = ResultViewModel()
     @State var isModal: Bool = false
+    //    @State var data: [Double] = [0, 0, 0, 0, 0, 0]
     
     var body: some View {
         
-      
         ScrollView{
             
             VStack(alignment: .leading, spacing: 35) {
@@ -27,35 +28,46 @@ struct ResultsDashboardController: View {
                     .fontWeight(.semibold)
                     .multilineTextAlignment(.trailing)
                 
+                VStack(alignment: .center){
+                    PieChartView(data: viewModel.data, title: "Top Categories")
+                }
+                
                 Text("Previous results")
                     .font(.system(size: 18, weight: .semibold, design: .default))
                     .foregroundColor(.black)
+                
                 
                 VStack(alignment: .leading, spacing: 35)  {
                     ForEach(viewModel.results.indices, id: \.self) { index in
                         ResultsDashboardView(result: $viewModel.results[index])
                         
                     }
+                    
                 }
-            
+                
                 
                 Spacer()
             }.padding(.leading, 30)
                 .padding(.trailing, 30)
             
-              
-          .navigationBarTitle("Results")
-            .onAppear() {
-                viewModel.fetchResults()
-            }
-         
-        }.clipped()
-           
-    
-    }
             
+                .navigationBarTitle("Results")
+            //                .onAppear() {
+            //                    viewModel.fetchResults()
+            //
+            //                }
+            
+        }.clipped()
+            .onAppear() {  viewModel.fetchResults()
+                viewModel.countRes() }
+
+        
     }
     
+}
+
+
+
 
 
 struct ResultsDashboardController_Previews: PreviewProvider {
