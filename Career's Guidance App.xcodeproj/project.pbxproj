@@ -82,7 +82,11 @@
 		04FA68A72986C3E600B9811E /* AccountPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA68A62986C3E600B9811E /* AccountPageController.swift */; };
 		04FA68A92986C8BB00B9811E /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA68A82986C8BB00B9811E /* AccountView.swift */; };
 		04FA68B32986F6F500B9811E /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA68B22986F6F500B9811E /* NavigationView.swift */; };
-		04FF09AA29E6BBCC00D5717A /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 04FF09A929E6BBCC00D5717A /* SwiftUICharts */; };
+		04FF09B229E7011F00D5717A /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 04FF09B129E7011F00D5717A /* SwiftUICharts */; };
+		04FF09BB29E7068E00D5717A /* SwiftPieChart in Frameworks */ = {isa = PBXBuildFile; productRef = 04FF09BA29E7068E00D5717A /* SwiftPieChart */; };
+		04FF09BD29E72BB500D5717A /* PieSlice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FF09BC29E72BB500D5717A /* PieSlice.swift */; };
+		04FF09BF29E72BD700D5717A /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FF09BE29E72BD700D5717A /* PieChart.swift */; };
+		04FF09C129E72BF100D5717A /* PieSliceText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FF09C029E72BF100D5717A /* PieSliceText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,6 +159,9 @@
 		04FA68A62986C3E600B9811E /* AccountPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPageController.swift; sourceTree = "<group>"; };
 		04FA68A82986C8BB00B9811E /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		04FA68B22986F6F500B9811E /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
+		04FF09BC29E72BB500D5717A /* PieSlice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieSlice.swift; sourceTree = "<group>"; };
+		04FF09BE29E72BD700D5717A /* PieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChart.swift; sourceTree = "<group>"; };
+		04FF09C029E72BF100D5717A /* PieSliceText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieSliceText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,7 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				046F2BCC2982A4E900F4D6BC /* FirebaseDatabase in Frameworks */,
-				04FF09AA29E6BBCC00D5717A /* SwiftUICharts in Frameworks */,
+				04FF09B229E7011F00D5717A /* SwiftUICharts in Frameworks */,
 				046F2BDA2982A4E900F4D6BC /* FirebaseFunctionsCombine-Community in Frameworks */,
 				046F2BD22982A4E900F4D6BC /* FirebaseFirestore in Frameworks */,
 				046F2BBE2982A4E900F4D6BC /* FirebaseAnalyticsSwift in Frameworks */,
@@ -182,6 +189,7 @@
 				046F2BEE2982A4E900F4D6BC /* FirebaseStorageCombine-Community in Frameworks */,
 				046F2BE82982A4E900F4D6BC /* FirebaseRemoteConfig in Frameworks */,
 				046F2BC42982A4E900F4D6BC /* FirebaseAppDistribution-Beta in Frameworks */,
+				04FF09BB29E7068E00D5717A /* SwiftPieChart in Frameworks */,
 				046F2BC82982A4E900F4D6BC /* FirebaseAuthCombine-Community in Frameworks */,
 				046F2BE62982A4E900F4D6BC /* FirebasePerformance in Frameworks */,
 				046F2BDE2982A4E900F4D6BC /* FirebaseInAppMessagingSwift-Beta in Frameworks */,
@@ -249,6 +257,9 @@
 				04597E9A29B0F210000BF3AB /* QA.swift */,
 				049AB07729DDC20F0055A71A /* ResultsView.swift */,
 				049BD4D729DF12500099FE5A /* ResultsDashboardView.swift */,
+				04FF09BC29E72BB500D5717A /* PieSlice.swift */,
+				04FF09BE29E72BD700D5717A /* PieChart.swift */,
+				04FF09C029E72BF100D5717A /* PieSliceText.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -384,7 +395,8 @@
 				046F2BE92982A4E900F4D6BC /* FirebaseRemoteConfigSwift */,
 				046F2BEB2982A4E900F4D6BC /* FirebaseStorage */,
 				046F2BED2982A4E900F4D6BC /* FirebaseStorageCombine-Community */,
-				04FF09A929E6BBCC00D5717A /* SwiftUICharts */,
+				04FF09B129E7011F00D5717A /* SwiftUICharts */,
+				04FF09BA29E7068E00D5717A /* SwiftPieChart */,
 			);
 			productName = "Career's Guidance App";
 			productReference = 04ADB7092982A11600BCFAC5 /* Career's Guidance App.app */;
@@ -460,7 +472,8 @@
 			mainGroup = 04ADB7002982A11600BCFAC5;
 			packageReferences = (
 				046F2BB82982A4E900F4D6BC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				04FF09A829E6BBCC00D5717A /* XCRemoteSwiftPackageReference "ChartView" */,
+				04FF09B029E7011F00D5717A /* XCRemoteSwiftPackageReference "ChartView" */,
+				04FF09B929E7068E00D5717A /* XCRemoteSwiftPackageReference "SwiftPieChart" */,
 			);
 			productRefGroup = 04ADB70A2982A11600BCFAC5 /* Products */;
 			projectDirPath = "";
@@ -510,13 +523,16 @@
 				0439A9D02982DC5800942926 /* RegisterUserRequest.swift in Sources */,
 				0456F74329A3E6DF00414B9C /* HomeView.swift in Sources */,
 				0439A9B92982DC1200942926 /* ForgotPasswordController.swift in Sources */,
+				04FF09BF29E72BD700D5717A /* PieChart.swift in Sources */,
 				049BD4D829DF12500099FE5A /* ResultsDashboardView.swift in Sources */,
 				04FA68A72986C3E600B9811E /* AccountPageController.swift in Sources */,
+				04FF09BD29E72BB500D5717A /* PieSlice.swift in Sources */,
 				049AF85C29DC4B8C0028351E /* Results.swift in Sources */,
 				0439A9BA2982DC1200942926 /* HomeController.swift in Sources */,
 				0456F73F29A3C04D00414B9C /* QuizView.swift in Sources */,
 				04597E9B29B0F210000BF3AB /* QA.swift in Sources */,
 				0439A9D52982DC8600942926 /* AuthService.swift in Sources */,
+				04FF09C129E72BF100D5717A /* PieSliceText.swift in Sources */,
 				0439A9C52982DC4500942926 /* CustomTextField.swift in Sources */,
 				04597E9729B0F177000BF3AB /* QuestionViewModel.swift in Sources */,
 				049AB07A29DDD7F90055A71A /* ResultDashboardController.swift in Sources */,
@@ -888,9 +904,17 @@
 				minimumVersion = 9.0.0;
 			};
 		};
-		04FF09A829E6BBCC00D5717A /* XCRemoteSwiftPackageReference "ChartView" */ = {
+		04FF09B029E7011F00D5717A /* XCRemoteSwiftPackageReference "ChartView" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/AppPear/ChartView.git";
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		04FF09B929E7068E00D5717A /* XCRemoteSwiftPackageReference "SwiftPieChart" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ilamanov/SwiftPieChart";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.0.0;
@@ -1034,10 +1058,15 @@
 			package = 046F2BB82982A4E900F4D6BC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseStorageCombine-Community";
 		};
-		04FF09A929E6BBCC00D5717A /* SwiftUICharts */ = {
+		04FF09B129E7011F00D5717A /* SwiftUICharts */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 04FF09A829E6BBCC00D5717A /* XCRemoteSwiftPackageReference "ChartView" */;
+			package = 04FF09B029E7011F00D5717A /* XCRemoteSwiftPackageReference "ChartView" */;
 			productName = SwiftUICharts;
+		};
+		04FF09BA29E7068E00D5717A /* SwiftPieChart */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04FF09B929E7068E00D5717A /* XCRemoteSwiftPackageReference "SwiftPieChart" */;
+			productName = SwiftPieChart;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

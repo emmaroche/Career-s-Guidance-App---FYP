@@ -21,7 +21,7 @@
     {
       "identity" : "chartview",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/AppPear/ChartView.git",
+      "location" : "https://github.com/AppPear/ChartView",
       "state" : {
         "revision" : "9115a992c91fa19cbb4f2241084240d38654a1fc",
         "version" : "1.5.5"
@@ -115,6 +115,15 @@
       "state" : {
         "revision" : "ab3a58b7209a17d781c0d1dbb3e1ff3da306bae8",
         "version" : "1.20.3"
+      }
+    },
+    {
+      "identity" : "swiftpiechart",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ilamanov/SwiftPieChart",
+      "state" : {
+        "revision" : "e6f67120c55e7402f67f3463994105ff6cfbcd10",
+        "version" : "1.0.61"
       }
     }
   ],

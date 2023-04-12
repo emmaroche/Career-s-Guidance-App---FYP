@@ -8,7 +8,7 @@
 import SwiftUI
 import UIKit
 import Firebase
-import SwiftUICharts
+import SwiftPieChart
 
 struct ResultsDashboardController: View {
     @ObservedObject var viewModel = ResultViewModel()
@@ -23,15 +23,19 @@ struct ResultsDashboardController: View {
                 Text("Results Dashboard")
                     .font(.system(size: 24, weight: .bold, design: .default))
                     .fontWeight(.bold)
+                
                 Text("Top Scoring Categories")
                     .font(.system(size: 18, weight: .semibold, design: .default))
                     .fontWeight(.semibold)
                     .multilineTextAlignment(.trailing)
                 
-                VStack(alignment: .center){
-                    PieChartView(data: viewModel.data, title: "Top Categories")
-                }
+                VStack(alignment: .center, spacing: 35) {
+ 
+                    PieChart(data: $viewModel.data, labels: ["Social", "Artistic", "Realistic", "Conventional", "Enterprising", "Investigative"], colors: [Color.red, Color.blue, Color.purple, Color.gray, Color.green, Color.pink], borderColor: Color.black).frame(height: 300)
+                    
+                }.modifier(CardModifier())
                 
+
                 Text("Previous results")
                     .font(.system(size: 18, weight: .semibold, design: .default))
                     .foregroundColor(.black)
@@ -58,10 +62,9 @@ struct ResultsDashboardController: View {
             //                }
             
         }.clipped()
-            .onAppear() {  viewModel.fetchResults()
+            .onAppear() {
+                viewModel.fetchResults()
                 viewModel.countRes() }
-
-        
     }
     
 }
