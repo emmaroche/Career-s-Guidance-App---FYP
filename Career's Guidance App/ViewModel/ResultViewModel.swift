@@ -1,5 +1,5 @@
 //
-//  CategoryViewModel.swift
+//  ResultViewModel.swift
 //  Career's Guidance App
 //
 //  Created by Emma Roche on 12/03/2023.
@@ -13,6 +13,7 @@ class ResultViewModel: ObservableObject {
     
     @Published var results: [Results] = []
     @Published var data: [Double] = [0, 0, 0, 0, 0, 0]
+    
     
     var currentUser = Auth.auth().currentUser?.uid
     
