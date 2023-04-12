@@ -7,14 +7,18 @@
 
 import SwiftUI
 
+import SwiftUICharts
+
 struct ResultsDashboardView: View {
     @Binding var result: Results
     @State var isModal: Bool = false
-    @State var selectedResult: Results?
+    @State var data: [Double] = [0, 0, 0, 0, 0, 0]
     
     var body: some View {
         
         VStack(alignment: .leading, spacing: 35) {
+            
+                                    
             HStack(alignment: .center) {
                 VStack(alignment: .leading , spacing: 25) {
                     HStack {
@@ -22,7 +26,6 @@ struct ResultsDashboardView: View {
                             
                             //https://developer.apple.com/documentation/foundation/dateformatter
                             
-
                             if let date = result.createDate {
                                 
                                 Text("Results from " + DateFormatter.localizedString(from: date,  dateStyle: .long, timeStyle: .none))
@@ -38,7 +41,6 @@ struct ResultsDashboardView: View {
                     
                     HStack {
                             Button(action: {
-//                                selectedResult = result
                                 self.isModal = true
                                 
                             }) {
