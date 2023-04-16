@@ -19,7 +19,12 @@ class CustomSButton: UIButton {
         super.init(frame: .zero)
         self.setTitle(title, for: .normal)
         self.layer.cornerRadius = 12
-        self.layer.masksToBounds = true
+        //drop shadow
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOffset = CGSize(width: 0, height: 3)
+        self.layer.shadowOpacity = 0.25
+        self.layer.shadowRadius = 3
+        self.layer.masksToBounds = false
         
         self.backgroundColor = hasBackground ? .white: .clear
         
@@ -28,7 +33,7 @@ class CustomSButton: UIButton {
         
         switch fontSize {
         case .bigSb:
-            self.titleLabel?.font = .systemFont(ofSize: 22, weight: .bold)
+            self.titleLabel?.font = .systemFont(ofSize: 20, weight: .bold)
             
         case .medSb:
             self.titleLabel?.font = .systemFont(ofSize: 18, weight: .semibold)

@@ -30,7 +30,7 @@ class QuizViewController: UIViewController {
     
     private let quizViews = QuizView(title: "Our mission is to help you find your dream course, personalised to your skills and interests.", subLabel: "Let's start by taking the Course Matching Questionnaire!", subLabel2: "To get the most accurate results choose the answers that relates to you the most.", subLabel3: "Please note that only one option is accepted per question." )
 
-    private let getStartedButton = CustomButton(title: "Get Started", hasBackground: true, fontSize: .biglol)
+    private let getStartedButton = CustomButton(title: "Get Started", hasBackground: true, fontSize: .big)
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
