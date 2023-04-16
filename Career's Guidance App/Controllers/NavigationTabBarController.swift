@@ -16,7 +16,7 @@ class NavigationTabBarController: UITabBarController {
         let homeVC = HomeController()
         let quizScreen = UIHostingController(rootView: QuizScreen())
         let resultsDashboard = UIHostingController(rootView: ResultsDashboardController())
-        let account = AccountPageController()
+        let account = UIHostingController(rootView: AccountController())
         
         homeVC.title = "Home"
         quizScreen.title = "Quiz"

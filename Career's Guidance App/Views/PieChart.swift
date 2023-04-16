@@ -29,9 +29,9 @@ struct PieChart: View {
   var body: some View {
     GeometryReader { geo in
       ZStack(alignment: .center) {
-          ForEach(0 ..< data.count) { index in
+          ForEach(0 ..< data.count, id: \.self) { index in
               
-              //Only display result category data greater than 0
+              // Only display result category data in analysis that is greater than 0
               if data[index] > 0 {
                   PieSlice(startAngle: startAngle(for: index), endAngle: endAngle(for: index))
                       .fill(colors[index % colors.count])

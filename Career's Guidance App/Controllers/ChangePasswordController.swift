@@ -1,22 +1,24 @@
 //
-//  ForgotPasswordController.swift
-//  CGA
+//  ChangePasswordController.swift
+//  Career's Guidance App
 //
-//  Created by Emma Roche on 18/01/2023.
+//  Created by Emma Roche on 16/04/2023.
 //
 
 import UIKit
 
-class ForgotPasswordController: UIViewController {
+class ChangePasswordController: UIViewController {
     
     // MARK: - UI Components
-    private let headerView = AuthHeaderView(title: "Forgot Password", subTitle: "Reset your password")
+    
+    private let headerView = AuthHeaderView(title: "Change Password", subTitle: "Reset your password")
     
     private let emailField = CustomTextField(fieldType: .email)
     
     private let resetPasswordButton = CustomButton(title: "Reset", hasBackground: true, fontSize: .big)
     
     // MARK: - LifeCycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
@@ -24,8 +26,7 @@ class ForgotPasswordController: UIViewController {
         self.resetPasswordButton.addTarget(self, action: #selector(didTapForgotPassword), for: .touchUpInside)
         
         overrideUserInterfaceStyle = .light
-        
-        //Dismiss keyboard when text field is clicked out of. Code reference: https://stackoverflow.com/questions/24126678/close-ios-keyboard-by-touching-anywhere-using-swift
+    
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
     }
@@ -36,6 +37,7 @@ class ForgotPasswordController: UIViewController {
     }
     
     // MARK: - UI Setup
+    
     private func setupUI() {
         self.view.backgroundColor = UIColor(red: 0.20, green: 0.48, blue: 0.67, alpha: 1.00)
         
@@ -66,6 +68,7 @@ class ForgotPasswordController: UIViewController {
     }
     
     // MARK: - Selectors
+    
     @objc private func didTapForgotPassword() {
         let email = self.emailField.text ?? ""
         
@@ -86,8 +89,8 @@ class ForgotPasswordController: UIViewController {
     }
     
     @objc func dismissKeyboard() {
-        //Causes the text fields to resign the first responder status.
         view.endEditing(true)
     }
     
 }
+
