@@ -19,7 +19,7 @@ class CustomSButton: UIButton {
         super.init(frame: .zero)
         self.setTitle(title, for: .normal)
         self.layer.cornerRadius = 12
-        //drop shadow
+        // Drop shadow
         self.layer.shadowColor = UIColor.black.cgColor
         self.layer.shadowOffset = CGSize(width: 0, height: 3)
         self.layer.shadowOpacity = 0.25

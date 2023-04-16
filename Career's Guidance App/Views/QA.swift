@@ -10,14 +10,7 @@ import Firebase
 import FirebaseFirestore
 import FirebaseCore
 
-struct CardModifier: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .cornerRadius(20)
-            .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 0)
-    }
-    
-}
+// Resource that helped with displaying questions: https://www.youtube.com/watch?v=S_BwMu2J3TQ (the code I have implemented has been modified significantly to fit the content of the CGA and this tutorial was used only as a guide to link this questionnaire with Firebase)
 
 struct QA: View {
     
@@ -26,7 +19,7 @@ struct QA: View {
     var set: String
     @StateObject var data = QuestionViewModel()
     
-    //Resource that helped display highest category (code in document is heavily modified and troubleshooted from these resources to suit whats needed for the CGA app): https://stackoverflow.com/questions/43806967/finding-indices-of-max-value-in-swift-array & https://stackoverflow.com/questions/69160416/how-do-i-get-the-variable-with-the-highest-int-and-retrieve-a-string-swift
+    // Resource that helped display highest category (code I have implemeted has been heavily modified and troubleshooted from these resources to suit whats needed for the CGA app): https://stackoverflow.com/questions/43806967/finding-indices-of-max-value-in-swift-array & https://stackoverflow.com/questions/69160416/how-do-i-get-the-variable-with-the-highest-int-and-retrieve-a-string-swift
     
     @State var ResultTitle = ""
     @State var ResultDescription = ""
@@ -46,9 +39,7 @@ struct QA: View {
     
     @Environment(\.presentationMode) var present
     
-  
     var body: some View {
-
         
         ScrollView {
             ZStack {
@@ -58,7 +49,6 @@ struct QA: View {
                     if answered == data.questions.count {
                         VStack(alignment: .leading, spacing: 35){
                             
-    
                             Text("Results")
                                 .font(.title)
                                 .fontWeight(.bold)
@@ -70,15 +60,15 @@ struct QA: View {
                                 .multilineTextAlignment(.trailing)
                                 .padding(.leading, 20)
                             
-                            //get max number and count how many times in array.
+                            // Gets max number and counts how many times in array
                             let highestIndex = categories.indices.max(by: { categories[$0].categoryCount < categories[$1].categoryCount })
                             let highestCategory = categories[highestIndex!]
                             
                             
-                            //adds a reposnse date to the result
+                            // Adds a reposnse date to the result
                             let date: Date = Date()
                             
-                            //links result to current user
+                            // Links result to current user
                             let userID = Auth.auth().currentUser!.uid
                             
                             HStack(alignment: .center) {
@@ -134,7 +124,7 @@ struct QA: View {
                                             Text(" \(highestCategory.categoryName)")
                                                 .font(.system(size: 24, weight: .bold, design: .default))
                                                 .frame(maxWidth: .infinity, alignment: .center)
- 
+                                            
                                         }
                                         
                                     }
@@ -159,13 +149,13 @@ struct QA: View {
                             
                             
                             Button(action: {
-                                // closing sheet
+                                // Closes the sheet
                                 present.wrappedValue.dismiss()
                                 answered = 0
                                 
                                 self.AddInfo(Result: highestCategory.categoryName, ResultDescription: highestCategory.categoryDescription, createDate: date, user: userID)
                                 
-  
+                                
                                 
                             }) {
                                 Text("Save")
@@ -197,8 +187,6 @@ struct QA: View {
                             }
                             .padding()
                             
-                            
-                            //results: $results.results[index],
                             // QuestionView
                             ZStack {
                                 ForEach(data.questions.reversed().indices, id: \.self) { index in
@@ -221,7 +209,7 @@ struct QA: View {
         }
     }
     
-    //Add result info to firebase
+    // Add result info to firebase
     func AddInfo(Result: String, ResultDescription: String, createDate: Date, user: String){
         let db = Firestore.firestore()
         db.collection("Results").document().setData(["Result": Result, "ResultDescription": ResultDescription,"createDate": createDate, "user": user])

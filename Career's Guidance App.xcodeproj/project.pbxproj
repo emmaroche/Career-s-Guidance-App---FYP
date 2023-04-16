@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0400554D29BDEA2900EEB2A9 /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400554C29BDEA2900EEB2A9 /* ResultViewModel.swift */; };
+		042B880A29EC3CED008A056A /* CardModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B880929EC3CED008A056A /* CardModifier.swift */; };
+		042B880C29EC41B4008A056A /* ChangePasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B880B29EC41B4008A056A /* ChangePasswordController.swift */; };
 		0435CFFA298BF07E00670D1A /* NavigationTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0435CFF9298BF07E00670D1A /* NavigationTabBarController.swift */; };
 		0439A9B72982DC1200942926 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0439A9B22982DC1200942926 /* LoginController.swift */; };
 		0439A9B82982DC1200942926 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0439A9B32982DC1200942926 /* RegisterController.swift */; };
@@ -28,9 +30,7 @@
 		0439A9D72982DC8A00942926 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0439A9D62982DC8A00942926 /* Validator.swift */; };
 		044351E129C35EA800F2DC6C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044351E029C35EA800F2DC6C /* Category.swift */; };
 		0456AB85299E4F5500C8369A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456AB84299E4F5500C8369A /* ViewController.swift */; };
-		0456AB87299E5E1000C8369A /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456AB86299E5E1000C8369A /* QuizViewController.swift */; };
 		0456F73B29A3B57300414B9C /* QuizScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456F73A29A3B57300414B9C /* QuizScreen.swift */; };
-		0456F73F29A3C04D00414B9C /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456F73E29A3C04D00414B9C /* QuizView.swift */; };
 		0456F74329A3E6DF00414B9C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456F74229A3E6DF00414B9C /* HomeView.swift */; };
 		0456F74529A5065800414B9C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456F74429A5065800414B9C /* TableViewCell.swift */; };
 		04597E9729B0F177000BF3AB /* QuestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04597E9629B0F177000BF3AB /* QuestionViewModel.swift */; };
@@ -81,9 +81,9 @@
 		04E47DCC29E8160200178AD9 /* CustomColour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E47DCB29E8160200178AD9 /* CustomColour.swift */; };
 		04E47DCE29E826D300178AD9 /* CourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E47DCD29E826D300178AD9 /* CourseViewModel.swift */; };
 		04E47DD029E8272600178AD9 /* Courses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E47DCF29E8272600178AD9 /* Courses.swift */; };
+		04EAE1DF29EC763F00519730 /* AccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EAE1DE29EC763F00519730 /* AccountController.swift */; };
+		04EAE1E529ECB55200519730 /* ChangePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EAE1E429ECB55200519730 /* ChangePasswordView.swift */; };
 		04EF025129A67C050018C090 /* Questionnaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF025029A67C050018C090 /* Questionnaire.swift */; };
-		04FA68A72986C3E600B9811E /* AccountPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA68A62986C3E600B9811E /* AccountPageController.swift */; };
-		04FA68A92986C8BB00B9811E /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA68A82986C8BB00B9811E /* AccountView.swift */; };
 		04FA68B32986F6F500B9811E /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA68B22986F6F500B9811E /* NavigationView.swift */; };
 		04FF09B229E7011F00D5717A /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 04FF09B129E7011F00D5717A /* SwiftUICharts */; };
 		04FF09BB29E7068E00D5717A /* SwiftPieChart in Frameworks */ = {isa = PBXBuildFile; productRef = 04FF09BA29E7068E00D5717A /* SwiftPieChart */; };
@@ -111,6 +111,8 @@
 
 /* Begin PBXFileReference section */
 		0400554C29BDEA2900EEB2A9 /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
+		042B880929EC3CED008A056A /* CardModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModifier.swift; sourceTree = "<group>"; };
+		042B880B29EC41B4008A056A /* ChangePasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordController.swift; sourceTree = "<group>"; };
 		0435CFF9298BF07E00670D1A /* NavigationTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTabBarController.swift; sourceTree = "<group>"; };
 		0439A9B22982DC1200942926 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		0439A9B32982DC1200942926 /* RegisterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
@@ -131,9 +133,7 @@
 		0439A9D62982DC8A00942926 /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		044351E029C35EA800F2DC6C /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		0456AB84299E4F5500C8369A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0456AB86299E5E1000C8369A /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		0456F73A29A3B57300414B9C /* QuizScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizScreen.swift; sourceTree = "<group>"; };
-		0456F73E29A3C04D00414B9C /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 		0456F74229A3E6DF00414B9C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		0456F74429A5065800414B9C /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		04597E9629B0F177000BF3AB /* QuestionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewModel.swift; sourceTree = "<group>"; };
@@ -161,9 +161,9 @@
 		04E47DCB29E8160200178AD9 /* CustomColour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColour.swift; sourceTree = "<group>"; };
 		04E47DCD29E826D300178AD9 /* CourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewModel.swift; sourceTree = "<group>"; };
 		04E47DCF29E8272600178AD9 /* Courses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Courses.swift; sourceTree = "<group>"; };
+		04EAE1DE29EC763F00519730 /* AccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountController.swift; sourceTree = "<group>"; };
+		04EAE1E429ECB55200519730 /* ChangePasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordView.swift; sourceTree = "<group>"; };
 		04EF025029A67C050018C090 /* Questionnaire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questionnaire.swift; sourceTree = "<group>"; };
-		04FA68A62986C3E600B9811E /* AccountPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPageController.swift; sourceTree = "<group>"; };
-		04FA68A82986C8BB00B9811E /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		04FA68B22986F6F500B9811E /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
 		04FF09BC29E72BB500D5717A /* PieSlice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieSlice.swift; sourceTree = "<group>"; };
 		04FF09BE29E72BD700D5717A /* PieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChart.swift; sourceTree = "<group>"; };
@@ -232,12 +232,12 @@
 				0439A9B22982DC1200942926 /* LoginController.swift */,
 				0439A9B32982DC1200942926 /* RegisterController.swift */,
 				04A1448B29831831007F60A6 /* WelcomeController.swift */,
-				04FA68A62986C3E600B9811E /* AccountPageController.swift */,
 				0435CFF9298BF07E00670D1A /* NavigationTabBarController.swift */,
 				0456AB84299E4F5500C8369A /* ViewController.swift */,
-				0456AB86299E5E1000C8369A /* QuizViewController.swift */,
 				049AB07929DDD7F90055A71A /* ResultDashboardController.swift */,
 				049BD4D929DF1ACF0099FE5A /* ResultsController.swift */,
+				042B880B29EC41B4008A056A /* ChangePasswordController.swift */,
+				04EAE1DE29EC763F00519730 /* AccountController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -253,10 +253,8 @@
 				0439A9C02982DC4500942926 /* ForgotButton.swift */,
 				0439A9BD2982DC4500942926 /* LineView.swift */,
 				04A1448D29831D4F007F60A6 /* WelcomeView.swift */,
-				04FA68A82986C8BB00B9811E /* AccountView.swift */,
 				04FA68B22986F6F500B9811E /* NavigationView.swift */,
 				0456F73A29A3B57300414B9C /* QuizScreen.swift */,
-				0456F73E29A3C04D00414B9C /* QuizView.swift */,
 				0456F74229A3E6DF00414B9C /* HomeView.swift */,
 				0456F74429A5065800414B9C /* TableViewCell.swift */,
 				04597E9829B0F1E9000BF3AB /* QuestionsVIew.swift */,
@@ -267,6 +265,8 @@
 				04FF09BE29E72BD700D5717A /* PieChart.swift */,
 				04FF09C029E72BF100D5717A /* PieSliceText.swift */,
 				04E47DCB29E8160200178AD9 /* CustomColour.swift */,
+				04EAE1E429ECB55200519730 /* ChangePasswordView.swift */,
+				042B880929EC3CED008A056A /* CardModifier.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -534,11 +534,10 @@
 				0439A9B92982DC1200942926 /* ForgotPasswordController.swift in Sources */,
 				04FF09BF29E72BD700D5717A /* PieChart.swift in Sources */,
 				049BD4D829DF12500099FE5A /* ResultsDashboardView.swift in Sources */,
-				04FA68A72986C3E600B9811E /* AccountPageController.swift in Sources */,
+				04EAE1E529ECB55200519730 /* ChangePasswordView.swift in Sources */,
 				04FF09BD29E72BB500D5717A /* PieSlice.swift in Sources */,
 				049AF85C29DC4B8C0028351E /* Results.swift in Sources */,
 				0439A9BA2982DC1200942926 /* HomeController.swift in Sources */,
-				0456F73F29A3C04D00414B9C /* QuizView.swift in Sources */,
 				04597E9B29B0F210000BF3AB /* QA.swift in Sources */,
 				0439A9D52982DC8600942926 /* AuthService.swift in Sources */,
 				04FF09C129E72BF100D5717A /* PieSliceText.swift in Sources */,
@@ -547,7 +546,7 @@
 				049AB07A29DDD7F90055A71A /* ResultDashboardController.swift in Sources */,
 				0456F73B29A3B57300414B9C /* QuizScreen.swift in Sources */,
 				0456AB85299E4F5500C8369A /* ViewController.swift in Sources */,
-				04FA68A92986C8BB00B9811E /* AccountView.swift in Sources */,
+				04EAE1DF29EC763F00519730 /* AccountController.swift in Sources */,
 				0439A9C72982DC4500942926 /* ForgotButton.swift in Sources */,
 				0439A9D32982DC7500942926 /* AlertManager.swift in Sources */,
 				0439A9C42982DC4500942926 /* LineView.swift in Sources */,
@@ -557,9 +556,11 @@
 				049BD4DA29DF1ACF0099FE5A /* ResultsController.swift in Sources */,
 				0439A9C62982DC4500942926 /* CustomPrimaryButton.swift in Sources */,
 				04597E9929B0F1E9000BF3AB /* QuestionsVIew.swift in Sources */,
+				042B880C29EC41B4008A056A /* ChangePasswordController.swift in Sources */,
 				0435CFFA298BF07E00670D1A /* NavigationTabBarController.swift in Sources */,
 				0439A9C82982DC4500942926 /* AuthHeaderView.swift in Sources */,
 				04EF025129A67C050018C090 /* Questionnaire.swift in Sources */,
+				042B880A29EC3CED008A056A /* CardModifier.swift in Sources */,
 				04E47DCC29E8160200178AD9 /* CustomColour.swift in Sources */,
 				0400554D29BDEA2900EEB2A9 /* ResultViewModel.swift in Sources */,
 				04A1448C29831831007F60A6 /* WelcomeController.swift in Sources */,
@@ -572,7 +573,6 @@
 				049AB07829DDC20F0055A71A /* ResultsView.swift in Sources */,
 				044351E129C35EA800F2DC6C /* Category.swift in Sources */,
 				04E47DD029E8272600178AD9 /* Courses.swift in Sources */,
-				0456AB87299E5E1000C8369A /* QuizViewController.swift in Sources */,
 				04ADB70F2982A11600BCFAC5 /* SceneDelegate.swift in Sources */,
 				0439A9C92982DC4500942926 /* BasicText.swift in Sources */,
 			);

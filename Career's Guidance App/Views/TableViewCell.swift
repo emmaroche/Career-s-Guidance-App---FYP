@@ -43,7 +43,7 @@ class CustomTableViewCell: UITableViewCell {
         backgroundColor = UIColor.clear
         backView.layer.cornerRadius = 12
         contentTitle.layer.cornerRadius = 12
-        //Applys cornerRadius for the top-left and top-right corner only
+        // Applys cornerRadius for the top-left and top-right corner only
         contentTitle.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
         backView.clipsToBounds = false
         self.backView.layer.masksToBounds = false

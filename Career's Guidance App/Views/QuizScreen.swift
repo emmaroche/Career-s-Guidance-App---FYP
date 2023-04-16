@@ -8,13 +8,6 @@
 import SwiftUI
 import CoreMIDI
 
-// Resource that helped me with importing custom app colours https://levelup.gitconnected.com/using-custom-colors-in-swiftui-d16f07d6a71e
-
-//struct CustomColour {
-//    static let customGreenColour = Color("customGreenColour")
-//    static let customBlueColour = Color("customBlueColour")
-//}
-
 struct QuizScreen: View {
     
     @State var show = false
@@ -22,7 +15,6 @@ struct QuizScreen: View {
     // Storing Level for Fetching Questions
     @State var set = "Questionnaire_1"
     
-    // for analytics
     @State var answered = 0
     
     @StateObject var data = ResultViewModel()
@@ -59,7 +51,7 @@ struct QuizScreen: View {
                     .padding(.top, 20)
                     .fixedSize(horizontal: false, vertical: true)
                 
-                Text("**NOTE:** There is no right or wrong answers")
+                Text("**NOTE:** There are no right or wrong answers.")
                     .font(.system(size: 17, weight: .regular, design: .default))
                     .foregroundColor(.black)
                     .padding(.leading, 30)
@@ -73,15 +65,14 @@ struct QuizScreen: View {
             VStack {
                 // Level View
                 LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 20), count: 2), spacing: 35) {
-                    // four levels
+ 
                     ForEach(1...1, id: \.self) { index in
                         VStack(spacing: 15) {
                             
                             Text("Get Started")
-                                .font(.title2)
+                                .font(.system(size: 20))
                                 .fontWeight(.bold)
                                 .foregroundColor(CustomColour.customBlueColour)
-                            
                         }
                         .padding()
                         
@@ -89,7 +80,7 @@ struct QuizScreen: View {
                         
                         .background(CustomColour.customGreenColour)
                         .cornerRadius(12)
-                        // opening QA view as sheet
+                        // opens QA view as a sheet
                         .onTapGesture {
                             set = "Questionnaire_\(index)"
                             show.toggle()
@@ -100,7 +91,6 @@ struct QuizScreen: View {
             .padding(.top, 100)
             .padding(.leading, 136)
           
-            
             Spacer(minLength: 0)
         }.padding(.bottom, 65)
         .background(Color.black.opacity(0.05).ignoresSafeArea())
