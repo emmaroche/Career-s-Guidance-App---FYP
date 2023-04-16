@@ -78,6 +78,9 @@
 		04ADB7242982A11800BCFAC5 /* Career_s_Guidance_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ADB7232982A11800BCFAC5 /* Career_s_Guidance_AppTests.swift */; };
 		04ADB72E2982A11800BCFAC5 /* Career_s_Guidance_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ADB72D2982A11800BCFAC5 /* Career_s_Guidance_AppUITests.swift */; };
 		04ADB7302982A11800BCFAC5 /* Career_s_Guidance_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ADB72F2982A11800BCFAC5 /* Career_s_Guidance_AppUITestsLaunchTests.swift */; };
+		04E47DCC29E8160200178AD9 /* CustomColour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E47DCB29E8160200178AD9 /* CustomColour.swift */; };
+		04E47DCE29E826D300178AD9 /* CourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E47DCD29E826D300178AD9 /* CourseViewModel.swift */; };
+		04E47DD029E8272600178AD9 /* Courses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E47DCF29E8272600178AD9 /* Courses.swift */; };
 		04EF025129A67C050018C090 /* Questionnaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF025029A67C050018C090 /* Questionnaire.swift */; };
 		04FA68A72986C3E600B9811E /* AccountPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA68A62986C3E600B9811E /* AccountPageController.swift */; };
 		04FA68A92986C8BB00B9811E /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA68A82986C8BB00B9811E /* AccountView.swift */; };
@@ -155,6 +158,9 @@
 		04ADB7292982A11800BCFAC5 /* Career's Guidance AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Career's Guidance AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04ADB72D2982A11800BCFAC5 /* Career_s_Guidance_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Career_s_Guidance_AppUITests.swift; sourceTree = "<group>"; };
 		04ADB72F2982A11800BCFAC5 /* Career_s_Guidance_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Career_s_Guidance_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		04E47DCB29E8160200178AD9 /* CustomColour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColour.swift; sourceTree = "<group>"; };
+		04E47DCD29E826D300178AD9 /* CourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewModel.swift; sourceTree = "<group>"; };
+		04E47DCF29E8272600178AD9 /* Courses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Courses.swift; sourceTree = "<group>"; };
 		04EF025029A67C050018C090 /* Questionnaire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questionnaire.swift; sourceTree = "<group>"; };
 		04FA68A62986C3E600B9811E /* AccountPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPageController.swift; sourceTree = "<group>"; };
 		04FA68A82986C8BB00B9811E /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
@@ -260,6 +266,7 @@
 				04FF09BC29E72BB500D5717A /* PieSlice.swift */,
 				04FF09BE29E72BD700D5717A /* PieChart.swift */,
 				04FF09C029E72BF100D5717A /* PieSliceText.swift */,
+				04E47DCB29E8160200178AD9 /* CustomColour.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -273,6 +280,7 @@
 				04EF025029A67C050018C090 /* Questionnaire.swift */,
 				044351E029C35EA800F2DC6C /* Category.swift */,
 				049AF85B29DC4B8C0028351E /* Results.swift */,
+				04E47DCF29E8272600178AD9 /* Courses.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -282,6 +290,7 @@
 			children = (
 				04597E9629B0F177000BF3AB /* QuestionViewModel.swift */,
 				0400554C29BDEA2900EEB2A9 /* ResultViewModel.swift */,
+				04E47DCD29E826D300178AD9 /* CourseViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -542,6 +551,7 @@
 				0439A9C72982DC4500942926 /* ForgotButton.swift in Sources */,
 				0439A9D32982DC7500942926 /* AlertManager.swift in Sources */,
 				0439A9C42982DC4500942926 /* LineView.swift in Sources */,
+				04E47DCE29E826D300178AD9 /* CourseViewModel.swift in Sources */,
 				0439A9B72982DC1200942926 /* LoginController.swift in Sources */,
 				0439A9D72982DC8A00942926 /* Validator.swift in Sources */,
 				049BD4DA29DF1ACF0099FE5A /* ResultsController.swift in Sources */,
@@ -550,6 +560,7 @@
 				0435CFFA298BF07E00670D1A /* NavigationTabBarController.swift in Sources */,
 				0439A9C82982DC4500942926 /* AuthHeaderView.swift in Sources */,
 				04EF025129A67C050018C090 /* Questionnaire.swift in Sources */,
+				04E47DCC29E8160200178AD9 /* CustomColour.swift in Sources */,
 				0400554D29BDEA2900EEB2A9 /* ResultViewModel.swift in Sources */,
 				04A1448C29831831007F60A6 /* WelcomeController.swift in Sources */,
 				0456F74529A5065800414B9C /* TableViewCell.swift in Sources */,
@@ -560,6 +571,7 @@
 				0439A9CA2982DC4500942926 /* CustomSecondaryButton.swift in Sources */,
 				049AB07829DDC20F0055A71A /* ResultsView.swift in Sources */,
 				044351E129C35EA800F2DC6C /* Category.swift in Sources */,
+				04E47DD029E8272600178AD9 /* Courses.swift in Sources */,
 				0456AB87299E5E1000C8369A /* QuizViewController.swift in Sources */,
 				04ADB70F2982A11600BCFAC5 /* SceneDelegate.swift in Sources */,
 				0439A9C92982DC4500942926 /* BasicText.swift in Sources */,

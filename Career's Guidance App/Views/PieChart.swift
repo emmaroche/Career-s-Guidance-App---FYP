@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+//Code Resource: https://towardsdatascience.com/data-visualization-with-swiftui-pie-charts-bcad1903c5d2
+
 struct PieChart: View {
   @Binding var data: [Double]
   @State var labels: [String]!

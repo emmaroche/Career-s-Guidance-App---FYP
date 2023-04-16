@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+//Code Resource: https://towardsdatascience.com/data-visualization-with-swiftui-pie-charts-bcad1903c5d2
 
 struct PieSliceText: View {
   let title: String

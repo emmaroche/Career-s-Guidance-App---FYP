@@ -10,10 +10,10 @@ import CoreMIDI
 
 // Resource that helped me with importing custom app colours https://levelup.gitconnected.com/using-custom-colors-in-swiftui-d16f07d6a71e
 
-struct CustomColour {
-    static let customGreenColour = Color("customGreenColour")
-    static let customBlueColour = Color("customBlueColour")
-}
+//struct CustomColour {
+//    static let customGreenColour = Color("customGreenColour")
+//    static let customBlueColour = Color("customBlueColour")
+//}
 
 struct QuizScreen: View {
     

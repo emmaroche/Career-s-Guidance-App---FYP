@@ -12,6 +12,8 @@ import SwiftPieChart
 
 struct ResultsDashboardController: View {
     @ObservedObject var viewModel = ResultViewModel()
+    @ObservedObject var viewCourseModel = CourseViewModel()
+
     @State var isModal: Bool = false
     //    @State var data: [Double] = [0, 0, 0, 0, 0, 0]
     
@@ -31,7 +33,7 @@ struct ResultsDashboardController: View {
                 
                 VStack(alignment: .center, spacing: 35) {
  
-                    PieChart(data: $viewModel.data, labels: ["Social", "Artistic", "Realistic", "Conventional", "Enterprising", "Investigative"], colors: [Color.red, Color.blue, Color.purple, Color.gray, Color.green, Color.pink], borderColor: Color.black).frame(height: 300)
+                    PieChart(data: $viewModel.data, labels: ["Social", "Artistic", "Realistic", "Conventional", "Enterprising", "Investigative"], colors: [CustomColour.customPinkColour, CustomColour.customOrangeColour, CustomColour.customLightBlueColour, CustomColour.customPinkColour2, CustomColour.customGreenColour, CustomColour.customYellowColour], borderColor: Color.black).frame(height: 300)
                     
                 }.modifier(CardModifier())
                 
@@ -73,9 +75,9 @@ struct ResultsDashboardController: View {
 
 
 
-struct ResultsDashboardController_Previews: PreviewProvider {
-    static var previews: some View {
-        ResultsDashboardController()
-    }
-}
+//struct ResultsDashboardController_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ResultsDashboardController(course: course)
+//    }
+//}
 

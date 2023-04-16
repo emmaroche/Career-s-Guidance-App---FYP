@@ -9,6 +9,10 @@ import SwiftUI
 
 struct ResultsView: View {
     @Binding var result: Results
+    //   var course: Courses
+    @ObservedObject var viewCourseModel = CourseViewModel()
+    @ObservedObject var viewModel = ResultViewModel()
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 35) {
             
@@ -46,36 +50,84 @@ struct ResultsView: View {
                 .padding(.leading, 30)
                 .padding(.trailing, 20)
             
-                            HStack(alignment: .center) {
-                                VStack(alignment: .leading , spacing: 25) {
-                                    HStack{
-                                        Text("Course recommendations")
-                                            .font(.system(size: 20, weight: .bold, design: .default))
-                                            .frame(maxWidth: .infinity, alignment: .center)
-                                    }
-                                    Text("Placeholder Text")
-                                        .font(.system(size: 17, weight: .regular, design: .default))
-                                        .foregroundColor(.black)
+            
+                HStack(alignment: .center) {
+                    VStack(alignment: .leading , spacing: 25) {
+                        HStack(alignment: .center) {
+                            VStack(alignment: .leading , spacing: 25) {
+                                HStack{
+                                    Text("Course recommendations")
+                                        .font(.system(size: 20, weight: .bold, design: .default))
                                         .frame(maxWidth: .infinity, alignment: .center)
-                                        .fixedSize(horizontal: false, vertical: true)
-                                        .lineLimit(nil)
-                                } .padding(.leading, 30)
-                                    .padding(.trailing, 30)
-                                    .padding(.bottom, 20)
-                                    .padding(.top, 20)
-                                Spacer()
-                            }
-                            .padding(.bottom, 50)
-                            .padding(.top, 30)
-                            .frame(maxWidth: .infinity, alignment: .center)
-                            .background(Color.white)
-                            .modifier(CardModifier())
-                            .padding(.all, 30)
-            
-            
+                                }
+                                
+                                ForEach(viewCourseModel.courses, id: \.self) { course in
+                            
+                                Text(course.name!)
+                                    .font(.system(size: 17, weight: .regular, design: .default))
+                                    .foregroundColor(.black)
+                                    .frame(maxWidth: .infinity, alignment: .center)
+                                    .fixedSize(horizontal: false, vertical: true)
+                                    .lineLimit(nil)
+                            } .padding(.leading, 30)
+                                .padding(.trailing, 30)
+                                .padding(.bottom, 20)
+                                .padding(.top, 20)
+                            Spacer()
+                        }
+                        
+                    }
+                    .padding(.leading, 30)
+                    .padding(.trailing, 30)
+                    .padding(.bottom, 20)
+                    .padding(.top, 20)
+                    Spacer()
+                }
+                .padding(.bottom, 50)
+                .padding(.top, 30)
+                .frame(maxWidth: .infinity, alignment: .center)
+                .background(Color.white)
+                .modifier(CardModifier())
+                .padding(.all, 30)
+            }
+        }.onAppear() {
+            viewCourseModel.getCourses(set: "set name here")
         }
-        
     }
-    
 }
+
+//                            HStack(alignment: .center) {
+//                                VStack(alignment: .leading , spacing: 25) {
+//                                    HStack{
+//                                        Text("Course recommendations")
+//                                            .font(.system(size: 20, weight: .bold, design: .default))
+//                                            .frame(maxWidth: .infinity, alignment: .center)
+//                                    }
+//
+//
+//                                    Text("Course")
+//                                        .font(.system(size: 17, weight: .regular, design: .default))
+//                                        .foregroundColor(.black)
+//                                        .frame(maxWidth: .infinity, alignment: .center)
+//                                        .fixedSize(horizontal: false, vertical: true)
+//                                        .lineLimit(nil)
+//                                } .padding(.leading, 30)
+//                                    .padding(.trailing, 30)
+//                                    .padding(.bottom, 20)
+//                                    .padding(.top, 20)
+//                                Spacer()
+//                            }
+//                            .padding(.bottom, 50)
+//                            .padding(.top, 30)
+//                            .frame(maxWidth: .infinity, alignment: .center)
+//                            .background(Color.white)
+//                            .modifier(CardModifier())
+//                            .padding(.all, 30)
+//
+//
+//        }
+//
+//    }
+//
+//}
 
