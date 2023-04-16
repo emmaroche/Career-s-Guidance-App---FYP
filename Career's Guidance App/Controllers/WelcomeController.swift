@@ -7,9 +7,7 @@
 
 import UIKit
 
-
 class WelcomeController: UIViewController {
-    
     
     // MARK: - UI Components
     

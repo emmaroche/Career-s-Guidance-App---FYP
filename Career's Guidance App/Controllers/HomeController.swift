@@ -6,12 +6,11 @@
 //
 
 import UIKit
-
+import SwiftUI
 
 class HomeController: UIViewController {
     
     // MARK: - UI Components
-    
     
     private let gap = BasicText(text: "")
     
@@ -25,22 +24,34 @@ class HomeController: UIViewController {
         return label
     }()
     
-    private let homeView = HomeView(hLabel1: "Our mission is to help you find your dream course, personalised to your skills and interests.", hLabel2: "Take the Course Matching Questionnaire to find the course that will best suit you! ", hLabel3: "You have previously completed the Course Matching Questionnaire, you can retake the Questionnaire at any time or view previous results." )
+    private let homeView = HomeView(hLabel1: "Our mission is to help you find your \ndream course, personalised to your \nskills and interests.", hLabel2: "Take the Course Matching Questionnaire \nto find the course that will best suit you! ", hLabel3: "You have previously completed the \nCourse Matching Questionnaire, you \ncan retake the Questionnaire at any time or view previous results." )
     
-
-    private let logoImageView: UIButton = {
+    
+    private let cardImageView: UIButton = {
         let iv = UIButton()
-        let img = UIImage(named: "card")
+        let img = UIImage(named: "card1")
         iv.setImage(img , for: .normal)
+        iv.contentMode = .scaleAspectFit
         return iv
     }()
-
-
+    
+    private let cardImageView2: UIButton = {
+        let iv = UIButton()
+        let img = UIImage(named: "card2")
+        iv.setImage(img , for: .normal)
+        iv.contentMode = .scaleAspectFit
+        return iv
+    }()
+    
+    
     // MARK: - LifeCycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
-      
+        
+        self.cardImageView.addTarget(self, action: #selector(didTapRetakeQuestionnaire), for: .touchUpInside)
+        self.cardImageView2.addTarget(self, action: #selector(didTapResultsDashboard), for: .touchUpInside)
         
         AuthService.shared.fetchUser { [weak self] user, error in
             guard let self = self else { return }
@@ -54,29 +65,28 @@ class HomeController: UIViewController {
             }
         }
         
-//        self.logoImageView.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
-//
         overrideUserInterfaceStyle = .light
     }
     
     // MARK: - UI Setup
+    
     private func setupUI() {
         self.view.backgroundColor = .white
         
         self.view.addSubview(gap)
         self.view.addSubview(label)
         self.view.addSubview(homeView)
-        self.view.addSubview(logoImageView)
-
+        self.view.addSubview(cardImageView)
+        self.view.addSubview(cardImageView2)
         
-        //enables autolayout for view
         gap.translatesAutoresizingMaskIntoConstraints = false
         label.translatesAutoresizingMaskIntoConstraints = false
         homeView.translatesAutoresizingMaskIntoConstraints = false
-        logoImageView.translatesAutoresizingMaskIntoConstraints = false
-      
+        cardImageView.translatesAutoresizingMaskIntoConstraints = false
+        cardImageView2.translatesAutoresizingMaskIntoConstraints = false
+        
         NSLayoutConstraint.activate([
-
+            
             self.gap.topAnchor.constraint(equalTo: self.view.topAnchor),
             self.gap.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
             self.gap.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
@@ -85,22 +95,51 @@ class HomeController: UIViewController {
             self.label.topAnchor.constraint(equalTo: gap.bottomAnchor, constant: 40),
             self.label.centerXAnchor.constraint(equalTo: gap.centerXAnchor),
             self.label.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85),
-
+            
             self.homeView.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 40),
             self.homeView.centerXAnchor.constraint(equalTo: gap.centerXAnchor),
             self.homeView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85),
             
-            self.logoImageView.topAnchor.constraint(equalTo: homeView.bottomAnchor, constant: 270),
-            self.logoImageView.centerXAnchor.constraint(equalTo: gap.centerXAnchor),
-            self.logoImageView.widthAnchor.constraint(equalToConstant: 350),
-            self.logoImageView.heightAnchor.constraint(equalToConstant: 300),
+            self.cardImageView.topAnchor.constraint(equalTo: homeView.bottomAnchor, constant: 270),
+            self.cardImageView.centerXAnchor.constraint(equalTo: gap.centerXAnchor),
+            self.cardImageView.widthAnchor.constraint(equalToConstant: 335),
+            self.cardImageView.heightAnchor.constraint(equalToConstant: 125),
+            
+            self.cardImageView2.topAnchor.constraint(equalTo: cardImageView.bottomAnchor, constant: 30),
+            self.cardImageView2.centerXAnchor.constraint(equalTo: gap.centerXAnchor),
+            self.cardImageView2.widthAnchor.constraint(equalToConstant: 335),
+            self.cardImageView2.heightAnchor.constraint(equalToConstant: 125),
             
         ])
+        
     }
     
-//    @objc private func didTapButton() {
-//        let vc = LoginController()
-//        self.navigationController?.pushViewController(vc, animated: true)
-//    }
+    // MARK: - Selectors
+    
+    // The functions below keep the tab bar visable at the bottom of the screen when the card buttons are pressed
+    @objc private func didTapRetakeQuestionnaire() {
+        let quizScreen = UIHostingController(rootView: QuizScreen())
+        quizScreen.title = "Quiz"
+        quizScreen.tabBarItem.image = UIImage(systemName: "lightbulb.fill")
+        if let viewControllers = self.tabBarController?.viewControllers {
+            var updatedViewControllers = viewControllers
+            updatedViewControllers[1] = quizScreen
+            self.tabBarController?.setViewControllers(updatedViewControllers, animated: false)
+            self.tabBarController?.selectedIndex = 1
+        }
+    }
+    
+    @objc private func didTapResultsDashboard() {
+        let rdScreen = UIHostingController(rootView: ResultsDashboardController())
+        rdScreen.title = "Results"
+        rdScreen.tabBarItem.image = UIImage(systemName: "chart.bar.xaxis")
+        if let viewControllers = self.tabBarController?.viewControllers {
+            var updatedViewControllers = viewControllers
+            updatedViewControllers[2] = rdScreen
+            self.tabBarController?.setViewControllers(updatedViewControllers, animated: false)
+            self.tabBarController?.selectedIndex = 2
+        }
+    }
+    
     
 }
