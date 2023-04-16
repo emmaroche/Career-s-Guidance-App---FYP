@@ -10,7 +10,9 @@ import Firebase
 
 struct ResultsController: View {
     @ObservedObject var viewModel = ResultViewModel()
+    @ObservedObject var viewCourseModel = CourseViewModel()
     @Binding var result: Results
+//    var course: Courses
     
     var body: some View {
         
@@ -25,7 +27,7 @@ struct ResultsController: View {
                     .padding(.leading, 30)
                 
                 // Code resource to help me bind the specific result clicked to the ResultsView  https://www.hackingwithswift.com/quick-start/swiftui/how-to-create-constant-bindings
-                      ResultsView(result: .constant(result))
+                ResultsView(result: .constant(result), viewCourseModel: self.viewCourseModel)
                 
             } .padding(.top, 50)
             .navigationBarTitle("Results")
