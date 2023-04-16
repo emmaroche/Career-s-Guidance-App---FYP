@@ -28,17 +28,14 @@ class NavigationTabBarController: UITabBarController {
         guard let items = self.tabBar.items else {
             return
         }
-        
-//        let images = ["house", "lightbulb", "chart.bar.xaxis", "person"]
-      
-        
+    
         let images = ["house.fill", "lightbulb.fill", "chart.bar.xaxis", "person.fill"]
         
         for x in 0..<items.count {
             items[x].image = UIImage(systemName: images[x])
         }
         
-        //Code resource used to stop Scroll bar from putting a grey cast on the navigation:https://stackoverflow.com/questions/69924596/swift-navigation-navigation-bar-changes-its-background-color-when-scroll-the and Code resource for making the unselected items stay white (as they kept defaulting to grey) https://stackoverflow.com/questions/56839374/uitabbaritem-icon-not-colored-correctly-for-ios-13-when-a-bar-tint-color-is-spec
+        // Code resource used to stop Scroll bar from putting a grey cast on the navigation:https://stackoverflow.com/questions/69924596/swift-navigation-navigation-bar-changes-its-background-color-when-scroll-the and Code resource for making the unselected items stay white (as they kept defaulting to grey) https://stackoverflow.com/questions/56839374/uitabbaritem-icon-not-colored-correctly-for-ios-13-when-a-bar-tint-color-is-spec
         
         if #available(iOS 15, *) {
             let tabBarAppearance = UITabBarAppearance()
