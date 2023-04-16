@@ -10,6 +10,7 @@ import UIKit
 class RegisterController: UIViewController {
     
     // MARK: - UI Components
+    
     private let headerView = AuthHeaderView(title: "Sign Up", subTitle: "Create an account")
     
     private let usernameField = CustomTextField(fieldType: .firstName)
@@ -20,16 +21,17 @@ class RegisterController: UIViewController {
     
     private let ConfirmPasswordField = CustomTextField(fieldType: .confirmPassword)
     
-    private let signUpButton = CustomButton(title: "Sign Up", hasBackground: true, fontSize: .biglol)
+    private let signUpButton = CustomButton(title: "Sign Up", hasBackground: true, fontSize: .big)
     
     private let lineSeparator = LineView(lineWithOr: "⎯⎯⎯⎯⎯⎯⎯  or  ⎯⎯⎯⎯⎯⎯⎯")
-        
+    
     private let text = BasicText(text: "Already have an account?")
-
+    
     private let signInButton = CustomSButton(title: "Log in", hasBackground: true, fontSize: .bigSb)
-
+    
     
     // MARK: - LifeCycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
@@ -38,7 +40,7 @@ class RegisterController: UIViewController {
         self.signInButton.addTarget(self, action: #selector(didTapSignIn), for: .touchUpInside)
         overrideUserInterfaceStyle = .light
         
-        //Dismiss keyboard when text field is clicked out of. Code reference: https://stackoverflow.com/questions/24126678/close-ios-keyboard-by-touching-anywhere-using-swift
+        // Dismiss keyboard when text field is clicked out of. Code reference: https://stackoverflow.com/questions/24126678/close-ios-keyboard-by-touching-anywhere-using-swift
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
     }
@@ -53,9 +55,9 @@ class RegisterController: UIViewController {
     
     
     // MARK: - UI Setup
+    
     private func setupUI() {
         self.view.backgroundColor = UIColor(red: 0.20, green: 0.48, blue: 0.67, alpha: 1.00)
-        
         
         self.view.addSubview(headerView)
         self.view.addSubview(usernameField)
@@ -76,7 +78,7 @@ class RegisterController: UIViewController {
         lineSeparator.translatesAutoresizingMaskIntoConstraints = false
         text.translatesAutoresizingMaskIntoConstraints = false
         signInButton.translatesAutoresizingMaskIntoConstraints = false
-
+        
         NSLayoutConstraint.activate([
             self.headerView.topAnchor.constraint(equalTo: self.view.layoutMarginsGuide.topAnchor),
             self.headerView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
@@ -88,17 +90,17 @@ class RegisterController: UIViewController {
             self.usernameField.heightAnchor.constraint(equalToConstant: 55),
             self.usernameField.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85),
             
-            self.emailField.topAnchor.constraint(equalTo: usernameField.bottomAnchor, constant: 22),
+            self.emailField.topAnchor.constraint(equalTo: usernameField.bottomAnchor, constant: 30),
             self.emailField.centerXAnchor.constraint(equalTo: headerView.centerXAnchor),
             self.emailField.heightAnchor.constraint(equalToConstant: 55),
             self.emailField.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85),
             
-            self.passwordField.topAnchor.constraint(equalTo: emailField.bottomAnchor, constant: 22),
+            self.passwordField.topAnchor.constraint(equalTo: emailField.bottomAnchor, constant: 30),
             self.passwordField.centerXAnchor.constraint(equalTo: headerView.centerXAnchor),
             self.passwordField.heightAnchor.constraint(equalToConstant: 55),
             self.passwordField.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85),
             
-            self.ConfirmPasswordField.topAnchor.constraint(equalTo: passwordField.bottomAnchor, constant: 22),
+            self.ConfirmPasswordField.topAnchor.constraint(equalTo: passwordField.bottomAnchor, constant: 30),
             self.ConfirmPasswordField.centerXAnchor.constraint(equalTo: headerView.centerXAnchor),
             self.ConfirmPasswordField.heightAnchor.constraint(equalToConstant: 55),
             self.ConfirmPasswordField.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85),
@@ -126,6 +128,7 @@ class RegisterController: UIViewController {
     }
     
     // MARK: - Selectors
+    
     @objc func didTapSignUp() {
         let registerUserRequest = RegiserUserRequest(
             firstName: self.usernameField.text ?? "",
@@ -156,9 +159,9 @@ class RegisterController: UIViewController {
         if ConfirmPasswordField.text! != passwordField.text! {
             AlertManager.showInvalidCheckPasswordAlert(on: self)
             return
-
+            
         }
-
+        
         
         AuthService.shared.registerUser(with: registerUserRequest) { [weak self] wasRegistered, error in
             guard let self = self else { return }
@@ -184,7 +187,6 @@ class RegisterController: UIViewController {
     }
     
     @objc func dismissKeyboard() {
-        //Causes the text fields to resign the first responder status.
         view.endEditing(true)
     }
     

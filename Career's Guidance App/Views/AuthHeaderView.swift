@@ -10,18 +10,12 @@ import UIKit
 class AuthHeaderView: UIView {
     
     // MARK: - UI Components
-//    private let logoImageView: UIImageView = {
-//        let iv = UIImageView()
-//        iv.contentMode = .scaleAspectFit
-//        iv.image = UIImage(named: "logo")
-//        return iv
-//    }()
     
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = .white
         label.textAlignment = .center
-        label.font = .systemFont(ofSize: 28, weight: .bold)
+        label.font = .systemFont(ofSize: 24, weight: .bold)
         label.text = "Error"
         return label
     }()
@@ -36,6 +30,7 @@ class AuthHeaderView: UIView {
     }()
     
     // MARK: - LifeCycle
+    
     init(title: String, subTitle: String) {
         super.init(frame: .zero)
         self.titleLabel.text = title
@@ -49,22 +44,16 @@ class AuthHeaderView: UIView {
     
     
     // MARK: - UI Setup
+    
     private func setupUI() {
-//        self.addSubview(logoImageView)
         self.addSubview(titleLabel)
         self.addSubview(subTitleLabel)
         
-//        logoImageView.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         subTitleLabel.translatesAutoresizingMaskIntoConstraints = false
-
-
+        
+        
         NSLayoutConstraint.activate([
-//            self.logoImageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 30),
-//            self.logoImageView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-//            self.logoImageView.widthAnchor.constraint(equalToConstant: 90),
-//            self.logoImageView.heightAnchor.constraint(equalTo: logoImageView.widthAnchor),
-//
             self.titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 25),
             self.titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             self.titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor),

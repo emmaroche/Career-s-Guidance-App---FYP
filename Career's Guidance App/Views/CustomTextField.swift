@@ -21,15 +21,15 @@ class CustomTextField: UITextField {
     //padding code source: https://stackoverflow.com/questions/25367502/create-space-at-the-beginning-of-a-uitextfield
     
     let padding = UIEdgeInsets(top: 0, left: 60, bottom: 0, right: 5)
-
+    
     override open func textRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.inset(by: padding)
     }
-
+    
     override open func placeholderRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.inset(by: padding)
     }
-
+    
     override open func editingRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.inset(by: padding)
     }
@@ -41,6 +41,11 @@ class CustomTextField: UITextField {
         self.backgroundColor = .white
         
         self.layer.cornerRadius = 12
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOffset = CGSize(width: 0, height: 3)
+        self.layer.shadowOpacity = 0.25
+        self.layer.shadowRadius = 3
+        self.layer.masksToBounds = false
         
         self.returnKeyType = .done
         self.autocorrectionType = .no
@@ -48,7 +53,7 @@ class CustomTextField: UITextField {
         
         self.leftViewMode = .always
         self.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 12, height: self.frame.size.height))
-
+        
         switch fieldType {
         case .firstName:
             self.placeholder = "First Name"
@@ -61,7 +66,7 @@ class CustomTextField: UITextField {
             view.addSubview(imageView)
             self.leftViewMode = UITextField.ViewMode.always
             self.leftView = view
-        
+            
             
         case .email:
             self.placeholder = "Email Address"
@@ -71,7 +76,7 @@ class CustomTextField: UITextField {
             let image = UIImage(named: "fieldImage")
             imageView.image = image
             imageView.contentMode = .scaleAspectFit
-
+            
             let view = UIView(frame: CGRect(x: 0, y: 0, width: 55, height: 55))
             view.addSubview(imageView)
             self.leftViewMode = UITextField.ViewMode.always
@@ -85,7 +90,7 @@ class CustomTextField: UITextField {
             let image = UIImage(named: "fieldImage2")
             imageView.image = image
             imageView.contentMode = .scaleAspectFit
-
+            
             let view = UIView(frame: CGRect(x: 0, y: 0, width: 55, height: 55))
             view.addSubview(imageView)
             self.leftViewMode = UITextField.ViewMode.always
@@ -99,7 +104,7 @@ class CustomTextField: UITextField {
             let image = UIImage(named: "fieldImage2")
             imageView.image = image
             imageView.contentMode = .scaleAspectFit
-
+            
             let view = UIView(frame: CGRect(x: 0, y: 0, width: 55, height: 55))
             view.addSubview(imageView)
             self.leftViewMode = UITextField.ViewMode.always
@@ -110,6 +115,5 @@ class CustomTextField: UITextField {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
     
 }

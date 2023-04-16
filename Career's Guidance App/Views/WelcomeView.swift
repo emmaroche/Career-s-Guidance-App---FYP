@@ -15,7 +15,7 @@ class WelcomeView: UIView {
         let label = UILabel()
         label.textColor = .white
         label.textAlignment = .center
-        label.font = .systemFont(ofSize: 26, weight: .bold)
+        label.font = .systemFont(ofSize: 24, weight: .bold)
         label.text = "Error"
         return label
     }()
@@ -24,7 +24,7 @@ class WelcomeView: UIView {
         let label = UILabel()
         label.textColor = .white
         label.textAlignment = .center
-        label.font = .systemFont(ofSize: 26, weight: .bold)
+        label.font = .systemFont(ofSize: 24, weight: .bold)
         label.text = "Error"
         return label
     }()
@@ -35,12 +35,12 @@ class WelcomeView: UIView {
         iv.image = UIImage(named: "logo")
         return iv
     }()
-
+    
     private let subWelcomeLabel: UILabel = {
         let label = UILabel()
         label.textColor = .white
         label.textAlignment = .center
-        label.font = .systemFont(ofSize: 18, weight: .medium)
+        label.font = .systemFont(ofSize: 20, weight: .semibold)
         label.text = "Error"
         return label
     }()
@@ -49,12 +49,13 @@ class WelcomeView: UIView {
         let label = UILabel()
         label.textColor = .white
         label.textAlignment = .center
-        label.font = .systemFont(ofSize: 18, weight: .medium)
+        label.font = .systemFont(ofSize: 20, weight: .semibold)
         label.text = "Error"
         return label
     }()
     
     // MARK: - LifeCycle
+    
     init(title: String, subTitle: String, subLabel: String, subLabel2: String) {
         super.init(frame: .zero)
         self.welcomeLabel.text = title
@@ -70,8 +71,9 @@ class WelcomeView: UIView {
     
     
     // MARK: - UI Setup
+    
     private func setupUI() {
-
+        
         self.addSubview(welcomeLabel)
         self.addSubview(welcomeLabelContinued)
         self.addSubview(logoImageView)
@@ -83,7 +85,7 @@ class WelcomeView: UIView {
         logoImageView.translatesAutoresizingMaskIntoConstraints = false
         subWelcomeLabel.translatesAutoresizingMaskIntoConstraints = false
         subWelcomeLabel2.translatesAutoresizingMaskIntoConstraints = false
-
+        
         NSLayoutConstraint.activate([
             self.welcomeLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 25),
             self.welcomeLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor),
@@ -98,7 +100,6 @@ class WelcomeView: UIView {
             self.logoImageView.widthAnchor.constraint(equalToConstant: 200),
             self.logoImageView.heightAnchor.constraint(equalTo: logoImageView.widthAnchor),
             
-
             self.subWelcomeLabel.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 12),
             self.subWelcomeLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             self.subWelcomeLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor),
@@ -106,8 +107,7 @@ class WelcomeView: UIView {
             self.subWelcomeLabel2.topAnchor.constraint(equalTo: subWelcomeLabel.bottomAnchor, constant: 12),
             self.subWelcomeLabel2.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             self.subWelcomeLabel2.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-
-
+   
         ])
     }
 }

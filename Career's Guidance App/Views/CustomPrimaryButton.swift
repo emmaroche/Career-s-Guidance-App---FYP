@@ -10,7 +10,7 @@ import UIKit
 class CustomButton: UIButton {
     
     enum FontSize {
-        case biglol
+        case big
         case med
         case small
     }
@@ -20,8 +20,13 @@ class CustomButton: UIButton {
         
         self.setTitle(title, for: .normal)
         self.layer.cornerRadius = 12
-        self.layer.masksToBounds = true
-     
+        //drop shadow
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOffset = CGSize(width: 0, height: 3)
+        self.layer.shadowOpacity = 0.25
+        self.layer.shadowRadius = 3
+        self.layer.masksToBounds = false
+        
         
         self.backgroundColor = hasBackground ? UIColor(red: 0.53, green: 0.72, blue: 0.52, alpha: 1.00): .clear
         
@@ -30,8 +35,8 @@ class CustomButton: UIButton {
         self.setTitleColor(titleColor, for: .normal)
         
         switch fontSize {
-        case .biglol:
-            self.titleLabel?.font = .systemFont(ofSize: 22, weight: .bold)
+        case .big:
+            self.titleLabel?.font = .systemFont(ofSize: 20, weight: .bold)
             
         case .med:
             self.titleLabel?.font = .systemFont(ofSize: 18, weight: .semibold)

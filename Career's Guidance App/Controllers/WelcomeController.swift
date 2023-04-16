@@ -12,18 +12,20 @@ class WelcomeController: UIViewController {
     
     
     // MARK: - UI Components
+    
     private let headerView2 = WelcomeView(title: "Welcome to", subTitle: "The Careers Guidance App!", subLabel: "We want to help you make the", subLabel2: "right choice for your future")
-
-    private let signInButton = CustomButton(title: "Log in", hasBackground: true, fontSize: .biglol)
-
+    
+    private let signInButton = CustomButton(title: "Log in", hasBackground: true, fontSize: .big)
+    
     private let lineSeparator = LineView(lineWithOr: "⎯⎯⎯⎯⎯⎯⎯  or  ⎯⎯⎯⎯⎯⎯⎯")
-
-    private let signUpButton = CustomButton(title: "Create an account", hasBackground: true, fontSize: .biglol)
+    
+    private let signUpButton = CustomButton(title: "Create an account", hasBackground: true, fontSize: .big)
     
     private let guestButton = CustomSButton(title: "Continue as Guest", hasBackground: true, fontSize: .bigSb)
     
-   
+    
     // MARK: - LifeCycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
@@ -40,8 +42,9 @@ class WelcomeController: UIViewController {
         self.navigationController?.navigationBar.isHidden = true
     }
     
-   
+    
     // MARK: - UI Setup
+    
     private func setupUI() {
         self.view.backgroundColor = UIColor(red: 0.20, green: 0.48, blue: 0.67, alpha: 1.00)
         
@@ -50,16 +53,14 @@ class WelcomeController: UIViewController {
         self.view.addSubview(lineSeparator)
         self.view.addSubview(signUpButton)
         self.view.addSubview(guestButton)
-    
-        //enables autolayout for view
         
         headerView2.translatesAutoresizingMaskIntoConstraints = false
         signInButton.translatesAutoresizingMaskIntoConstraints = false
         signUpButton.translatesAutoresizingMaskIntoConstraints = false
         lineSeparator.translatesAutoresizingMaskIntoConstraints = false
         guestButton.translatesAutoresizingMaskIntoConstraints = false
-
-
+        
+        
         NSLayoutConstraint.activate([
             self.headerView2.topAnchor.constraint(equalTo: self.view.layoutMarginsGuide.topAnchor),
             self.headerView2.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
@@ -85,7 +86,7 @@ class WelcomeController: UIViewController {
             self.guestButton.centerXAnchor.constraint(equalTo: headerView2.centerXAnchor),
             self.guestButton.heightAnchor.constraint(equalToConstant: 55),
             self.guestButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85),
-        
+            
         ])
     }
     
@@ -106,5 +107,4 @@ class WelcomeController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-  }
-
+}
