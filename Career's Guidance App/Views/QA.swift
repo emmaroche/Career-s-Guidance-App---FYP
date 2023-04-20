@@ -75,7 +75,6 @@ struct QA: View {
                                     } ?? false
                                 }
                             }
-
                             
                             // Adds a reposnse date to the result
                             let date: Date = Date()
@@ -90,7 +89,6 @@ struct QA: View {
                                     HStack{
                                         
                                         ZStack {
-                                            
                                             
                                             Text(" \(highestCategory.categoryName)")
                                                 .font(.system(size: 20, weight: .bold, design: .default))
@@ -179,13 +177,14 @@ struct QA: View {
                                 
                             }) {
                                 Text("Save")
-                                    .fontWeight(.heavy)
+                                    .fontWeight(.bold)
                                     .foregroundColor(.white)
                                     .padding(.vertical)
                                     .frame(width: UIScreen.main.bounds.width - 50)
                                     .background(CustomColour.customBlueColour2)
-                                    .cornerRadius(15)
+                                    .cornerRadius(12)
                                     .frame(maxWidth: .infinity, alignment: .center)
+                                
                                 
                             }
                             

@@ -25,7 +25,7 @@ struct QuizScreen: View {
             
             Image("topScreenDesign")
                 .resizable()
-                .frame(width: 420, height: 200)
+                .frame(width: 450, height: 200)
                 .aspectRatio(contentMode: .fit)
                 .ignoresSafeArea()
       
@@ -94,7 +94,7 @@ struct QuizScreen: View {
           
             Spacer(minLength: 0)
         }.padding(.bottom, 65)
-        .background(Color.black.opacity(0.05).ignoresSafeArea())
+        .background(Color.white.ignoresSafeArea())
         .sheet(isPresented: $show) {
             QA(answered: $answered, set: set, viewCourseModel: self.viewCourseModel)
         }
