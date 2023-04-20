@@ -30,12 +30,12 @@ struct QA: View {
     
     //Category array
     @State var categories: [Category] = [
+        Category(categoryName: "Realistic", categoryDescription: "You like working mainly with your hands making, fixing, assembling or building things, using and operating equipment, tools or machines.", categoryCount: 0),
+        Category(categoryName: "Investigative", categoryDescription: "You like to discover and research ideas, observe, investigate and experiment, ask questions and solve questions.", categoryCount: 0),
         Category(categoryName: "Social", categoryDescription: "You like working with people to teach, train, inform, help, treat, heal, cure, serve and greet.", categoryCount: 0),
         Category(categoryName: "Artistic", categoryDescription: "You like using words, art, music or drama to express yourself, communicate or perform or you like to create or design things.", categoryCount: 0),
-        Category(categoryName: "Realistic", categoryDescription: "You like working mainly with your hands making, fixing, assembling or building things, using and operating equipment, tools or machines.", categoryCount: 0),
-        Category(categoryName: "Conventional", categoryDescription: "You like working indoors and at tasks that involve organising and being accurate, following procedures, working with data or numbers, planning work and events.", categoryCount: 0),
         Category(categoryName: "Enterprising", categoryDescription: "You like meeting people, leading, talking to and influencing others, encouraging others, working in business.", categoryCount: 0),
-        Category(categoryName: "Investigative", categoryDescription: "You like to discover and research ideas, observe, investigate and experiment, ask questions and solve questions.", categoryCount: 0)
+        Category(categoryName: "Conventional", categoryDescription: "You like working indoors and at tasks that involve organising and being accurate, following procedures, working with data or numbers, planning work and events.", categoryCount: 0)
     ]
     
 

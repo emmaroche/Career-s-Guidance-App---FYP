@@ -32,7 +32,7 @@ struct ResultsDashboardController: View {
                 
                 VStack(alignment: .center, spacing: 35) {
  
-                    PieChart(data: $viewModel.data, labels: ["Social", "Artistic", "Realistic", "Conventional", "Enterprising", "Investigative"], colors: [CustomColour.customPinkColour, CustomColour.customOrangeColour, CustomColour.customLightBlueColour, CustomColour.customPinkColour2, CustomColour.customGreenColour, CustomColour.customYellowColour], borderColor: Color.black).frame(height: 300)
+                    PieChart(data: $viewModel.data, labels: ["Realistic","Investigative", "Social", "Artistic", "Enterprising", "Conventional"], colors: [CustomColour.customPinkColour, CustomColour.customOrangeColour, CustomColour.customLightBlueColour, CustomColour.customPinkColour2, CustomColour.customGreenColour, CustomColour.customYellowColour], borderColor: Color.black).frame(height: 300)
                     
                 }.modifier(CardModifier())
                 

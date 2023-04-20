@@ -53,22 +53,22 @@ class ResultViewModel: ObservableObject {
         
         data = [0, 0, 0, 0, 0, 0]
         for result in results {
-            if result.Result == "Social" {
+            if result.Result == "Realistic" {
                 //social
                 data[0] += 1
             }
             
-            if result.Result == "Artistic" {
+            if result.Result == "Investigative" {
                 //artistic
                 data[1] += 1
             }
             
-            if result.Result == "Realistic"{
+            if result.Result == "Social"{
                 //realistic
                 data[2] += 1
             }
             
-            if result.Result == "Conventional" {
+            if result.Result == "Artistic" {
                 //conventional
                 data[3] += 1
             }
@@ -78,7 +78,7 @@ class ResultViewModel: ObservableObject {
                 data[4] += 1
             }
             
-            if result.Result == "Investigative" {
+            if result.Result == "Conventional" {
                 //investigative
                 data[5] += 1
             }
