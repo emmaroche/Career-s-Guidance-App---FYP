@@ -49,7 +49,7 @@ class ResultViewModel: ObservableObject {
     
     func countRes() {
         
-        //Clears results to ensure that the previous counts are cleared before counting the existing results i.e. does a recount
+        // Clears results to ensure that the previous counts are cleared before counting the existing results i.e. does a recount
         
         data = [0, 0, 0, 0, 0, 0]
         for result in results {

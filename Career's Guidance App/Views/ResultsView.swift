@@ -105,38 +105,4 @@ struct ResultsView: View {
     }
 }
 
-//                            HStack(alignment: .center) {
-//                                VStack(alignment: .leading , spacing: 25) {
-//                                    HStack{
-//                                        Text("Course recommendations")
-//                                            .font(.system(size: 20, weight: .bold, design: .default))
-//                                            .frame(maxWidth: .infinity, alignment: .center)
-//                                    }
-//
-//
-//                                    Text("Course")
-//                                        .font(.system(size: 17, weight: .regular, design: .default))
-//                                        .foregroundColor(.black)
-//                                        .frame(maxWidth: .infinity, alignment: .center)
-//                                        .fixedSize(horizontal: false, vertical: true)
-//                                        .lineLimit(nil)
-//                                } .padding(.leading, 30)
-//                                    .padding(.trailing, 30)
-//                                    .padding(.bottom, 20)
-//                                    .padding(.top, 20)
-//                                Spacer()
-//                            }
-//                            .padding(.bottom, 50)
-//                            .padding(.top, 30)
-//                            .frame(maxWidth: .infinity, alignment: .center)
-//                            .background(Color.white)
-//                            .modifier(CardModifier())
-//                            .padding(.all, 30)
-//
-//
-//        }
-//
-//    }
-//
-//}
 
