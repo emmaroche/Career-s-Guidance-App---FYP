@@ -117,8 +117,7 @@ class HomeController: UIViewController {
     
     // The functions below keep the tab bar visable at the bottom of the screen when the card buttons are pressed
     @objc private func didTapRetakeQuestionnaire() {
-        let results = Results() // cr
-        let quizScreen = UIHostingController(rootView: QuizScreen(result: results))
+        let quizScreen = UIHostingController(rootView: QuizScreen())
         quizScreen.title = "Quiz"
         quizScreen.tabBarItem.image = UIImage(systemName: "lightbulb.fill")
         if let viewControllers = self.tabBarController?.viewControllers {

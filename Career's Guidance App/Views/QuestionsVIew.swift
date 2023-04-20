@@ -9,15 +9,15 @@ import SwiftUI
 
 struct QuestionView: View {
     @Binding var question: Question
-//    @Binding var results: Results
     @Binding var answered: Int
     
-    //var shuffle: true if shuffle...... set it to false after for
+    // var shuffle: true if shuffle...... set it to false after for
     
-    //Calling Category array from QA
+    // Calling Category array from QA
     @Binding var categories: [Category]
 
     @State var selected = ""
+    @State var selectedAnswer = false
     
     var body: some View {
         
@@ -38,6 +38,7 @@ struct QuestionView: View {
                     Button(action: {
                         selected = answerChoice
                         question.answer = answerChoice
+                        selectedAnswer = true
                     }) {
                         Text(answerChoice)
                             .foregroundColor(.black)
@@ -87,25 +88,13 @@ struct QuestionView: View {
 
 //                Spacer(minLength: 0)
 
-            // Buttons
+            // Next Button
             HStack(spacing: 15) {
-                Button(action: countAns) {
-                    Text("Submit")
-                        .fontWeight(.heavy)
-                        .foregroundColor(.white)
-                        .padding(.vertical)
-                        .frame(maxWidth: .infinity)
-                        .background(Color.blue)
-                        .cornerRadius(15)
-                }
-                // disabling
-                .disabled(question.isSubmitted)
-                .opacity(question.isSubmitted ? 0.7 : 1)
-                
                 Button(action: {
                     withAnimation {
                         question.completed.toggle()
                         answered += 1
+                        countAns()
                     }
                 }) {
                     Text("Next")
@@ -113,11 +102,11 @@ struct QuestionView: View {
                         .foregroundColor(.white)
                         .padding(.vertical)
                         .frame(maxWidth: .infinity)
-                        .background(Color.blue)
+                        .background(CustomColour.customBlueColour2)
                         .cornerRadius(15)
                 }
-                .disabled(!question.isSubmitted)
-                .opacity(!question.isSubmitted ? 0.7 : 1)
+                .disabled(!selectedAnswer)
+                .opacity(!selectedAnswer ? 0.7 : 1)
             }
             .padding(.bottom)
         }
@@ -131,7 +120,7 @@ struct QuestionView: View {
     // highlighting Answer
     func color(option: String) -> Color {
         if option == selected {
-                return Color.blue
+                return (CustomColour.customBlueColour2)
             
         } else {
             

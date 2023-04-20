@@ -9,7 +9,7 @@ import SwiftUI
 import CoreMIDI
 
 struct QuizScreen: View {
-    var result: Results
+
     @State var show = false
     
     // Storing Level for Fetching Questions
@@ -96,7 +96,7 @@ struct QuizScreen: View {
         }.padding(.bottom, 65)
         .background(Color.black.opacity(0.05).ignoresSafeArea())
         .sheet(isPresented: $show) {
-            QA(answered: $answered, result: result, set: set, viewCourseModel: self.viewCourseModel)
+            QA(answered: $answered, set: set, viewCourseModel: self.viewCourseModel)
         }
     }
 }
