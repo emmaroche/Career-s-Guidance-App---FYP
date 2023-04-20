@@ -12,8 +12,7 @@ struct ResultsController: View {
     @ObservedObject var viewModel = ResultViewModel()
     @ObservedObject var viewCourseModel = CourseViewModel()
     @Binding var result: Results
-//    var course: Courses
-    
+
     var body: some View {
         
         ScrollView{

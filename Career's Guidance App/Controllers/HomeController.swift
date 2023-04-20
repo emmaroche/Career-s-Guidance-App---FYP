@@ -26,7 +26,6 @@ class HomeController: UIViewController {
     
     private let homeView = HomeView(hLabel1: "Our mission is to help you find your \ndream course, personalised to your \nskills and interests.", hLabel2: "Take the Course Matching Questionnaire \nto find the course that will best suit you! ", hLabel3: "You have previously completed the \nCourse Matching Questionnaire, you \ncan retake the Questionnaire at any time or view previous results." )
     
-    
     private let cardImageView: UIButton = {
         let iv = UIButton()
         let img = UIImage(named: "card1")

@@ -15,7 +15,6 @@ struct ResultsDashboardController: View {
     @ObservedObject var viewCourseModel = CourseViewModel()
 
     @State var isModal: Bool = false
-    //    @State var data: [Double] = [0, 0, 0, 0, 0, 0]
     
     var body: some View {
         
@@ -38,7 +37,7 @@ struct ResultsDashboardController: View {
                 }.modifier(CardModifier())
                 
 
-                Text("Previous results")
+                Text("Previous questionnaire results")
                     .font(.system(size: 18, weight: .semibold, design: .default))
                     .foregroundColor(.black)
                 
@@ -50,34 +49,22 @@ struct ResultsDashboardController: View {
                     }
                     
                 }
-                
-                
-                Spacer()
+
+//                Spacer()
             }.padding(.leading, 30)
                 .padding(.trailing, 30)
             
             
                 .navigationBarTitle("Results")
-            //                .onAppear() {
-            //                    viewModel.fetchResults()
-            //
-            //                }
             
         }.clipped()
+        
             .onAppear() {
                 viewModel.fetchResults()
-                viewModel.countRes() }
+                viewModel.countRes()
+            }            .background(Color.clear)
     }
     
 }
 
-
-
-
-
-//struct ResultsDashboardController_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ResultsDashboardController(course: course)
-//    }
-//}
 

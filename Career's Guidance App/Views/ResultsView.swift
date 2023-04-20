@@ -9,9 +9,17 @@ import SwiftUI
 
 struct ResultsView: View {
     @Binding var result: Results
-    //   var course: Courses
     @ObservedObject var viewCourseModel = CourseViewModel()
     @ObservedObject var viewModel = ResultViewModel()
+    
+    // Filters courses to only display with their matching categories
+    var filteredCourses: [Courses] {
+         viewCourseModel.courses.filter { course in
+             course.course_details?.contains { details in
+                 details.contains(result.Result!)
+             } ?? false
+         }
+     }
     
     var body: some View {
         VStack(alignment: .leading, spacing: 35) {
@@ -61,15 +69,16 @@ struct ResultsView: View {
                                         .frame(maxWidth: .infinity, alignment: .center)
                                 }
                                 
-                                ForEach(viewCourseModel.courses, id: \.self) { course in
-                            
-                                Text(course.name!)
-                                    .font(.system(size: 17, weight: .regular, design: .default))
-                                    .foregroundColor(.black)
-                                    .frame(maxWidth: .infinity, alignment: .center)
-                                    .fixedSize(horizontal: false, vertical: true)
-                                    .lineLimit(nil)
-                            } .padding(.leading, 30)
+                                ForEach(filteredCourses, id: \.self) { course in
+                                    ForEach(course.course_details ?? [], id: \.self) { name in
+                                        Text(name)
+                                            .font(.system(size: 17, weight: .regular, design: .default))
+                                            .foregroundColor(.black)
+                                            .frame(maxWidth: .infinity, alignment: .center)
+                                            .fixedSize(horizontal: false, vertical: true)
+                                            .lineLimit(nil)
+                                    }
+                                } .padding(.leading, 30)
                                 .padding(.trailing, 30)
                                 .padding(.bottom, 20)
                                 .padding(.top, 20)

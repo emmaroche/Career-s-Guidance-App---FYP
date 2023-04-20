@@ -55,6 +55,9 @@ class NavigationTabBarController: UITabBarController {
         
         UITabBar.appearance().tintColor = UIColor(red: 0.53, green: 0.72, blue: 0.52, alpha: 1.00)
         
+        UINavigationBar.appearance().backgroundColor = .clear
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+        UINavigationBar.appearance().shadowImage = UIImage()
         
         overrideUserInterfaceStyle = .light
     }

@@ -44,11 +44,11 @@ struct ResultsDashboardView: View {
                                 self.isModal = true
                                 
                             }) {
-                                Text("View Questionnaire results")
+                                Text("View results")
                                     .font(.system(size: 16, weight: .bold, design: .default))
                                     .foregroundColor(.black)
                                     .frame(maxWidth: .infinity, alignment: .leading)
-                                    .padding(.trailing, 10)
+//                                    .padding(.trailing, 10)
                                     .fixedSize(horizontal: false, vertical: true)
                                 
                                 Image(systemName: "arrowtriangle.forward.fill")
