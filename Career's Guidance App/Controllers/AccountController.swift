@@ -107,7 +107,7 @@ struct AccountController: View {
                                 .foregroundColor(CustomColour.customBlueColour2)
                         }
                         .sheet(isPresented: $isChangePasswordPresented, content: {
-                            ChangePasswordView()
+                            ChangePasswordView().background(Color(UIColor(red: 0.20, green: 0.48, blue: 0.67, alpha: 1.00)))
                         })
                     }
                 }.padding(.horizontal, 30)

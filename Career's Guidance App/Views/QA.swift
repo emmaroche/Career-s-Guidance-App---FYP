@@ -14,9 +14,7 @@ import FirebaseCore
 
 struct QA: View {
     
-    @Binding var answered: Int
-    var result: Results
-    
+    @Binding var answered: Int    
     var set: String
     @StateObject var data = QuestionViewModel()
     @StateObject var viewCourseModel = CourseViewModel()
@@ -40,20 +38,7 @@ struct QA: View {
         Category(categoryName: "Investigative", categoryDescription: "You like to discover and research ideas, observe, investigate and experiment, ask questions and solve questions.", categoryCount: 0)
     ]
     
-    // Filters courses to only display with their matching categories
-//    var filteredCourses: [Courses] {
-//        viewCourseModel.courses.filter { course in
-//            if let details = course.course_details {
-//                return details.contains { detail in
-//                    categories.contains { category in
-//                        category.categoryName == detail
-//                    }
-//                }
-//            }
-//            return false
-//        }
-//    }
-    
+
     @Environment(\.presentationMode) var present
     
     var body: some View {
@@ -198,7 +183,7 @@ struct QA: View {
                                     .foregroundColor(.white)
                                     .padding(.vertical)
                                     .frame(width: UIScreen.main.bounds.width - 50)
-                                    .background(Color.blue)
+                                    .background(CustomColour.customBlueColour2)
                                     .cornerRadius(15)
                                     .frame(maxWidth: .infinity, alignment: .center)
                                 
