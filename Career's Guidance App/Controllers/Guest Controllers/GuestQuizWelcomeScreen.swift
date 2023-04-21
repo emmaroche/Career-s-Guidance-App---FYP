@@ -1,14 +1,13 @@
 //
-//  QuizScreen.swift
+//  GuestQuizWelcomeScreen.swift
 //  Career's Guidance App
 //
-//  Created by Emma Roche on 20/02/2023.
+//  Created by Emma Roche on 21/04/2023.
 //
 
 import SwiftUI
-import CoreMIDI
 
-struct QuizScreen: View {
+struct GuestQuizWelcomeScreen: View {
 
     @State var show = false
     
@@ -30,13 +29,21 @@ struct QuizScreen: View {
                 .ignoresSafeArea()
       
             VStack(alignment: .leading) {
-                Text("Questionnaire")
+                Text("Questionnaire!")
                     .font(.system(size: 24, weight: .bold, design: .default))
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .foregroundColor(.black)
                     .padding(.leading, 30)
                 
-                Text("This Course Matching Questionnaire is designed to help you discover courses \nthat are best suited to your skills and \ninterests.")
+                Text("Our mission is to help you find your \ndream course, personalised to your \nskills and interests.")
+                    .font(.system(size: 17, weight: .medium, design: .default))
+                    .foregroundColor(.black)
+                    .padding(.leading, 30)
+                    .padding(.trailing, 10)
+                    .padding(.top, 20)
+                    .fixedSize(horizontal: false, vertical: true)
+                
+                Text("To get the most accurate results choose \nthe answers that relates to you the most.")
                     .font(.system(size: 17, weight: .regular, design: .default))
                     .foregroundColor(.black)
                     .padding(.leading, 30)
@@ -44,7 +51,7 @@ struct QuizScreen: View {
                     .padding(.top, 20)
                     .fixedSize(horizontal: false, vertical: true)
                 
-                Text("The results are aimed to show course \noptions you may not have considered \nbefore!")
+                Text("Please note that only one option is \naccepted per question.")
                     .font(.system(size: 17, weight: .regular, design: .default))
                     .foregroundColor(.black)
                     .padding(.leading, 30)
@@ -89,21 +96,21 @@ struct QuizScreen: View {
                     }
                 }
             }
-            .padding(.top, 100)
+            .padding(.top, 80)
             .padding(.leading, 136)
           
             Spacer(minLength: 0)
         }.padding(.bottom, 65)
         .background(Color.white.ignoresSafeArea())
         .sheet(isPresented: $show) {
-            QA(answered: $answered, set: set, viewCourseModel: self.viewCourseModel)
+            QAGuest(answered: $answered, set: set, viewCourseModel: self.viewCourseModel)
         }
     }
 }
 
 
-//struct QuizScreen_Previews: PreviewProvider {
-//    static var previews: some View {
-//        QuizScreen()
-//    }
-//}
+struct QuizScreen_Previews: PreviewProvider {
+    static var previews: some View {
+        GuestQuizWelcomeScreen()
+    }
+}

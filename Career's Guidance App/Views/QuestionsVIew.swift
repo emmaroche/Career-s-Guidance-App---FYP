@@ -24,7 +24,7 @@ struct QuestionView: View {
         VStack(alignment: .leading, spacing: 22) {
             HStack(spacing: 15){
             Text(question.question!)
-                .font(.title2)
+                .font(.system(size: 18, weight: .semibold, design: .default))
                 .fontWeight(.heavy)
                 .foregroundColor(.black)
                 .padding(.top, 25)
@@ -42,10 +42,11 @@ struct QuestionView: View {
                     }) {
                         Text(answerChoice)
                             .foregroundColor(.black)
+                            .font(.system(size: 16, weight: .regular, design: .default))
                             .padding()
                             .frame(maxWidth: .infinity)
                             .background(
-                                RoundedRectangle(cornerRadius: 15)
+                                RoundedRectangle(cornerRadius: 12)
                                     .stroke(color(option: answerChoice), lineWidth: 2)
                             )
                     }
@@ -98,12 +99,12 @@ struct QuestionView: View {
                     }
                 }) {
                     Text("Next")
-                        .fontWeight(.heavy)
+                        .fontWeight(.bold)
                         .foregroundColor(.white)
                         .padding(.vertical)
                         .frame(maxWidth: .infinity)
                         .background(CustomColour.customBlueColour2)
-                        .cornerRadius(15)
+                        .cornerRadius(12)
                 }
                 .disabled(!selectedAnswer)
                 .opacity(!selectedAnswer ? 0.7 : 1)
@@ -113,14 +114,14 @@ struct QuestionView: View {
         .padding()
         .background(Color.white)
         .cornerRadius(25)
-        .shadow(color: Color.black.opacity(0.05), radius: 5, x: 5, y: 5)
-        .shadow(color: Color.black.opacity(0.05), radius: 5, x: -5, y: -5)
+        .shadow(color: Color.black.opacity(0.02), radius: 5, x: 5, y: 5)
+        .shadow(color: Color.black.opacity(0.02), radius: 5, x: -5, y: -5)
     }
     
     // highlighting Answer
     func color(option: String) -> Color {
         if option == selected {
-                return (CustomColour.customBlueColour2)
+                return (CustomColour.customGreenColour)
             
         } else {
             

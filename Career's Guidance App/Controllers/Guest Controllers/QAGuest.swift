@@ -1,8 +1,8 @@
 //
-//  QA.swift
+//  QAGuest.swift
 //  Career's Guidance App
 //
-//  Created by Emma Roche on 02/03/2023.
+//  Created by Emma Roche on 21/04/2023.
 //
 
 import SwiftUI
@@ -12,9 +12,9 @@ import FirebaseCore
 
 // Resource that helped with displaying questions: https://www.youtube.com/watch?v=S_BwMu2J3TQ (the code I have implemented has been modified significantly to fit the content of the CGA and this tutorial was used only as a guide to link this questionnaire with Firebase)
 
-struct QA: View {
+struct QAGuest: View {
     
-    @Binding var answered: Int    
+    @Binding var answered: Int
     var set: String
     @StateObject var data = QuestionViewModel()
     @StateObject var viewCourseModel = CourseViewModel()
@@ -66,7 +66,7 @@ struct QA: View {
                             // Gets max number and counts how many times in array
                             let highestIndex = categories.indices.max(by: { categories[$0].categoryCount < categories[$1].categoryCount })
                             let highestCategory = categories[highestIndex!]
-                            
+
                             // Filters courses to make sure that only the courses related to the highest category are being displayed
                             var filteredCourses: [Courses] {
                                 viewCourseModel.courses.filter { course in
@@ -75,13 +75,7 @@ struct QA: View {
                                     } ?? false
                                 }
                             }
-                            
-                            // Adds a reposnse date to the result
-                            let date: Date = Date()
-                            
-                            // Links result to current user
-                            let userID = Auth.auth().currentUser!.uid
-                            
+
                             HStack(alignment: .center) {
                                 
                                 VStack(alignment: .leading , spacing: 25) {
@@ -89,11 +83,9 @@ struct QA: View {
                                     HStack{
                                         
                                         ZStack {
-                                            
                                             Text(" \(highestCategory.categoryName)")
                                                 .font(.system(size: 20, weight: .bold, design: .default))
                                                 .frame(maxWidth: .infinity, alignment: .center)
-                                            
                                         }
                                         
                                     }
@@ -167,16 +159,11 @@ struct QA: View {
                             }
                             
                             Button(action: {
-                                // Closes the sheet
                                 present.wrappedValue.dismiss()
                                 answered = 0
-                                
-                                self.AddInfo(Result: highestCategory.categoryName, ResultDescription: highestCategory.categoryDescription, createDate: date, user: userID)
-                                
-                                
-                                
+
                             }) {
-                                Text("Save")
+                                Text("Close")
                                     .fontWeight(.bold)
                                     .foregroundColor(.white)
                                     .padding(.vertical)
@@ -184,8 +171,6 @@ struct QA: View {
                                     .background(CustomColour.customBlueColour2)
                                     .cornerRadius(12)
                                     .frame(maxWidth: .infinity, alignment: .center)
-                                
-                                
                             }
                             
                         }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
@@ -229,13 +214,7 @@ struct QA: View {
         }
     }
     
-    // Add result info to firebase
-    func AddInfo(Result: String, ResultDescription: String, createDate: Date, user: String){
-        let db = Firestore.firestore()
-        db.collection("Results").document().setData(["Result": Result, "ResultDescription": ResultDescription,"createDate": createDate, "user": user])
-    }
-    
-    // progress
+    // Progress bar
     func progress() -> CGFloat {
         let fraction = CGFloat(answered) / CGFloat(data.questions.count)
         
