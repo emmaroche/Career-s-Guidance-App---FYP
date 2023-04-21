@@ -1,43 +1,34 @@
 //
-//  ResultsController.swift
+//  GuestResultsDashboard.swift
 //  Career's Guidance App
 //
-//  Created by Emma Roche on 06/04/2023.
+//  Created by Emma Roche on 21/04/2023.
 //
 
 import SwiftUI
 import Firebase
 
-struct ResultsController: View {
+struct GuestResultsDashboard: View {
     @ObservedObject var viewModel = ResultViewModel()
     @ObservedObject var viewCourseModel = CourseViewModel()
-    @Binding var result: Results
     @Environment(\.presentationMode) private var presentationMode
-    
     var body: some View {
         
         ScrollView{
             VStack(alignment: .leading, spacing: 35) {
-                HStack{
-                    Text("Results")
+                
+                    Text("Results Dashboard")
                         .font(.system(size: 24, weight: .bold, design: .default))
                         .padding(.leading, 30)
-                    
-                    Button(action: {
-                        withAnimation(.easeOut(duration: 0.2)) {
-                            self.presentationMode.wrappedValue.dismiss()
-                        }
-                        }) {
-                          Image(systemName: "xmark.circle.fill")
-                        }
-                }
-                Text("Top Category")
+
+
+                Text("Previous Result")
                     .font(.system(size: 18, weight: .bold, design: .default))
                     .multilineTextAlignment(.trailing)
                     .padding(.leading, 30)
                 
                 // Code resource to help me bind the specific result clicked to the ResultsView  https://www.hackingwithswift.com/quick-start/swiftui/how-to-create-constant-bindings
-                ResultsView(result: .constant(result), viewCourseModel: self.viewCourseModel)
+                GuestResultsView(viewCourseModel: self.viewCourseModel)
                 
             }
             .padding(.top, 50)

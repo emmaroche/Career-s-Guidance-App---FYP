@@ -64,6 +64,13 @@
 		046F2BEA2982A4E900F4D6BC /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 046F2BE92982A4E900F4D6BC /* FirebaseRemoteConfigSwift */; };
 		046F2BEC2982A4E900F4D6BC /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 046F2BEB2982A4E900F4D6BC /* FirebaseStorage */; };
 		046F2BEE2982A4E900F4D6BC /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 046F2BED2982A4E900F4D6BC /* FirebaseStorageCombine-Community */; };
+		0490E71D29F291AE00845DAA /* GuestQuizWelcomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490E71C29F291AE00845DAA /* GuestQuizWelcomeScreen.swift */; };
+		0490E71F29F2937500845DAA /* QAGuest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490E71E29F2937500845DAA /* QAGuest.swift */; };
+		0490E72129F2949B00845DAA /* GuestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490E72029F2949B00845DAA /* GuestData.swift */; };
+		0490E72329F299FA00845DAA /* GuestNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490E72229F299FA00845DAA /* GuestNavigation.swift */; };
+		0490E72529F29C0400845DAA /* GuestAccountScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490E72429F29C0400845DAA /* GuestAccountScreen.swift */; };
+		0490E72729F2A25100845DAA /* GuestResultsDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490E72629F2A25100845DAA /* GuestResultsDashboard.swift */; };
+		0490E72929F2A7B400845DAA /* GuestResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490E72829F2A7B400845DAA /* GuestResultsView.swift */; };
 		049AB07829DDC20F0055A71A /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049AB07729DDC20F0055A71A /* ResultsView.swift */; };
 		049AB07A29DDD7F90055A71A /* ResultDashboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049AB07929DDD7F90055A71A /* ResultDashboardController.swift */; };
 		049AF85C29DC4B8C0028351E /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049AF85B29DC4B8C0028351E /* Results.swift */; };
@@ -140,6 +147,13 @@
 		04597E9829B0F1E9000BF3AB /* QuestionsVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsVIew.swift; sourceTree = "<group>"; };
 		04597E9A29B0F210000BF3AB /* QA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QA.swift; sourceTree = "<group>"; };
 		046F2BB62982A30100F4D6BC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0490E71C29F291AE00845DAA /* GuestQuizWelcomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestQuizWelcomeScreen.swift; sourceTree = "<group>"; };
+		0490E71E29F2937500845DAA /* QAGuest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QAGuest.swift; sourceTree = "<group>"; };
+		0490E72029F2949B00845DAA /* GuestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestData.swift; sourceTree = "<group>"; };
+		0490E72229F299FA00845DAA /* GuestNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestNavigation.swift; sourceTree = "<group>"; };
+		0490E72429F29C0400845DAA /* GuestAccountScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestAccountScreen.swift; sourceTree = "<group>"; };
+		0490E72629F2A25100845DAA /* GuestResultsDashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestResultsDashboard.swift; sourceTree = "<group>"; };
+		0490E72829F2A7B400845DAA /* GuestResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestResultsView.swift; sourceTree = "<group>"; };
 		049AB07729DDC20F0055A71A /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
 		049AB07929DDD7F90055A71A /* ResultDashboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultDashboardController.swift; sourceTree = "<group>"; };
 		049AF85B29DC4B8C0028351E /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
@@ -227,6 +241,7 @@
 		0439A9B12982DBEB00942926 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0490E71B29F290BC00845DAA /* Guest Controllers */,
 				0439A9B42982DC1200942926 /* ForgotPasswordController.swift */,
 				0439A9B52982DC1200942926 /* HomeController.swift */,
 				0439A9B22982DC1200942926 /* LoginController.swift */,
@@ -305,6 +320,20 @@
 				04ADB7172982A11800BCFAC5 /* LaunchScreen.storyboard */,
 			);
 			path = Supporting;
+			sourceTree = "<group>";
+		};
+		0490E71B29F290BC00845DAA /* Guest Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0490E71C29F291AE00845DAA /* GuestQuizWelcomeScreen.swift */,
+				0490E71E29F2937500845DAA /* QAGuest.swift */,
+				0490E72029F2949B00845DAA /* GuestData.swift */,
+				0490E72229F299FA00845DAA /* GuestNavigation.swift */,
+				0490E72429F29C0400845DAA /* GuestAccountScreen.swift */,
+				0490E72629F2A25100845DAA /* GuestResultsDashboard.swift */,
+				0490E72829F2A7B400845DAA /* GuestResultsView.swift */,
+			);
+			path = "Guest Controllers";
 			sourceTree = "<group>";
 		};
 		04ADB7002982A11600BCFAC5 = {
@@ -527,23 +556,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0490E71F29F2937500845DAA /* QAGuest.swift in Sources */,
 				0439A9B82982DC1200942926 /* RegisterController.swift in Sources */,
 				0439A9CF2982DC5800942926 /* LoginUserRequest.swift in Sources */,
 				0439A9D02982DC5800942926 /* RegisterUserRequest.swift in Sources */,
 				0456F74329A3E6DF00414B9C /* HomeView.swift in Sources */,
+				0490E72929F2A7B400845DAA /* GuestResultsView.swift in Sources */,
 				0439A9B92982DC1200942926 /* ForgotPasswordController.swift in Sources */,
 				04FF09BF29E72BD700D5717A /* PieChart.swift in Sources */,
 				049BD4D829DF12500099FE5A /* ResultsDashboardView.swift in Sources */,
 				04EAE1E529ECB55200519730 /* ChangePasswordView.swift in Sources */,
 				04FF09BD29E72BB500D5717A /* PieSlice.swift in Sources */,
 				049AF85C29DC4B8C0028351E /* Results.swift in Sources */,
+				0490E72529F29C0400845DAA /* GuestAccountScreen.swift in Sources */,
+				0490E72129F2949B00845DAA /* GuestData.swift in Sources */,
 				0439A9BA2982DC1200942926 /* HomeController.swift in Sources */,
+				0490E71D29F291AE00845DAA /* GuestQuizWelcomeScreen.swift in Sources */,
 				04597E9B29B0F210000BF3AB /* QA.swift in Sources */,
 				0439A9D52982DC8600942926 /* AuthService.swift in Sources */,
 				04FF09C129E72BF100D5717A /* PieSliceText.swift in Sources */,
 				0439A9C52982DC4500942926 /* CustomTextField.swift in Sources */,
 				04597E9729B0F177000BF3AB /* QuestionViewModel.swift in Sources */,
 				049AB07A29DDD7F90055A71A /* ResultDashboardController.swift in Sources */,
+				0490E72329F299FA00845DAA /* GuestNavigation.swift in Sources */,
+				0490E72729F2A25100845DAA /* GuestResultsDashboard.swift in Sources */,
 				0456F73B29A3B57300414B9C /* QuizScreen.swift in Sources */,
 				0456AB85299E4F5500C8369A /* ViewController.swift in Sources */,
 				04EAE1DF29EC763F00519730 /* AccountController.swift in Sources */,
@@ -748,8 +784,9 @@
 				INFOPLIST_FILE = "Career's Guidance App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -775,8 +812,9 @@
 				INFOPLIST_FILE = "Career's Guidance App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

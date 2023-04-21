@@ -24,6 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         self.window = window
         self.window?.makeKeyAndVisible()
+        window.overrideUserInterfaceStyle = .light
     }
     
     public func checkAuthentication() {
@@ -31,6 +32,23 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             self.goToController(with: WelcomeController())
         } else {
             self.goToController(with: NavigationTabBarController())
+        }
+    }
+    
+    public func checkAuthenticationGuestLogin() {
+        if Auth.auth().currentUser == nil {
+            self.goToController(with: LoginController())
+        } else {
+            self.goToController(with: GuestNavigation())
+        }
+    }
+    
+    
+    public func checkAuthenticationGuestSignup() {
+        if Auth.auth().currentUser == nil {
+            self.goToController(with: RegisterController())
+        } else {
+            self.goToController(with: GuestNavigation())
         }
     }
     
