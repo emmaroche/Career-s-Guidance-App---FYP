@@ -29,9 +29,11 @@ struct ResultsDashboardView: View {
                             if let date = result.createDate {
                                 
                                 Text("Results from " + DateFormatter.localizedString(from: date,  dateStyle: .long, timeStyle: .none))
-                                    .font(.system(size: 20, weight: .bold, design: .default))
+                                    .font(.system(size: 18, weight: .bold, design: .default))
+                                    .foregroundColor(.white)
                                     .frame(maxWidth: .infinity, alignment: .center)
                                     .lineLimit(nil)
+                                    .padding(.top, -27)
                             } else {
                                 Text("No date")
                             }
@@ -48,9 +50,8 @@ struct ResultsDashboardView: View {
                                     .font(.system(size: 16, weight: .bold, design: .default))
                                     .foregroundColor(.black)
                                     .frame(maxWidth: .infinity, alignment: .leading)
-//                                    .padding(.trailing, 10)
                                     .fixedSize(horizontal: false, vertical: true)
-                                
+              
                                 Image(systemName: "arrowtriangle.forward.fill")
                                     .foregroundColor(CustomColour.customBlueColour)
                                 
@@ -60,14 +61,16 @@ struct ResultsDashboardView: View {
                         
                     }.padding(.horizontal, 40)
                     
+                    
                 }
                 Spacer()
             }
-            .padding(.bottom, 50)
-            .padding(.top, 30)
+//            .padding(.bottom, 30)
+//            .padding(.top, 30)
+            .padding(.vertical, 30)
             .frame(maxWidth: .infinity, alignment: .center)
-            .background(Color.white)
-            .modifier(CardModifier())
+            .modifier(CardModifierColour())
+  
             
         }
         

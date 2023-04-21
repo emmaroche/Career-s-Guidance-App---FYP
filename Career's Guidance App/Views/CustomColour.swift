@@ -17,5 +17,5 @@ struct CustomColour {
     static let customOrangeColour = Color("customOrangeColour")
     static let customPinkColour = Color("customPinkColour")
     static let customPinkColour2 = Color("customPinkColour2")
-    static let customYellowColour = Color("customYellowColour")
+    static let customPurpleColour = Color("customPurpleColour")
 }
