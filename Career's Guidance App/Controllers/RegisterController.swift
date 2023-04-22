@@ -163,7 +163,7 @@ class RegisterController: UIViewController, UITextViewDelegate, UITextFieldDeleg
         
         // Password check
         if !Validator.isPasswordValid(for: registerUserRequest.password) {
-            AlertManager.showInvalidPasswordAlert(on: self)
+            AlertManager.showInvalidPasswordAlertSignUp(on: self)
             return
         }
         

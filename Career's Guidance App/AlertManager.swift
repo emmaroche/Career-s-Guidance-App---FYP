@@ -19,6 +19,7 @@ class AlertManager {
 }
 
 // MARK: - Show Validation Alerts
+
 extension AlertManager {
     
     public static func showInvalidEmailAlert(on vc: UIViewController) {
@@ -29,8 +30,12 @@ extension AlertManager {
         self.showBasicAlert(on: vc, title: "Invalid Password", message: "Please enter a valid password.")
     }
     
+    public static func showInvalidPasswordAlertSignUp(on vc: UIViewController) {
+        self.showBasicAlert(on: vc, title: "Invalid Password", message: "Make sure your password includes both lower and upper case characters and at least one number or symbol.")
+    }
+    
     public static func showInvalidCheckPasswordAlert(on vc: UIViewController) {
-        self.showBasicAlert(on: vc, title: "Passwords do not match", message: "Confirm password does not match initial password.")
+        self.showBasicAlert(on: vc, title: "Passwords do not match", message: "Confirm password does not match password.")
     }
     
     
@@ -41,6 +46,7 @@ extension AlertManager {
 
 
 // MARK: - Registration Errors
+
 extension AlertManager {
     
     public static func showRegistrationErrorAlert(on vc: UIViewController) {
@@ -54,6 +60,7 @@ extension AlertManager {
 
 
 // MARK: - Log In Errors
+
 extension AlertManager {
     
     public static func showSignInErrorAlert(on vc: UIViewController) {
@@ -67,6 +74,7 @@ extension AlertManager {
 
 
 // MARK: - Logout Errors
+
 extension AlertManager {
     
     public static func showLogoutError(on vc: UIViewController, with error: Error) {
@@ -75,7 +83,8 @@ extension AlertManager {
 }
 
 
-// MARK: - Forgot Password
+// MARK: - Forgot Password Errors
+
 extension AlertManager {
 
     public static func showPasswordResetSent(on vc: UIViewController) {
@@ -89,6 +98,7 @@ extension AlertManager {
 
 
 // MARK: - Fetching User Errors
+
 extension AlertManager {
     
     public static func showFetchingUserError(on vc: UIViewController, with error: Error) {

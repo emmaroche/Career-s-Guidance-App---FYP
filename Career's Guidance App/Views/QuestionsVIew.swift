@@ -121,11 +121,11 @@ struct QuestionView: View {
     // highlighting Answer
     func color(option: String) -> Color {
         if option == selected {
-                return (CustomColour.customGreenColour)
+            return (CustomColour.customGreenColour)
             
         } else {
             
-            return Color.gray
+            return (CustomColour.customBlueColour2)
         }
     }
 
