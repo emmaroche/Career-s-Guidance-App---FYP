@@ -23,12 +23,15 @@ struct ResultsController: View {
                         .font(.system(size: 24, weight: .bold, design: .default))
                         .padding(.leading, 30)
                     
+                    Spacer()
                     Button(action: {
-                        withAnimation(.easeOut(duration: 0.2)) {
+                        withAnimation(.easeOut) {
                             self.presentationMode.wrappedValue.dismiss()
                         }
                         }) {
                           Image(systemName: "xmark.circle.fill")
+                                .foregroundColor(CustomColour.customBlueColour)
+                                .padding(.trailing, 30)
                         }
                 }
                 Text("Top Category")
