@@ -23,7 +23,7 @@ class HomeController: UIViewController {
         return label
     }()
     
-    private let homeView = HomeView(hLabel1: "Our mission is to help you find your \ndream course, personalised to your \nskills and interests.", hLabel2: "Take the Course Matching Questionnaire \nto find the course that will best suit you! ", hLabel3: "If you have previously completed the \nCourse Matching Questionnaire, you \ncan retake the Questionnaire at any time and/or view previous results." )
+    private let homeView = HomeView(hLabel1: "Our mission is to help you find your \ndream course, personalised to your \nskills and interests.", hLabel2: "Take the Course Matching Questionnaire \nto find the course that will best suit you! ", hLabel3: "If you have previously completed the \nCourse Matching Questionnaire, you \ncan retake it at any time and/or view previous results." )
     
     private let cardImageView: UIButton = {
         let iv = UIButton()
@@ -100,13 +100,13 @@ class HomeController: UIViewController {
             
             self.cardImageView.topAnchor.constraint(equalTo: homeView.bottomAnchor, constant: 270),
             self.cardImageView.centerXAnchor.constraint(equalTo: gap.centerXAnchor),
-            self.cardImageView.widthAnchor.constraint(equalToConstant: 335),
-            self.cardImageView.heightAnchor.constraint(equalToConstant: 125),
+            self.cardImageView.widthAnchor.constraint(equalToConstant: 350),
+            self.cardImageView.heightAnchor.constraint(equalToConstant: 140),
             
-            self.cardImageView2.topAnchor.constraint(equalTo: cardImageView.bottomAnchor, constant: 30),
+            self.cardImageView2.topAnchor.constraint(equalTo: cardImageView.bottomAnchor, constant: 15),
             self.cardImageView2.centerXAnchor.constraint(equalTo: gap.centerXAnchor),
-            self.cardImageView2.widthAnchor.constraint(equalToConstant: 335),
-            self.cardImageView2.heightAnchor.constraint(equalToConstant: 125),
+            self.cardImageView2.widthAnchor.constraint(equalToConstant: 350),
+            self.cardImageView2.heightAnchor.constraint(equalToConstant: 140),
             
         ])
         

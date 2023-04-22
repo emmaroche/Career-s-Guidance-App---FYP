@@ -52,6 +52,14 @@ struct QuizScreen: View {
                     .padding(.top, 20)
                     .fixedSize(horizontal: false, vertical: true)
                 
+                Text("Please note that only one option is \naccepted per question.")
+                    .font(.system(size: 17, weight: .regular, design: .default))
+                    .foregroundColor(.black)
+                    .padding(.leading, 30)
+                    .padding(.trailing, 10)
+                    .padding(.top, 20)
+                    .fixedSize(horizontal: false, vertical: true)
+                
                 Text("**NOTE:** There are no right or wrong answers.")
                     .font(.system(size: 17, weight: .regular, design: .default))
                     .foregroundColor(.black)

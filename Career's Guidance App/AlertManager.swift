@@ -22,7 +22,7 @@ class AlertManager {
 extension AlertManager {
     
     public static func showInvalidEmailAlert(on vc: UIViewController) {
-        self.showBasicAlert(on: vc, title: "Invalid Email", message: "Please enter a valid email.")
+        self.showBasicAlert(on: vc, title: "Invalid Email", message: "Please enter a valid email address.")
     }
     
     public static func showInvalidPasswordAlert(on vc: UIViewController) {
@@ -30,7 +30,7 @@ extension AlertManager {
     }
     
     public static func showInvalidCheckPasswordAlert(on vc: UIViewController) {
-        self.showBasicAlert(on: vc, title: "Passwords do not match", message: "Confirm password does not match password.")
+        self.showBasicAlert(on: vc, title: "Passwords do not match", message: "Confirm password does not match initial password.")
     }
     
     
