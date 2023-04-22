@@ -40,18 +40,19 @@ struct ResultsView: View {
                         .foregroundColor(.black)
                         .frame(maxWidth: .infinity, alignment: .center)
                         .fixedSize(horizontal: false, vertical: true)
-                }.padding(.leading, 30)
-                    .padding(.trailing, 30)
-                    .padding(.bottom, 20)
-                    .padding(.top, 20)
+                }
+                .padding(.leading, 30)
+                .padding(.trailing, 30)
+                .padding(.bottom, 20)
+                .padding(.top, 20)
                 Spacer()
             }
-            .padding(.bottom, 50)
-            .padding(.top, 30)
+            .padding(.bottom, 20)
+            .padding(.top, 20)
             .frame(maxWidth: .infinity, alignment: .center)
             .background(Color.white)
             .modifier(CardModifier())
-            .padding(.all, 30)
+            .padding(.horizontal, 30)
             
             Text("Based on your results, the following courses have been recommended:")
                 .font(.system(size: 18, weight: .medium, design: .default))
@@ -84,7 +85,7 @@ struct ResultsView: View {
                                             .lineLimit(nil)
                                     }
                                 }
-                                .padding(.vertical, 10)
+                                .padding(.vertical, 5)
 
                             Spacer()
                         }
@@ -96,12 +97,12 @@ struct ResultsView: View {
                     .padding(.top, 20)
                     Spacer()
                 }
-                .padding(.bottom, 30)
-                .padding(.top, 30)
+                .padding(.bottom, -10)
+                .padding(.top, 20)
                 .frame(maxWidth: .infinity, alignment: .center)
                 .background(Color.white)
                 .modifier(CardModifier())
-                .padding(.all, 30)
+                .padding(.horizontal, 30)
             }
         }.onAppear() {
             viewCourseModel.getCourses(set: "set name here")

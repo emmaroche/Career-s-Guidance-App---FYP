@@ -93,6 +93,7 @@ struct QA: View {
                                             Text(" \(highestCategory.categoryName)")
                                                 .font(.system(size: 20, weight: .bold, design: .default))
                                                 .frame(maxWidth: .infinity, alignment: .center)
+                                                .foregroundColor(CustomColour.customBlueColour2)
                                             
                                         }
                                         
@@ -131,37 +132,39 @@ struct QA: View {
                                                 Text("Course recommendations")
                                                     .font(.system(size: 20, weight: .bold, design: .default))
                                                     .frame(maxWidth: .infinity, alignment: .center)
+                                                    .foregroundColor(CustomColour.customBlueColour2)
+                                                    .padding(.bottom, 20)
                                             }
                                             
+                                            
                                             ForEach(filteredCourses, id: \.self) { course in
-                                                ForEach(course.course_details ?? [], id: \.self) { name in
+                                                ForEach(course.course_details?.enumerated().filter { $0.offset != 0 }.map { $0.element } ?? [], id: \.self) { name in
                                                     Text(name)
-                                                        .font(.system(size: 17, weight: .regular, design: .default))
+                                                        .font(.system(size: 16, weight: .medium, design: .default))
                                                         .foregroundColor(.black)
-                                                        .frame(maxWidth: .infinity, alignment: .center)
+                                                        .frame(maxWidth: .infinity, alignment: .leading)
                                                         .fixedSize(horizontal: false, vertical: true)
                                                         .lineLimit(nil)
                                                 }
-                                            } .padding(.leading, 30)
-                                                .padding(.trailing, 30)
-                                                .padding(.bottom, 20)
-                                                .padding(.top, 20)
-                                            Spacer()
-                                        }
-                                        
+                                            }
+                                            .padding(.vertical, 5)
+
+                                        Spacer()
                                     }
-                                    .padding(.leading, 30)
-                                    .padding(.trailing, 30)
-                                    .padding(.bottom, 20)
-                                    .padding(.top, 20)
-                                    Spacer()
+                                    
                                 }
-                                .padding(.bottom, 50)
-                                .padding(.top, 30)
-                                .frame(maxWidth: .infinity, alignment: .center)
-                                .background(Color.white)
-                                .modifier(CardModifier())
-                                .padding(.all, 30)
+                                .padding(.leading, 30)
+                                .padding(.trailing, 30)
+                                .padding(.bottom, 20)
+                                .padding(.top, 20)
+                                Spacer()
+                            }
+                            .padding(.bottom, -10)
+                            .padding(.top, 20)
+                            .frame(maxWidth: .infinity, alignment: .center)
+                            .background(Color.white)
+                            .modifier(CardModifier())
+                            .padding(.horizontal, 30)
                             }.onAppear() {
                                 viewCourseModel.getCourses(set: "set name here")
                             }
