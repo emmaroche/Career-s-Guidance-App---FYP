@@ -43,7 +43,7 @@ struct GuestQuizWelcomeScreen: View {
                     .padding(.top, 20)
                     .fixedSize(horizontal: false, vertical: true)
                 
-                Text("To get the most accurate results choose \nthe answers that relates to you the most.")
+                Text("To get the most accurate results choose \nthe answers that relate to you the most.")
                     .font(.system(size: 17, weight: .regular, design: .default))
                     .foregroundColor(.black)
                     .padding(.leading, 30)
