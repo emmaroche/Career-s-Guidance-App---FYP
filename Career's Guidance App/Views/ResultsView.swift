@@ -32,6 +32,7 @@ struct ResultsView: View {
                                 .font(.system(size: 20, weight: .bold, design: .default))
                                 .frame(maxWidth: .infinity, alignment: .center)
                                 .lineLimit(nil)
+                                .foregroundColor(CustomColour.customBlueColour2)
                         }
                     }
                     Text(result.ResultDescription!)
@@ -62,26 +63,29 @@ struct ResultsView: View {
                 HStack(alignment: .center) {
                     VStack(alignment: .leading , spacing: 25) {
                         HStack(alignment: .center) {
-                            VStack(alignment: .leading , spacing: 25) {
+                            VStack(alignment: .leading) {
                                 HStack{
                                     Text("Course recommendations")
                                         .font(.system(size: 20, weight: .bold, design: .default))
                                         .frame(maxWidth: .infinity, alignment: .center)
+                                        .foregroundColor(CustomColour.customBlueColour2)
+                                        .padding(.bottom, 20)
                                 }
                                 
+                                // This function displays all courses relared to the result category while also hiding index 0 of the course_details array which is just used to link the category and course together. Code resourse used to help (modfied to fit this app) https://stackoverflow.com/questions/45933149/swift-how-to-get-indexes-of-filtered-items-of-array
+                                
                                 ForEach(filteredCourses, id: \.self) { course in
-                                    ForEach(course.course_details ?? [], id: \.self) { name in
+                                    ForEach(course.course_details?.enumerated().filter { $0.offset != 0 }.map { $0.element } ?? [], id: \.self) { name in
                                         Text(name)
-                                            .font(.system(size: 17, weight: .regular, design: .default))
+                                            .font(.system(size: 16, weight: .medium, design: .default))
                                             .foregroundColor(.black)
-                                            .frame(maxWidth: .infinity, alignment: .center)
+                                            .frame(maxWidth: .infinity, alignment: .leading)
                                             .fixedSize(horizontal: false, vertical: true)
                                             .lineLimit(nil)
                                     }
-                                } .padding(.leading, 30)
-                                .padding(.trailing, 30)
-                                .padding(.bottom, 20)
-                                .padding(.top, 20)
+                                }
+                                .padding(.vertical, 10)
+
                             Spacer()
                         }
                         
@@ -92,7 +96,7 @@ struct ResultsView: View {
                     .padding(.top, 20)
                     Spacer()
                 }
-                .padding(.bottom, 50)
+                .padding(.bottom, 30)
                 .padding(.top, 30)
                 .frame(maxWidth: .infinity, alignment: .center)
                 .background(Color.white)

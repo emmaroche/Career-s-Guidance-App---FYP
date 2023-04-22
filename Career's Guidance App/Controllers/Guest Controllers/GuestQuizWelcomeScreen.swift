@@ -36,7 +36,7 @@ struct GuestQuizWelcomeScreen: View {
                     .padding(.leading, 30)
                 
                 Text("Our mission is to help you find your \ndream course, personalised to your \nskills and interests.")
-                    .font(.system(size: 17, weight: .medium, design: .default))
+                    .font(.system(size: 16, weight: .medium, design: .default))
                     .foregroundColor(.black)
                     .padding(.leading, 30)
                     .padding(.trailing, 10)
@@ -44,7 +44,7 @@ struct GuestQuizWelcomeScreen: View {
                     .fixedSize(horizontal: false, vertical: true)
                 
                 Text("To get the most accurate results choose \nthe answers that relate to you the most.")
-                    .font(.system(size: 17, weight: .regular, design: .default))
+                    .font(.system(size: 16, weight: .regular, design: .default))
                     .foregroundColor(.black)
                     .padding(.leading, 30)
                     .padding(.trailing, 10)
@@ -52,7 +52,7 @@ struct GuestQuizWelcomeScreen: View {
                     .fixedSize(horizontal: false, vertical: true)
                 
                 Text("Please note that only one option is \naccepted per question.")
-                    .font(.system(size: 17, weight: .regular, design: .default))
+                    .font(.system(size: 16, weight: .regular, design: .default))
                     .foregroundColor(.black)
                     .padding(.leading, 30)
                     .padding(.trailing, 10)
@@ -60,7 +60,7 @@ struct GuestQuizWelcomeScreen: View {
                     .fixedSize(horizontal: false, vertical: true)
                 
                 Text("**NOTE:** There are no right or wrong answers.")
-                    .font(.system(size: 17, weight: .regular, design: .default))
+                    .font(.system(size: 16, weight: .regular, design: .default))
                     .foregroundColor(.black)
                     .padding(.leading, 30)
                     .padding(.trailing, 10)
@@ -68,7 +68,8 @@ struct GuestQuizWelcomeScreen: View {
                     .fixedSize(horizontal: false, vertical: true)
                 
                 Spacer(minLength: 0)
-            }.padding(.top,-50)
+            }.padding(.top,-40)
+            
             
             VStack {
                 // Level View

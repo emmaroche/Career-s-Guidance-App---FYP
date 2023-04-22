@@ -36,24 +36,24 @@ struct QuizScreen: View {
                     .foregroundColor(.black)
                     .padding(.leading, 30)
                 
-                Text("This Course Matching Questionnaire is designed to help you discover courses \nthat are best suited to your skills and \ninterests.")
-                    .font(.system(size: 17, weight: .regular, design: .default))
+                Text("This Course Matching Questionnaire is designed to help you discover courses \nthat are best suited to your skills and \ninterests!")
+                    .font(.system(size: 16, weight: .regular, design: .default))
                     .foregroundColor(.black)
                     .padding(.leading, 30)
                     .padding(.trailing, 10)
                     .padding(.top, 20)
                     .fixedSize(horizontal: false, vertical: true)
                 
-                Text("The results are aimed to show course \noptions you may not have considered \nbefore!")
-                    .font(.system(size: 17, weight: .regular, design: .default))
+                Text("The results are aimed to show course \noptions you may not have considered \nbefore.")
+                    .font(.system(size: 16, weight: .regular, design: .default))
                     .foregroundColor(.black)
                     .padding(.leading, 30)
                     .padding(.trailing, 10)
                     .padding(.top, 20)
                     .fixedSize(horizontal: false, vertical: true)
                 
-                Text("Please note that only one option is \naccepted per question.")
-                    .font(.system(size: 17, weight: .regular, design: .default))
+                Text("Please note that only one option is \naccepted per question so choose \nthe answer that relates to you the most.")
+                    .font(.system(size: 16, weight: .regular, design: .default))
                     .foregroundColor(.black)
                     .padding(.leading, 30)
                     .padding(.trailing, 10)
@@ -61,7 +61,7 @@ struct QuizScreen: View {
                     .fixedSize(horizontal: false, vertical: true)
                 
                 Text("**NOTE:** There are no right or wrong answers.")
-                    .font(.system(size: 17, weight: .regular, design: .default))
+                    .font(.system(size: 16, weight: .regular, design: .default))
                     .foregroundColor(.black)
                     .padding(.leading, 30)
                     .padding(.trailing, 10)
@@ -69,7 +69,7 @@ struct QuizScreen: View {
                     .fixedSize(horizontal: false, vertical: true)
                 
                 Spacer(minLength: 0)
-            }.padding(.top,-50)
+            }.padding(.top, -70)
             
             VStack {
                 // Level View
@@ -97,7 +97,7 @@ struct QuizScreen: View {
                     }
                 }
             }
-            .padding(.top, 100)
+            .padding(.top, 10)
             .padding(.leading, 136)
           
             Spacer(minLength: 0)
@@ -110,8 +110,8 @@ struct QuizScreen: View {
 }
 
 
-//struct QuizScreen_Previews: PreviewProvider {
-//    static var previews: some View {
-//        QuizScreen()
-//    }
-//}
+struct QuizScreen2_Previews: PreviewProvider {
+    static var previews: some View {
+        QuizScreen()
+    }
+}
