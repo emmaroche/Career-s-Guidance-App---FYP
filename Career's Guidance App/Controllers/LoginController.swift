@@ -8,7 +8,7 @@
 import UIKit
 
 
-class LoginController: UIViewController, UITextViewDelegate {
+class LoginController: UIViewController, UITextViewDelegate, UITextFieldDelegate {
     
     
     // MARK: - UI Components
@@ -44,6 +44,7 @@ class LoginController: UIViewController, UITextViewDelegate {
         //Dismiss keyboard when text field is clicked out of. Code reference: https://stackoverflow.com/questions/24126678/close-ios-keyboard-by-touching-anywhere-using-swift
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
+
         
     }
     
@@ -52,11 +53,18 @@ class LoginController: UIViewController, UITextViewDelegate {
         self.navigationController?.navigationBar.tintColor = UIColor.white
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
     
     // MARK: - UI Setup
     
     private func setupUI() {
         self.view.backgroundColor = UIColor(red: 0.20, green: 0.48, blue: 0.67, alpha: 1.00)
+        
+        emailField.delegate = self
+        passwordField.delegate = self
         
         self.view.addSubview(headerView)
         self.view.addSubview(emailField)

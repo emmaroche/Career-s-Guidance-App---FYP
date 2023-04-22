@@ -26,7 +26,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window?.makeKeyAndVisible()
         window.overrideUserInterfaceStyle = .light
     }
-    
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+
     public func checkAuthentication() {
         if Auth.auth().currentUser == nil {
             self.goToController(with: WelcomeController())
