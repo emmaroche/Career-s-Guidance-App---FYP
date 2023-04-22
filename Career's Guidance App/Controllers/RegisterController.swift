@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegisterController: UIViewController {
+class RegisterController: UIViewController, UITextViewDelegate, UITextFieldDelegate {
     
     // MARK: - UI Components
     
@@ -58,6 +58,11 @@ class RegisterController: UIViewController {
     
     private func setupUI() {
         self.view.backgroundColor = UIColor(red: 0.20, green: 0.48, blue: 0.67, alpha: 1.00)
+       
+        usernameField.delegate = self
+        emailField.delegate = self
+        passwordField.delegate = self
+        ConfirmPasswordField.delegate = self
         
         self.view.addSubview(headerView)
         self.view.addSubview(usernameField)
@@ -127,6 +132,13 @@ class RegisterController: UIViewController {
         ])
     }
     
+    // Code resource to help with "Done" button bug where it was not dusmissing the keyboard when tapped: https://stackoverflow.com/questions/49522773/how-to-hide-the-keyboard-using-done-button-swift-4
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
     // MARK: - Selectors
     
     @objc func didTapSignUp() {
@@ -159,11 +171,9 @@ class RegisterController: UIViewController {
         if ConfirmPasswordField.text! != passwordField.text! {
             AlertManager.showInvalidCheckPasswordAlert(on: self)
             return
-            
         }
         
-        
-        AuthService.shared.registerUser(with: registerUserRequest) { [weak self] wasRegistered, error in
+      AuthService.shared.registerUser(with: registerUserRequest) { [weak self] wasRegistered, error in
             guard let self = self else { return }
             
             if let error = error {
