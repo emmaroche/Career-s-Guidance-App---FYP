@@ -49,9 +49,9 @@ struct ResultsDashboardController: View {
                 
                 VStack(alignment: .center, spacing: 35) {
  
-                    PieChart(data: $viewModel.data, labels: ["Realistic","Investigative", "Social", "Artistic", "Enterprising", "Conventional"], colors: [CustomColour.customPinkColour, CustomColour.customOrangeColour, CustomColour.customLightBlueColour, CustomColour.customPinkColour2, CustomColour.customGreenColour, CustomColour.customPurpleColour], borderColor: Color.black).frame(height: 300)
+                    PieChart(data: $viewModel.data, labels: ["Realistic","Investigative", "Social", "Artistic", "Enterprising", "Conventional"], colors: [CustomColour.customPinkColour, CustomColour.customOrangeColour, CustomColour.customLightBlueColour, CustomColour.customPinkColour2, CustomColour.customGreenColour, CustomColour.customPurpleColour], borderColor: Color.clear).frame(height: 225)
                     
-                }.modifier(CardModifier())
+                }.shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 0)
                 
 
                 Text("Previous questionnaire results")
