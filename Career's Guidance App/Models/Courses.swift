@@ -10,18 +10,14 @@ import FirebaseFirestoreSwift
 import FirebaseFirestore
 
 struct Courses: Identifiable, Codable, Hashable {
-    // fetch doc ID
+    
     @DocumentID var id: String?
-
-//var name: [String]?
     
     var course_details: [String]?
-
     
     enum CodingKeys: String, CodingKey {
         case course_details
-
+        
     }
-
 }
 

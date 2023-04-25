@@ -7,6 +7,8 @@
 
 import UIKit
 
+// Code resource to draw retangle shape for the navigation view: https://stackoverflow.com/questions/34777992/how-to-create-unique-shapes-or-uiviews-in-swift
+
 class NavigationView: UIView {
 
     override func draw(_ rect: CGRect) {

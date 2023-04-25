@@ -18,7 +18,7 @@ struct ResultsDashboardView: View {
         
         VStack(alignment: .leading, spacing: 35) {
             
-                                    
+            
             HStack(alignment: .center) {
                 VStack(alignment: .leading , spacing: 25) {
                     HStack {
@@ -37,27 +37,27 @@ struct ResultsDashboardView: View {
                             } else {
                                 Text("No date")
                             }
- 
+                            
                         }
                     }
                     
                     HStack {
-                            Button(action: {
-                                self.isModal = true
-                                
-                            }) {
-                                Text("View results")
-                                    .font(.system(size: 16, weight: .bold, design: .default))
-                                    .foregroundColor(.black)
-                                    .frame(maxWidth: .infinity, alignment: .leading)
-                                    .fixedSize(horizontal: false, vertical: true)
-              
-                                Image(systemName: "arrowtriangle.forward.fill")
-                                    .foregroundColor(CustomColour.customBlueColour)
-                                
-                            }.sheet(isPresented: $isModal, content: {
-                                ResultsController(result: $result)
-                            })
+                        Button(action: {
+                            self.isModal = true
+                            
+                        }) {
+                            Text("View results")
+                                .font(.system(size: 16, weight: .bold, design: .default))
+                                .foregroundColor(.black)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .fixedSize(horizontal: false, vertical: true)
+                            
+                            Image(systemName: "arrowtriangle.forward.fill")
+                                .foregroundColor(CustomColour.customBlueColour)
+                            
+                        }.sheet(isPresented: $isModal, content: {
+                            ResultsController(result: $result)
+                        })
                         
                     }.padding(.horizontal, 40)
                     
@@ -65,17 +65,17 @@ struct ResultsDashboardView: View {
                 }
                 Spacer()
             }
-//            .padding(.bottom, 30)
-//            .padding(.top, 30)
+            //            .padding(.bottom, 30)
+            //            .padding(.top, 30)
             .padding(.vertical, 30)
             .frame(maxWidth: .infinity, alignment: .center)
             .modifier(CardModifierColour())
-  
+            
             
         }
         
     }
     
 }
-    
+
 

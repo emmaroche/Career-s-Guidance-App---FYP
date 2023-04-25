@@ -5,6 +5,7 @@
 //  Created by Emma Roche on 20/01/2023.
 //
 
+// Code Resource for authetication servives (modfied to work with this apps content): https://www.youtube.com/watch?v=bFdHM7lxFW0&t=113s
 
 import Foundation
 import FirebaseAuth

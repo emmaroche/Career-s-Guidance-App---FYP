@@ -8,7 +8,7 @@
 import UIKit
 
 class LineView: UIView {
-
+    
     // MARK: - UI Components
     
     private let lineWithText: UILabel = {
@@ -19,9 +19,10 @@ class LineView: UIView {
         label.text = "Error"
         return label
     }()
-
+    
     
     // MARK: - LifeCycle
+    
     init(lineWithOr: String) {
         super.init(frame: .zero)
         self.lineWithText.text = lineWithOr
@@ -34,13 +35,12 @@ class LineView: UIView {
     
     
     // MARK: - UI Setup
+    
     private func setupUI() {
         self.addSubview(lineWithText)
         
         lineWithText.translatesAutoresizingMaskIntoConstraints = false
-
-
-
+        
         NSLayoutConstraint.activate([
             self.lineWithText.topAnchor.constraint(equalTo: self.topAnchor, constant: 0),
             self.lineWithText.centerXAnchor.constraint(equalTo: self.centerXAnchor),

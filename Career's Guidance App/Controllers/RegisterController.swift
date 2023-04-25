@@ -5,6 +5,8 @@
 //  Created by Emma Roche on 18/01/2023.
 //
 
+//Code Resource to help with sign up authetication (heavily modfied to work with this apps content): https://www.youtube.com/watch?v=T6kC1LKx1OM
+
 import UIKit
 
 class RegisterController: UIViewController, UITextViewDelegate, UITextFieldDelegate {
@@ -51,7 +53,6 @@ class RegisterController: UIViewController, UITextViewDelegate, UITextFieldDeleg
         self.navigationController?.navigationBar.isHidden = false
         self.navigationController?.navigationBar.tintColor = UIColor.white
     }
-    
     
     
     // MARK: - UI Setup
@@ -167,7 +168,7 @@ class RegisterController: UIViewController, UITextViewDelegate, UITextFieldDeleg
             return
         }
         
-        //Check password
+        // Check password
         if ConfirmPasswordField.text! != passwordField.text! {
             AlertManager.showInvalidCheckPasswordAlert(on: self)
             return

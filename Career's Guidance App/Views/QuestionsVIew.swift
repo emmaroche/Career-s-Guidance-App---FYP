@@ -15,7 +15,7 @@ struct QuestionView: View {
     
     // Calling Category array from QA
     @Binding var categories: [Category]
-
+    
     @State var selected = ""
     @State var selectedAnswer = false
     
@@ -23,72 +23,69 @@ struct QuestionView: View {
         
         VStack(alignment: .leading, spacing: 22) {
             HStack(spacing: 15){
-            Text(question.question!)
-                .font(.system(size: 18, weight: .semibold, design: .default))
-                .fontWeight(.heavy)
-                .foregroundColor(.black)
-                .padding(.top, 25)
-            
-            Spacer(minLength: 0)
-            
+                Text(question.question!)
+                    .font(.system(size: 18, weight: .semibold, design: .default))
+                    .fontWeight(.heavy)
+                    .foregroundColor(.black)
+                    .padding(.top, 25)
+                
+                Spacer(minLength: 0)
+                
             }
-    
-                ForEach(question.answer_choices!, id: \.self) { answerChoice in
-
-                    Button(action: {
-                        selected = answerChoice
-                        question.answer = answerChoice
-                        selectedAnswer = true
-                    }) {
-                        Text(answerChoice)
-                            .foregroundColor(.black)
-                            .font(.system(size: 16, weight: .regular, design: .default))
-                            .padding()
-                            .frame(maxWidth: .infinity)
-                            .background(
-                                RoundedRectangle(cornerRadius: 12)
-                                    .stroke(color(option: answerChoice), lineWidth: 2)
-                            )
-                    }
-
+            
+            ForEach(question.answer_choices!, id: \.self) { answerChoice in
+                
+                Button(action: {
+                    selected = answerChoice
+                    question.answer = answerChoice
+                    selectedAnswer = true
+                }) {
+                    Text(answerChoice)
+                        .foregroundColor(.black)
+                        .font(.system(size: 16, weight: .regular, design: .default))
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(
+                            RoundedRectangle(cornerRadius: 12)
+                                .stroke(color(option: answerChoice), lineWidth: 2)
+                        )
                 }
-//                
-//                .onAppear {
-//                    question.answer_choices?.shuffle()
-//
-//                }
-//
-//            // Create a new shuffled array for display
-//            let shuffledAnswerChoices = question.answer_choices?.shuffled()
-//
-//            // Use the shuffled array for display
-//            ForEach(shuffledAnswerChoices!, id: \.self) { answerChoice in
-//                Button(action: {
-//                    selected = answerChoice
-//                    question.answer = answerChoice
-//                }) {
-//                    Text(answerChoice)
-//                        .foregroundColor(.black)
-//                        .padding()
-//                        .frame(maxWidth: .infinity)
-//                        .background(
-//                            RoundedRectangle(cornerRadius: 15)
-//                                .stroke(color(option: answerChoice), lineWidth: 2)
-//                        )
-//                } .id(answerChoice)
-//                .animation(nil, value: answerChoice)
-//                .transition(.identity)
-//            }.onAppear {
-//                                    question.answer_choices?.shuffle()
-//
-//                                }
-//
-//
-
-            //Flag - first display = false ..... or count
-
-//                Spacer(minLength: 0)
-
+                
+            }
+            //
+            //                .onAppear {
+            //                    question.answer_choices?.shuffle()
+            //
+            //                }
+            //
+            //            // Create a new shuffled array for display
+            //            let shuffledAnswerChoices = question.answer_choices?.shuffled()
+            //
+            //            // Use the shuffled array for display
+            //            ForEach(shuffledAnswerChoices!, id: \.self) { answerChoice in
+            //                Button(action: {
+            //                    selected = answerChoice
+            //                    question.answer = answerChoice
+            //                }) {
+            //                    Text(answerChoice)
+            //                        .foregroundColor(.black)
+            //                        .padding()
+            //                        .frame(maxWidth: .infinity)
+            //                        .background(
+            //                            RoundedRectangle(cornerRadius: 15)
+            //                                .stroke(color(option: answerChoice), lineWidth: 2)
+            //                        )
+            //                } .id(answerChoice)
+            //                .animation(nil, value: answerChoice)
+            //                .transition(.identity)
+            //            }.onAppear {
+            //                                    question.answer_choices?.shuffle()
+            //
+            //                                }
+            //
+            //
+            
+            
             // Next Button
             HStack(spacing: 15) {
                 Button(action: {
@@ -118,7 +115,7 @@ struct QuestionView: View {
         .shadow(color: Color.black.opacity(0.02), radius: 5, x: -5, y: -5)
     }
     
-    // highlighting Answer
+    // Highlighting selected answer
     func color(option: String) -> Color {
         if option == selected {
             return (CustomColour.customGreenColour)
@@ -128,41 +125,41 @@ struct QuestionView: View {
             return (CustomColour.customBlueColour2)
         }
     }
-
-     func countAns() {
+    
+    func countAns() {
         if selected == question.answer_choices![0] {
-            //social
+            // Realistic
             categories[0].categoryCount += 1
         }
         
         if selected == question.answer_choices![1] {
-            //artistic
+            // Investigative
             categories[1].categoryCount += 1
         }
         
         if selected == question.answer_choices![2] {
-            //realistic
+            // Social
             categories[2].categoryCount += 1
         }
         
         if selected == question.answer_choices![3] {
-           //conventional
+            // Artistic
             categories[3].categoryCount += 1
         }
         
         if selected == question.answer_choices![4] {
-           //enterprising
+            // Enterprising
             categories[4].categoryCount += 1
         }
         
         if selected == question.answer_choices![5] {
-           //investigative
+            // Conventional
             categories[5].categoryCount += 1
         }
         
         question.isSubmitted.toggle()
     }
-
+    
 }
 
 

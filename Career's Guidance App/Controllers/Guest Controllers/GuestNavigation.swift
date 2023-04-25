@@ -19,7 +19,7 @@ class GuestNavigation: UITabBarController {
         let account = UIHostingController(rootView: GuestAccountScreen())
         
 //        homeVC.title = "Home"
-        quizScreen.title = "Quiz"
+        quizScreen.title = "Questionnaire"
 //        resultsDashboard.title = "Results"
         account.title = "Account"
 

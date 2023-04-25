@@ -27,5 +27,4 @@ struct Question: Identifiable, Codable {
         case answer
         case answer_choices
     }
-
 }

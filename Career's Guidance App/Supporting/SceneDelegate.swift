@@ -10,9 +10,9 @@ import UIKit
 import FirebaseAuth
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
+    
     var window: UIWindow?
-
+    
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         self.setupWindow(with: scene)
@@ -26,12 +26,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window?.makeKeyAndVisible()
         window.overrideUserInterfaceStyle = .light
     }
-
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
-
+    
     public func checkAuthentication() {
         if Auth.auth().currentUser == nil {
             self.goToController(with: WelcomeController())
@@ -48,7 +48,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
     }
     
-    
     public func checkAuthenticationGuestSignup() {
         if Auth.auth().currentUser == nil {
             self.goToController(with: RegisterController())
@@ -59,7 +58,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     private func goToController(with viewController: UIViewController) {
         DispatchQueue.main.async { [weak self] in
-            UIView.animate(withDuration: 0.25) {
+            UIView.animate(withDuration: 0.10) {
                 self?.window?.layer.opacity = 0
                 
             } completion: { [weak self] _ in
@@ -68,7 +67,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 nav.modalPresentationStyle = .fullScreen
                 self?.window?.rootViewController = nav
                 
-                UIView.animate(withDuration: 0.25) { [weak self] in
+                UIView.animate(withDuration: 0.10) { [weak self] in
                     self?.window?.layer.opacity = 1
                 }
             }

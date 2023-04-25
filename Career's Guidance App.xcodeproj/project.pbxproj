@@ -29,6 +29,8 @@
 		0439A9D52982DC8600942926 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0439A9D42982DC8600942926 /* AuthService.swift */; };
 		0439A9D72982DC8A00942926 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0439A9D62982DC8A00942926 /* Validator.swift */; };
 		044351E129C35EA800F2DC6C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044351E029C35EA800F2DC6C /* Category.swift */; };
+		0446F12229F7D4BC0046A74D /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 0446F12129F7D4BC0046A74D /* FirebaseFirestore */; };
+		0446F12429F7D5050046A74D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 0446F12329F7D5050046A74D /* FirebaseAuth */; };
 		0456AB85299E4F5500C8369A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456AB84299E4F5500C8369A /* ViewController.swift */; };
 		0456F73B29A3B57300414B9C /* QuizScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456F73A29A3B57300414B9C /* QuizScreen.swift */; };
 		0456F74329A3E6DF00414B9C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456F74229A3E6DF00414B9C /* HomeView.swift */; };
@@ -225,6 +227,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0446F12229F7D4BC0046A74D /* FirebaseFirestore in Frameworks */,
+				0446F12429F7D5050046A74D /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +304,13 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		0446F12029F7D4BC0046A74D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		04597E9529B0F161000BF3AB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -343,6 +354,7 @@
 				04ADB7222982A11800BCFAC5 /* Career's Guidance AppTests */,
 				04ADB72C2982A11800BCFAC5 /* Career's Guidance AppUITests */,
 				04ADB70A2982A11600BCFAC5 /* Products */,
+				0446F12029F7D4BC0046A74D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -454,6 +466,10 @@
 				04ADB7212982A11800BCFAC5 /* PBXTargetDependency */,
 			);
 			name = "Career's Guidance AppTests";
+			packageProductDependencies = (
+				0446F12129F7D4BC0046A74D /* FirebaseFirestore */,
+				0446F12329F7D5050046A74D /* FirebaseAuth */,
+			);
 			productName = "Career's Guidance AppTests";
 			productReference = 04ADB71F2982A11800BCFAC5 /* Career's Guidance AppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -973,6 +989,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0446F12129F7D4BC0046A74D /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 046F2BB82982A4E900F4D6BC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		0446F12329F7D5050046A74D /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 046F2BB82982A4E900F4D6BC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
 		046F2BB92982A4E900F4D6BC /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 046F2BB82982A4E900F4D6BC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

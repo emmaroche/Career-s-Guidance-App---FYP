@@ -9,7 +9,7 @@ import SwiftUI
 import CoreMIDI
 
 struct QuizScreen: View {
-
+    
     @State var show = false
     
     // Storing Level for Fetching Questions
@@ -28,7 +28,7 @@ struct QuizScreen: View {
                 .frame(width: 450, height: 200)
                 .aspectRatio(contentMode: .fit)
                 .ignoresSafeArea()
-      
+            
             VStack(alignment: .leading) {
                 Text("Questionnaire")
                     .font(.system(size: 24, weight: .bold, design: .default))
@@ -74,7 +74,7 @@ struct QuizScreen: View {
             VStack {
                 // Level View
                 LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 20), count: 2), spacing: 35) {
- 
+                    
                     ForEach(1...1, id: \.self) { index in
                         VStack(spacing: 15) {
                             
@@ -89,7 +89,7 @@ struct QuizScreen: View {
                         
                         .background(CustomColour.customGreenColour)
                         .cornerRadius(12)
-                        // opens QA view as a sheet
+                        // Opens QA view as a sheet
                         .onTapGesture {
                             set = "Questionnaire_\(index)"
                             show.toggle()
@@ -99,13 +99,13 @@ struct QuizScreen: View {
             }
             .padding(.top, 10)
             .padding(.leading, 136)
-          
+            
             Spacer(minLength: 0)
         }.padding(.bottom, 65)
-        .background(Color.white.ignoresSafeArea())
-        .sheet(isPresented: $show) {
-            QA(answered: $answered, set: set, viewCourseModel: self.viewCourseModel)
-        }
+            .background(Color.white.ignoresSafeArea())
+            .sheet(isPresented: $show) {
+                QA(answered: $answered, set: set, viewCourseModel: self.viewCourseModel)
+            }
     }
 }
 
