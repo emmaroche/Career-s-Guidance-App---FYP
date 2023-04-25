@@ -8,7 +8,7 @@
 import UIKit
 
 class BasicText: UIView {
-
+    
     private let bText: UILabel = {
         let label = UILabel()
         label.textColor = .white
@@ -19,6 +19,7 @@ class BasicText: UIView {
     }()
     
     // MARK: - LifeCycle
+    
     init(text: String) {
         super.init(frame: .zero)
         self.bText.text = text
@@ -30,21 +31,19 @@ class BasicText: UIView {
     }
     
     // MARK: - UI Setup
-    private func setupUI() {
-//        self.addSubview(logoImageView)
-        self.addSubview(bText)
     
+    private func setupUI() {
         
-//        logoImageView.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(bText)
+        
         bText.translatesAutoresizingMaskIntoConstraints = false
-
-
+        
         NSLayoutConstraint.activate([
-
+            
             self.bText.topAnchor.constraint(equalTo: self.topAnchor, constant: 0),
             self.bText.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             self.bText.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            ])
-            }
-            
+        ])
+    }
+    
 }

@@ -18,7 +18,7 @@ class CustomTextField: UITextField {
     
     private let authFieldType: CustomTextFieldType
     
-    //padding code source: https://stackoverflow.com/questions/25367502/create-space-at-the-beginning-of-a-uitextfield
+    // Padding code source: https://stackoverflow.com/questions/25367502/create-space-at-the-beginning-of-a-uitextfield
     
     let padding = UIEdgeInsets(top: 0, left: 60, bottom: 0, right: 5)
     
@@ -61,7 +61,7 @@ class CustomTextField: UITextField {
             let image = UIImage(named: "fieldImage3")
             imageView.image = image
             imageView.contentMode = .scaleAspectFit
-
+            
             let view = UIView(frame: CGRect(x: 0, y: 0, width: 55, height: 55))
             view.addSubview(imageView)
             self.leftViewMode = UITextField.ViewMode.always

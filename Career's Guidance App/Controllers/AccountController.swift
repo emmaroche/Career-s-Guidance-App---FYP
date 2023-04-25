@@ -12,7 +12,6 @@ import UIKit
 
 struct AccountController: View {
     
-    
     @State private var isChangePasswordPresented = false
     @State private var username: String = ""
     
@@ -120,8 +119,8 @@ struct AccountController: View {
                 .background(Color.white)
                 .modifier(CardModifier())
                 .padding(.horizontal, 30)
-
-
+            
+            
             
             HStack{
                 
@@ -144,7 +143,7 @@ struct AccountController: View {
                     .padding(15)
                     .background(CustomColour.customGreenColour)
                     .cornerRadius(12)
-     
+                
             }.padding(.top, 30)
             
         }.padding(.bottom, 100)
@@ -170,8 +169,6 @@ struct AccountController: View {
         }
     }
 }
-
-
 
 struct AccountController_Previews: PreviewProvider {
     static var previews: some View {

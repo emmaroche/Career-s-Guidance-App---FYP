@@ -7,6 +7,7 @@
 
 import UIKit
 
+//Code Resource to help with log in authetication (heavily modfied to work with this apps content): https://www.youtube.com/watch?v=T6kC1LKx1OM
 
 class LoginController: UIViewController, UITextViewDelegate, UITextFieldDelegate {
     
@@ -174,7 +175,7 @@ class LoginController: UIViewController, UITextViewDelegate, UITextFieldDelegate
     }
     
     @objc func dismissKeyboard() {
-        //Causes the text fields to resign the first responder status.
+        // Causes the text fields to resign the first responder status.
         view.endEditing(true)
     }
     

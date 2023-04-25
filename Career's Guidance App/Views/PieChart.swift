@@ -17,8 +17,6 @@ struct PieChart: View {
   private let borderColor: Color
   private let sliceOffset: Double = -.pi / 2
     
-
-  
   init(data: Binding<[Double]>, labels: [String], colors: [Color], borderColor: Color) {
     self._data = data
     self.labels = labels

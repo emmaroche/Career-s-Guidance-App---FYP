@@ -102,9 +102,7 @@ class WelcomeController: UIViewController {
     }
     
     @objc private func didTapGuest() {
-//        let vc = NavigationTabBarController()
         let vc = GuestNavigation()
-//        let vc = UIHostingController(rootView: GuestQuizWelcomeScreen())
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

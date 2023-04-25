@@ -10,19 +10,17 @@ import FirebaseFirestoreSwift
 import FirebaseFirestore
 
 struct Results: Identifiable, Codable {
-    // fetch doc ID
+    
     @DocumentID var id: String?
 
     var Result: String?
     var ResultDescription:  String?
     var createDate: Date?
 
-    // declare the coding keys with respect to Firebase Firestore Key
     enum CodingKeys: String, CodingKey {
         case Result
         case ResultDescription
         case createDate
     }
-
 }
 

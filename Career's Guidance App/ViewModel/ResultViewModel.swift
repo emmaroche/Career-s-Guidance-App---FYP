@@ -42,7 +42,7 @@ class ResultViewModel: ObservableObject {
                     try? queryDocumentSnapshot.data(as: Results.self)
                 }
                 
-                //Counts results when fetching the results data
+                // Counts results when fetching the results data
                 self.countRes()
             }
     }

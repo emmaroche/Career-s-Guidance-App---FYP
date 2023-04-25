@@ -5,6 +5,8 @@
 //  Created by Emma Roche on 20/01/2023.
 //
 
+// Code Resource for authetication errors (modfied to work with this apps content): https://www.youtube.com/watch?v=bFdHM7lxFW0&t=113s
+
 import UIKit
 
 class AlertManager {
@@ -27,11 +29,11 @@ extension AlertManager {
     }
     
     public static func showInvalidPasswordAlert(on vc: UIViewController) {
-        self.showBasicAlert(on: vc, title: "Invalid Password", message: "Please enter a valid password.")
+        self.showBasicAlert(on: vc, title: "Incorrect Password", message: "Please enter a valid password.")
     }
     
     public static func showInvalidPasswordAlertSignUp(on vc: UIViewController) {
-        self.showBasicAlert(on: vc, title: "Invalid Password", message: "Make sure your password includes both lower and upper case characters and at least one number or symbol.")
+        self.showBasicAlert(on: vc, title: "Invalid Password", message: "Your password should contain both lowercase and uppercase characters as well as at least one number and symbol.")
     }
     
     public static func showInvalidCheckPasswordAlert(on vc: UIViewController) {
@@ -40,7 +42,7 @@ extension AlertManager {
     
     
     public static func showInvalidUsernameAlert(on vc: UIViewController) {
-        self.showBasicAlert(on: vc, title: "Invalid Username", message: "Please enter a valid username.")
+        self.showBasicAlert(on: vc, title: "Invalid Username", message: "Your password should contain 1 or more chracters and no numbers.")
     }
 }
 

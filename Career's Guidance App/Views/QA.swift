@@ -10,17 +10,17 @@ import Firebase
 import FirebaseFirestore
 import FirebaseCore
 
-// Resource that helped with displaying questions: https://www.youtube.com/watch?v=S_BwMu2J3TQ (the code I have implemented has been modified significantly to fit the content of the CGA and this tutorial was used only as a guide to link this questionnaire with Firebase)
+// Resource that helped with displaying questions: https://www.youtube.com/watch?v=elhzkcoBl-A (the code I have implemented has been modified significantly to fit the content of the CGA and this tutorial was used only as a guide to link this questionnaire with Firebase)
 
 struct QA: View {
     
-    @Binding var answered: Int    
+    @Binding var answered: Int
     var set: String
     @StateObject var data = QuestionViewModel()
     @StateObject var viewCourseModel = CourseViewModel()
     @StateObject var viewModel = ResultViewModel()
-
-    // Resource that helped display highest category (code I have implemeted has been heavily modified and troubleshooted from these resources to suit whats needed for the CGA app): https://stackoverflow.com/questions/43806967/finding-indices-of-max-value-in-swift-array & https://stackoverflow.com/questions/69160416/how-do-i-get-the-variable-with-the-highest-int-and-retrieve-a-string-swift
+    
+    // Resource that helped display highest category (code I have implemeted has been heavily modified and troubleshooted from these resources to suit whats needed for this app): https://stackoverflow.com/questions/43806967/finding-indices-of-max-value-in-swift-array & https://stackoverflow.com/questions/69160416/how-do-i-get-the-variable-with-the-highest-int-and-retrieve-a-string-swift
     
     @State var ResultTitle = ""
     @State var ResultDescription = ""
@@ -38,7 +38,7 @@ struct QA: View {
         Category(categoryName: "Conventional", categoryDescription: "You like working indoors and at tasks that involve organising and being accurate, following procedures, working with data or numbers, planning work and events.", categoryCount: 0)
     ]
     
-
+    
     @Environment(\.presentationMode) var present
     
     var body: some View {
@@ -148,23 +148,23 @@ struct QA: View {
                                                 }
                                             }
                                             .padding(.vertical, 5)
-
-                                        Spacer()
+                                            
+                                            Spacer()
+                                        }
+                                        
                                     }
-                                    
+                                    .padding(.leading, 30)
+                                    .padding(.trailing, 30)
+                                    .padding(.bottom, 20)
+                                    .padding(.top, 20)
+                                    Spacer()
                                 }
-                                .padding(.leading, 30)
-                                .padding(.trailing, 30)
-                                .padding(.bottom, 20)
+                                .padding(.bottom, -10)
                                 .padding(.top, 20)
-                                Spacer()
-                            }
-                            .padding(.bottom, -10)
-                            .padding(.top, 20)
-                            .frame(maxWidth: .infinity, alignment: .center)
-                            .background(Color.white)
-                            .modifier(CardModifier())
-                            .padding(.horizontal, 30)
+                                .frame(maxWidth: .infinity, alignment: .center)
+                                .background(Color.white)
+                                .modifier(CardModifier())
+                                .padding(.horizontal, 30)
                             }.onAppear() {
                                 viewCourseModel.getCourses(set: "set name here")
                             }
@@ -223,7 +223,7 @@ struct QA: View {
                     }
                 }
             }
-            // fetching
+            // Fetching
             .onAppear {
                 data.getQuestions(set: set)
                 viewCourseModel.getCourses(set: "set name here")
@@ -238,7 +238,7 @@ struct QA: View {
         db.collection("Results").document().setData(["Result": Result, "ResultDescription": ResultDescription,"createDate": createDate, "user": user])
     }
     
-    // progress
+    // Progress bar
     func progress() -> CGFloat {
         let fraction = CGFloat(answered) / CGFloat(data.questions.count)
         
