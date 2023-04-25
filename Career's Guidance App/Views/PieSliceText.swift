@@ -16,9 +16,9 @@ struct PieSliceText: View {
   var body: some View {
     VStack {
       Text(title)
-        .font(.headline)
+         .font(.system(size: 17, weight: .bold, design: .default))
       Text(description)
-        .font(.body)
+            .font(.system(size: 16, weight: .semibold, design: .default))
     }
   }
 }

@@ -35,12 +35,12 @@ struct PieChart: View {
                       .fill(colors[index % colors.count])
                   
                   PieSlice(startAngle: startAngle(for: index), endAngle: endAngle(for: index))
-                      .stroke(borderColor, lineWidth: 1)
+                      .stroke(borderColor, lineWidth: 1.3)
                   
                   PieSliceText(
                     title: "\(labels[index])",
                     // Calculates total value of data and converts to %
-                    description: "\(Int(data[index] / data.reduce(0.0, +) * 100))%"
+                    description: "\(Int(data[index] / data.reduce(0.0, +) * 101))%"
                   )
                   .offset(textOffset(for: index, in: geo.size))
                   .zIndex(1)
@@ -71,7 +71,7 @@ struct PieChart: View {
   }
   
   private func textOffset(for index: Int, in size: CGSize) -> CGSize {
-      let radius = min(size.width, size.height) / 3.2
+      let radius = min(size.width, size.height) / 3.8
     let dataRatio = (2 * data[..<index].reduce(0, +) + data[index]) / (2 * data.reduce(0, +))
     let angle = CGFloat(sliceOffset + 2 * .pi * dataRatio)
     return CGSize(width: radius * cos(angle), height: radius * sin(angle))
