@@ -13,7 +13,33 @@ The Careers Guidance App is a mobile application designed and developed for Appl
 - Completed Questionnaire results can be saved and viewed again in the Results Dashboard
 - In the Results Dashboard users can view an analysis of their top scoring category results, plotted on a pie chart (guest users are not permitted to use this feature)
 
-## GitHub workflow
+## Key Technologies
+
+#### The Careers Guidance App was designed and developed using the following technologies:
+
+<img width="618" alt="Screenshot 2023-04-26 at 00 03 57" src="https://user-images.githubusercontent.com/78028777/234425973-e3790c63-9a17-4f89-b9bb-9740a265b4ef.png">
+
+## System Diagram - Flow Chart
+
+#### This flowchart represents the workflow of the Careers Guidance App’s system:
+
+<img width="466" alt="Screenshot 2023-04-25 at 23 58 42" src="https://user-images.githubusercontent.com/78028777/234425128-4af17aef-0f1f-4dab-99e4-0a1878e14765.png">
+
+## Development Process 
+
+###	Methodology 
+
+Agile methodology was adopted throughout the development of this project. 
+
+### Sprints & Continuous Integration and Continuous Delivery (CI/CD)
+
+For the development process of this project, sprints were planned and undertaken. Documentations of which tasks were to be completed and the time frame given to complete these tasks was included. 
+
+See the Issues Section of this Repo for more details on each sprint that was undertaken during the development of this app: [Issues Section](https://github.com/emmaroche/Careers-Guidance-App-FYP/issues?q=is%3Aissue+is%3Aclosed)
+
+The Agile development process was also implemented through the use of Continuous Integration and Continuous Delivery (CI/CD). CI/CD was used to ensure that each build advancement was tested, integrated, released and deployed to a physical iPhone. 
+
+### GitHub workflow
 
 **The GitHub workflow illustrated below was used throughout development of this app:**
 
