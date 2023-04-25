@@ -1,6 +1,6 @@
 # Careers-Guidance-App-FYP
 
-Development of my app called the 'Career's Guidance App' for my Final Year Project
+GitHub Repo for the Development of my iOS Mobile Application called 'The Careers Guidance App' for my Final Year Project.
 
 ## App Overview
 
@@ -21,7 +21,7 @@ Issue - Branch - Commit(s) - Push - Pull Request - Merge - Close Issue (once ful
 
 ## User Interface
 
-Screenshots for the completed app screens are provided below. The majority of the designs were similar to the Interactive Prototype created in semester one, which can be viewed here:[Careers Guidance iOS App Prototype](https://www.figma.com/proto/rgEVeHQKiUvBvZRrDRXuD6/FYP-UX-Design?page-id=0%3A1&node-id=8-184&viewport=-8%2C404%2C0.19&scaling=scale-down&starting-point-node-id=8%3A184)
+Screenshots for the completed app screens are provided below. The majority of the designs were similar to the Interactive Prototype created in semester one, which can be viewed here: [Careers Guidance iOS App Prototype](https://www.figma.com/proto/rgEVeHQKiUvBvZRrDRXuD6/FYP-UX-Design?page-id=0%3A1&node-id=8-184&viewport=-8%2C404%2C0.19&scaling=scale-down&starting-point-node-id=8%3A184)
 
 ### Welcome Screen
 
@@ -63,9 +63,9 @@ Screenshots for the completed app screens are provided below. The majority of th
 
 #### ScrollView
 
-<img src= "https://user-images.githubusercontent.com/78028777/234415373-c67aec53-7f26-457f-b234-1207054cbf46.PNG" alt="Results Dashboard Screen Top" style="width: 250px; height: 550px;">
+<img src= "https://user-images.githubusercontent.com/78028777/234422706-b99eb852-1146-46ab-ba5e-889e0c078fd1.PNG" alt="Results Dashboard Screen Top" style="width: 250px; height: 550px;">
 
-<img src= "https://user-images.githubusercontent.com/78028777/234415379-f367c967-8939-4876-a044-77ef62b9bb7b.PNG" alt="Results Dashboard Screen Top" style="width: 250px; height: 550px;">
+<img src= "https://user-images.githubusercontent.com/78028777/234422738-5bef2226-2d6a-496d-aa08-41a7be8c14bf.PNG" alt="Results Dashboard Screen Top" style="width: 250px; height: 550px;">
 
 ### Account Screen
 
@@ -75,7 +75,13 @@ Screenshots for the completed app screens are provided below. The majority of th
 
 <img src="https://user-images.githubusercontent.com/78028777/234413522-056c5f54-9ee8-480b-bdb7-f9942543d46d.PNG" alt="Change Password Screen" style="width: 250px; height: 550px;">
 
+
 ### Continue as Guest Screens
+
+<img src="https://user-images.githubusercontent.com/78028777/234421774-de9dd49b-da65-4bd0-93eb-46145504e78e.PNG" alt="Guest Questionnaire Screen" style="width: 250px; height: 550px;">
+
+<img src="https://user-images.githubusercontent.com/78028777/234421731-f3c1a827-25c2-42fc-a012-32007fde2118.PNG" alt="Guest Account Screen" style="width: 250px; height: 550px;">
+
 
 ## Code References
 
