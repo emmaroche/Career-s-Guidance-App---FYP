@@ -120,8 +120,6 @@ struct AccountController: View {
                 .modifier(CardModifier())
                 .padding(.horizontal, 30)
             
-            
-            
             HStack{
                 
                 // Code resource I used to help with how to log out the user from firebase (modified to fit CGA app) https://stackoverflow.com/questions/40402413/signing-out-of-firebase-in-swift

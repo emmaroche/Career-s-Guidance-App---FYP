@@ -40,7 +40,7 @@ struct PieChart: View {
                   PieSliceText(
                     title: "\(labels[index])",
                     // Calculates total value of data and converts to %
-                    description: "\(Int(data[index] / data.reduce(0.0, +) * 101))%"
+                    description: "\(Int(data[index] / data.reduce(0.0, +) * 100))%"
                   )
                   .offset(textOffset(for: index, in: geo.size))
                   .zIndex(1)
