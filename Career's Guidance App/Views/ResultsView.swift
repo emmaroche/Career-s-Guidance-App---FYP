@@ -29,11 +29,56 @@ struct ResultsView: View {
                 VStack(alignment: .leading , spacing: 25) {
                     HStack{
                         ZStack {
+                            if result.Result! == "Conventional"{
                             Text(result.Result!)
                                 .font(.system(size: 20, weight: .bold, design: .default))
                                 .frame(maxWidth: .infinity, alignment: .center)
                                 .lineLimit(nil)
-                                .foregroundColor(CustomColour.customBlueColour2)
+                                .foregroundColor(CustomColour.customPurpleColour)
+                            }
+                            
+                            if result.Result! == "Social"{
+                            Text(result.Result!)
+                                .font(.system(size: 20, weight: .bold, design: .default))
+                                .frame(maxWidth: .infinity, alignment: .center)
+                                .lineLimit(nil)
+                                .foregroundColor(CustomColour.customLightBlueColour)
+                 
+                            }
+                            
+                            if result.Result! == "Investigative"{
+                            Text(result.Result!)
+                                .font(.system(size: 20, weight: .bold, design: .default))
+                                .frame(maxWidth: .infinity, alignment: .center)
+                                .lineLimit(nil)
+                                .foregroundColor(CustomColour.customOrangeColour)
+                            }
+                            
+                            if result.Result! == "Enterprising"{
+                            Text(result.Result!)
+                                .font(.system(size: 20, weight: .bold, design: .default))
+                                .frame(maxWidth: .infinity, alignment: .center)
+                                .lineLimit(nil)
+                                .foregroundColor(CustomColour.customGreenColour)
+                            }
+                            
+                            if result.Result! == "Artistic"{
+                            Text(result.Result!)
+                                .font(.system(size: 20, weight: .bold, design: .default))
+                                .frame(maxWidth: .infinity, alignment: .center)
+                                .lineLimit(nil)
+                                .foregroundColor(CustomColour.customPinkColour2)
+                            }
+                            
+                            if result.Result! == "Realistic"{
+                            Text(result.Result!)
+                                .font(.system(size: 20, weight: .bold, design: .default))
+                                .frame(maxWidth: .infinity, alignment: .center)
+                                .lineLimit(nil)
+                                .foregroundColor(CustomColour.customPinkColour)
+                                
+                            }
+                            
                         }
                     }
                     Text(result.ResultDescription!)
