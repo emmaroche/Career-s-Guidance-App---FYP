@@ -37,9 +37,10 @@ The Careers Guidance App is a mobile application designed and developed for Appl
 
 #### This flowchart represents the workflow of the Careers Guidance App’s system:
 
-<img width="466" alt="Screenshot 2023-04-25 at 23 58 42" src="https://user-images.githubusercontent.com/78028777/234425128-4af17aef-0f1f-4dab-99e4-0a1878e14765.png">
+<img width="618" alt="Flowchart" src="https://user-images.githubusercontent.com/78028777/234669220-32609953-e6ef-4370-b7f1-fdf216f96647.png">
 
 <a name="dp"></a>
+
 ## Development Process 
 
 ###	Methodology 
@@ -105,6 +106,11 @@ Issue - Branch - Commit(s) - Push - Pull Request - Merge - Close Issue (once ful
 
 #### Results Screen
 
+<img src= "https://user-images.githubusercontent.com/78028777/234668483-6154ca4b-680e-4527-9e12-9a132a8a9013.PNG" alt="Results Dashboard Screen Top" style="width: 250px; height: 550px;">
+
+<img src= "https://user-images.githubusercontent.com/78028777/234668509-1c1cf8dc-367e-4b4e-87a0-cb3c812abfea.PNG" alt="Results Dashboard Screen Scrolling" style="width: 250px; height: 550px;">
+
+<img src= "https://user-images.githubusercontent.com/78028777/234668679-5f5b3850-e588-4acb-8752-94d0e7a4f596.PNG" alt="Results Screen Bottom" style="width: 250px; height: 550px;">
 
 #### Results Dashboard Screens
 
